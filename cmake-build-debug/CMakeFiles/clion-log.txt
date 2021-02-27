@@ -1,0 +1,29 @@
+"D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" C:\Users\lidan\Desktop\result\project\VR
+-- include LidanBuild.cmake
+-- include LidanBase.cmake
+-- Add C:/Users/lidan/Desktop/result/project/VR/util;
+-- C:/Users/lidan/Desktop/result/project/VR/util/EigenLidan.hC:/Users/lidan/Desktop/result/project/VR/util/util.h
+-- Add C:/Users/lidan/Desktop/result/project/VR/shadertoy;
+-- C:/Users/lidan/Desktop/result/project/VR/shadertoy/ShaderToy.h
+-- Add C:/Users/lidan/Desktop/result/project/VR/opengl;
+-- C:/Users/lidan/Desktop/result/project/VR/opengl/Sample2D.cppC:/Users/lidan/Desktop/result/project/VR/opengl/Sample2D.h
+-- ----------
+-- C:/Users/lidan/Desktop/result/project/VR/external/glfw/ TRUE glfw3 
+-- C:/Users/lidan/Desktop/result/project/VR/external/glfw
+-- Add C:/Users/lidan/Desktop/result/project/VR/external/glfw/include;
+-- C:/Users/lidan/Desktop/result/project/VR/external/glfw/include/GLFW/glfw3.hC:/Users/lidan/Desktop/result/project/VR/external/glfw/include/GLFW/glfw3native.h
+-- C:/Users/lidan/Desktop/result/project/VR/external/glfw
+-- include C:/Users/lidan/Desktop/result/project/VR/external/glfw/include/}
+-- C:/Users/lidan/Desktop/result/project/VR/external/glfw/lib-vc2019/glfw3
+-- link C:/Users/lidan/Desktop/result/project/VR/external/glfw/lib-vc2019/glfw3.dll
+-- ----------
+-- C:/Users/lidan/Desktop/result/project/VR/external/glad/   
+-- C:/Users/lidan/Desktop/result/project/VR/external/glad
+-- Add C:/Users/lidan/Desktop/result/project/VR/external/glad/include;
+-- C:/Users/lidan/Desktop/result/project/VR/external/glad/include/KHR/khrplatform.hC:/Users/lidan/Desktop/result/project/VR/external/glad/include/glad/glad.h
+-- Add C:/Users/lidan/Desktop/result/project/VR/external/glad/src
+-- C:/Users/lidan/Desktop/result/project/VR/external/glad/src/glad.cpp
+-- using windows external
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/lidan/Desktop/result/project/VR/cmake-build-debug

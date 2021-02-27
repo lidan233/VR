@@ -1,0 +1,12 @@
+C:/Users/lidan/Desktop/result/project/VR/cmake-build-debug/CMakeFiles/VR.dir
+C:/Users/lidan/Desktop/result/project/VR/cmake-build-debug/CMakeFiles/install/local.dir
+C:/Users/lidan/Desktop/result/project/VR/cmake-build-debug/CMakeFiles/install.dir
+C:/Users/lidan/Desktop/result/project/VR/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/lidan/Desktop/result/project/VR/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/lidan/Desktop/result/project/VR/cmake-build-debug/CMakeFiles/list_install_components.dir
+C:/Users/lidan/Desktop/result/project/VR/cmake-build-debug/external/imgui/CMakeFiles/list_install_components.dir
+C:/Users/lidan/Desktop/result/project/VR/cmake-build-debug/external/imgui/CMakeFiles/imgui.dir
+C:/Users/lidan/Desktop/result/project/VR/cmake-build-debug/external/imgui/CMakeFiles/install/local.dir
+C:/Users/lidan/Desktop/result/project/VR/cmake-build-debug/external/imgui/CMakeFiles/install.dir
+C:/Users/lidan/Desktop/result/project/VR/cmake-build-debug/external/imgui/CMakeFiles/edit_cache.dir
+C:/Users/lidan/Desktop/result/project/VR/cmake-build-debug/external/imgui/CMakeFiles/rebuild_cache.dir
