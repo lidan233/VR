@@ -94,16 +94,16 @@ void Sample2D::loadByEmpty(GLint w, GLint h)
 
 void Sample2D::bindToPipLine(GLint pipline)
 {
-    glActiveTexture(GL_Texture0+pipline) ;
+    glActiveTexture(GL_TEXTURE0+pipline) ;
     glBindTexture(_Target, _id) ;
 
     if(_WrapMode == GL_REPEAT)
     {
         glTexParameteri(_Target,GL_TEXTURE_WRAP_S, GL_REPEAT) ;
         glTexParameteri(_Target,GL_TEXTURE_WRAP_T, GL_REPEAT) ;
-        if(_Target==GL_TEXTURE_CUBE_MAP || _Target == GL_TEXTURE3D)
+        if(_Target==GL_TEXTURE_CUBE_MAP || _Target == GL_TEXTURE_3D)
         {
-            glTexParameteri(_Target,GL_TEXTURE_R,GL_CLAMP_TO_EDGE) ;
+            glTexParameteri(_Target,GL_TEXTURE_WRAP_R,GL_CLAMP_TO_EDGE) ;
         }
     } else {
         glTexParameteri(_Target, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);

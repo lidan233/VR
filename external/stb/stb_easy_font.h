@@ -107,7 +107,7 @@ void print_string(float x, float y, char *text, float r, float g, float b)
 #define INCLUDE_STB_EASY_FONT_H
 
 #include <stdlib.h>
-#include <math.h>
+#include <Lmath.h>
 
 static struct stb_easy_font_info_struct {
     unsigned char advance;

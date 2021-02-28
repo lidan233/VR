@@ -8,7 +8,7 @@
 #include <fstream>
 #include <vector>
 #include <cmath>
-#include <math.h>
+#include <Lmath.h>
 #include <complex>
 #include <iostream>
 #include <iomanip> // io manipulator
@@ -20,6 +20,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <type_traits>
+#include <assert.h>
 
 
 using namespace std ;
@@ -113,7 +114,7 @@ public:
     typedef T value_type ;
     inline T& operator[](const int i) ; // why is it inline?
     inline const T& operator[](const int i) const ;
-
+    T multiply(const Lvector<T>& other) ;
 
     T length_squared() ;
 
@@ -124,6 +125,18 @@ public:
     std::string toString() const;
     ~Lvector() ;
 };
+
+template<class T>
+T Lvector<T>::multiply(const Lvector<T>& other)
+{
+    T result = 0 ;
+    assert(this->size_vector == other.size_vector) ;
+    for(int i = 0 ; i < this->size_vector;i++)
+    {
+        result += this->data[i] * other[i] ;
+    }
+    return result ;
+}
 
 template<class T>
 std::string Lvector<T>::toString() const
@@ -280,12 +293,12 @@ public:
     Lvec3& operator/=(const T t) ;
     T length() const ;
     T length_square() const ;
-    inline static Lvec3 random()
+    static Lvec3 random()
     {
         return Lvec3<T>(T( rand()/RAND_MAX), T( rand()/RAND_MAX), T( rand()/RAND_MAX));
     }
 
-    inline static Lvec3 random(T begin, T end)
+    static Lvec3 random(T begin, T end)
     {
         return Lvec3<T>(T(T(rand()/RAND_MAX)*(end-begin)+begin),T(T(rand()/RAND_MAX)*(end-begin)+begin), T(T(rand()/RAND_MAX)*(end-begin)+begin));
     }
@@ -409,7 +422,7 @@ Lvec3<double> random_unit_vector() {
 
 Lvec3<double> random_in_unit_disk() {
     while (true) {
-        auto p = Lvec3<double>(double(rand())/RAND_MAX*2-1, double(rand())/RAND_MAX*2-1, 0);
+        auto p = Lvec3<double>(double(rand())/RAND_MAX*2-1, double(rand())/RAND_MAX*2-1, 0.0);
         if (p.length_squared() >= 1) {
 //            std::cout<<p<<std::endl;
             continue;
@@ -421,7 +434,7 @@ Lvec3<double> random_in_unit_disk() {
 
 Lvec3<double> random_in_unit_sphere() {
     while (true) {
-        auto p = Lvec3<double>::random(-1,1);
+        auto p = Lvec3<double>::random(-1.0,1.0);
         if (p.length_squared() >= 1) continue;
         return p;
     }
@@ -578,16 +591,16 @@ public:
     inline int ncols() const ;
     void resize(int newn, int newm) ;
     void assign(int newn, int newm, const T& a) ;
+
+
     Lvector<T> row(int index) ;
     Lvector<T> col(int index) ;
     void setRow(int index, const Lvector<T>& res) ;
     void setCol(int index, const Lvector<T>& res) ;
     void fill(float value) ;
     bool isAffine() const ;
-    void fromAxes(const Lvector<T>& xAxis, const Lvector<T>& yAxis) ;
-    inline void inverse() { *this = Lmatrix<T>::inverse(*this); }
+//    void fromAxes(const Lvector<T>& xAxis, const Lvector<T>& yAxis) ;
     inline void transpose() { *this = Lmatrix<T>::transpose(*this); }
-    float determinant() const;
 
     inline bool isZero() const {
         for(int i = 0; i < size_matrix_m; i++)
@@ -596,7 +609,7 @@ public:
                     return false ;
         return true ;
     } ;
-    inline bool setZero() const{
+    inline void setZero() const{
         for(int i = 0 ; i < size_matrix_m; i++)
             for(int j = 0 ; j < size_matrix_n; j++)
                 data[i][j] = 0.0 ;
@@ -610,7 +623,7 @@ public:
         return true ;
     } ;
 
-    inline bool setIdentity() const {
+    inline void setIdentity() const {
         for(int i = 0; i < size_matrix_m; i++)
             for(int j = 0 ; j < size_matrix_n ; j++)
                 if(i == j) data[i][j] = 1.0 ;
@@ -638,11 +651,9 @@ public:
     static void add(const Lmatrix<T>& left, const Lmatrix<T>& right, Lmatrix<T>& result) ;
     static Lmatrix<T> add(const Lmatrix<T>& left, const Lmatrix<T>& right) ;
 
-    static void inverse(const Lmatrix<T>& matrix, Lmatrix<T>& result) ;
-    static Lmatrix<T> inverse(const Lmatrix<T>& matrix) ;
 
     static void transpose(const Lmatrix<T>& matrix, Lmatrix<T>& result) ;
-    static Lmatrix<T> transpose(const Lmatrix<T>& matrix) ;
+    static Lmatrix<T> transpose(const Lmatrix<T>& other) ;
 
 
     friend bool operator==(const Lmatrix<T> &m1, const Lmatrix<T> &m2);
@@ -684,7 +695,7 @@ Lmatrix<T>::Lmatrix(int m, int n ): size_matrix_m(m), size_matrix_n(n) , data(m>
 {
     int i,nel=m*n;
     if (data) data[0] = nel>0 ? new T[nel] : NULL;
-    for (i=1;i<n;i++) data[i] = data[i-1] + m;
+    for (i=1;i<m;i++) data[i] = data[i-1] + n;
 }
 
 template<class T>
@@ -832,6 +843,281 @@ Lmatrix<T>::~Lmatrix()
     }
 }
 
+template <class T>
+Lvector<T> Lmatrix<T>::row(int index)
+{
+    Lvector<T> result(this->ncols()) ;
+    for(int i = 0 ; i < this->ncols();i++)
+    {
+        result[i] = data[index][i] ;
+    }
+    return result ;
+}
+
+template <class T>
+Lvector<T> Lmatrix<T>::col(int index)
+{
+    Lvector<T> result(this->mrows()) ;
+    for(int i = 0 ; i < this->mrows(); i++)
+    {
+        result[i] = data[i][index] ;
+    }
+
+    return result ;
+}
+
+template <class T>
+void Lmatrix<T>::setRow(int index, const Lvector<T>& res)
+{
+    assert(this->ncols() == res.size_vector) ;
+    for(int i = 0 ; i < this->ncols();i++)
+    {
+        data[index][i] = res[i] ;
+    }
+}
+
+template <class T>
+void Lmatrix<T>::setCol(int index, const Lvector<T>& res)
+{
+    assert(this->mrows() == res.size_vector) ;
+    for(int i = 0 ; i < this->mrows() ;i++)
+    {
+        data[i][index] = res[i] ;
+    }
+}
+
+template <class T>
+void Lmatrix<T>::fill(float value)
+{
+    int r = mrows() ;
+    int c = ncols() ;
+    for(int i = 0 ; i < mrows() ; i++)
+    {
+        for(int j = 0 ; j < ncols() ;j++ )
+        {
+            data[i][j] = value ;
+        }
+    }
+}
+
+template <class T>
+bool Lmatrix<T>::isAffine() const
+{
+    for( int i = 0 ; i < this->size_matrix_m ;i++)
+    {
+        T result = 0 ;
+        for(int j = 0 ; j < this->size_matrix_n ; j++)
+        {
+            result += data[i][j] ;
+        }
+        if((result-1.0)>DBL_EPSILON) return false ;
+    }
+    return true ;
+}
+
+/*
+template <class T>
+void Lmatrix<T>::fromAxes(const Lvector<T>& xAxis, const Lvector<T>& yAxis)
+{
+        //pass
+}
+*/
+
+
+template <class T>
+void Lmatrix<T>::multiply(const Lmatrix<T>& left, const Lmatrix<T>& right,  Lmatrix<T>& result)
+{
+    assert(left.ncols()==right.mrows() && result.mrows()==left.mrows() && result.ncols()==right.ncols()) ;
+    for(int i = 0 ; i < result.mrows(); i++)
+    {
+        for(int j = 0 ; j < result.ncols() ; j++)
+        {
+            result[i][j] = left.row(i).multiply( right.col(j)) ;
+        }
+    }
+}
+
+template <class T>
+void Lmatrix<T>::multiply(const Lvector<T>& left, const Lmatrix<T>& right, Lvector<T>& result)
+{
+    assert(left.size_vector == right.size_matrix_m && result.size_vector == right.size_matrix_n) ;
+    for(int i = 0 ; i < right.ncols() ; i++)
+    {
+        result[i] = left.multiply(right.col(i)) ;
+    }
+}
+
+template <class T>
+void Lmatrix<T>::multiply(const Lmatrix<T>& left, const Lvector<T>& right, Lvector<T>& result) \
+{
+    assert(right.size_vector == left.size_matrix_n && result.size_vector == left.size_matrix_m) ;
+    for(int i = 0 ; i < left.mrows() ;i++)
+    {
+        result[i] = left.row(i).multiply(right) ;
+    }
+}
+
+template <class T>
+void Lmatrix<T>::multiply(const Lmatrix<T>& left, const T& right, Lmatrix<T>& result)
+{
+    for(int i = 0 ; i < left.size_matrix_m;i++)
+    {
+        for(int j = 0 ; j < left.size_matrix_n ; j++)
+        {
+            result[i][j] *= right ;
+        }
+    }
+}
+
+template <class T>
+void Lmatrix<T>::multiply(const T& left, const Lmatrix<T>& right,  Lmatrix<T>& result)
+{
+    for(int i = 0 ; i < right.size_matrix_m;i++)
+    {
+        for(int j = 0 ; j < right.size_matrix_n ; j++)
+        {
+            result[i][j] *= left ;
+        }
+    }
+}
+
+template <class T>
+Lmatrix<T> Lmatrix<T>::multiply(const Lmatrix<T>& left, const Lmatrix<T>& right )
+{
+    assert(left.size_matrix_n == right.size_matrix_m) ;
+    Lmatrix<T> result(left.size_matrix_m, right.size_matrix_n) ;
+    multiply(left,right,result) ;
+    return result ;
+}
+
+template <class T>
+Lvector<T> Lmatrix<T>::multiply(const Lvector<T>& left, const Lmatrix<T>& right )
+{
+    assert(left.size_vector == right.size_matrix_m) ;
+    Lvector<T> result(right.size_matrix_n) ;
+    multiply(left,right,result) ;
+    return result ;
+}
+
+template <class T>
+Lvector<T> Lmatrix<T>::multiply(const Lmatrix<T>& left, const Lvector<T>& right )
+{
+    assert(left.size_matrix_n == right.size_vector) ;
+    Lvector<T> result(left.size_matrix_m) ;
+    multiply(left,right,result) ;
+    return result ;
+}
+
+template <class T>
+Lmatrix<T> Lmatrix<T>::multiply(const Lmatrix<T>& left, const T& right )
+{
+    Lmatrix<T>  result(left.size_matrix_m,left.size_matrix_n) ;
+    multiply(left,right,result) ;
+    return result ;
+}
+
+template <class T>
+Lmatrix<T> Lmatrix<T>::multiply(const T& left, const Lmatrix<T>& right )
+{
+    Lmatrix<T> result(right.size_matrix_m,right.size_matrix_n) ;
+    multiply(left, right,result) ;
+    return result ;
+}
+
+template <class T>
+ void Lmatrix<T>::substract(const Lmatrix<T>& left, const Lmatrix<T>& right, Lmatrix<T>& result)
+{
+    assert(left.mrows()==right.mrows() && left.ncols() == right.ncols()&&left.mrows()==result.mrows()&& left.ncols()==result.ncols()) ;
+    for(int i = 0 ; i < left.size_matrix_m ;i++)
+    {
+        for (int j = 0; j < left.size_matrix_n ; ++j) {
+            result[i][j] = left[i][j] - right[i][j] ;
+        }
+    }
+}
+
+template <class T>
+ Lmatrix<T> Lmatrix<T>::substract(const Lmatrix<T>& left, const Lmatrix<T>& right)
+{
+    Lmatrix<T> res(left.mrows(),left.ncols()) ;
+    substract(left,right,result) ;
+    return result ;
+}
+
+template <class T>
+void Lmatrix<T>::add(const Lmatrix<T>& left, const Lmatrix<T>& right, Lmatrix<T>& result)
+{
+    assert(left.mrows()==right.mrows() && left.ncols() == right.ncols()&&left.mrows()==result.mrows()&& left.ncols()==result.ncols()) ;
+    for(int i = 0 ; i < left.size_matrix_m ;i++)
+    {
+        for (int j = 0; j < left.size_matrix_n ; ++j) {
+            result[i][j] = left[i][j] + right[i][j] ;
+        }
+    }
+}
+
+template <class T>
+ Lmatrix<T> Lmatrix<T>::add(const Lmatrix<T>& left, const Lmatrix<T>& right)
+{
+    Lmatrix<T> res(left.mrows(),left.ncols()) ;
+    add(left,right,result) ;
+    return result ;
+}
+
+template <class T>
+ void Lmatrix<T>::transpose(const Lmatrix<T>& matrix, Lmatrix<T>& result)
+{
+    assert(matrix.size_matrix_m == result.size_matrix_n && matrix.size_matrix_n == result.size_matrix_m) ;
+
+    for(int i = 0 ; i < matrix.size_matrix_n ; i++)
+    {
+        for(int j = 0 ; j < matrix.size_matrix_m ; j++)
+        {
+            result[i][j] = matrix.data[j][i] ;
+        }
+    }
+}
+
+template <class T>
+ Lmatrix<T> Lmatrix<T>::transpose(const Lmatrix<T>& matrix)
+{
+    Lmatrix<T> res(matrix.size_matrix_n,matrix.size_matrix_m) ;
+    transpose(matrix,res);
+    return res ;
+}
+
+template <class T>
+ bool operator==(const Lmatrix<T> &m1, const Lmatrix<T> &m2)
+ {
+    if(!(m1.size_matrix_m == m2.size_matrix_m && m1.size_matrix_n == m2.size_matrix_n) ) return false;
+    for(int i = 0 ; i < m1.size_matrix_m ;i++)
+    {
+        for(int j = 0 ; j < m1.size_matrix_n ; j++)
+        {
+            if( m1[i][j] != m2[i][j]) return false ;
+        }
+    }
+    return true ;
+ }
+
+template <class T>
+ bool operator!=(const Lmatrix<T> &m1, const Lmatrix<T> &m2)
+ {
+    if(m1==m2) return true ;
+    return false ;
+ }
+
+template <class T>
+ Lvector<T> operator*(const Lmatrix<T> &mat2, const Lvector<T> &vec2)
+{
+    return Lmatrix<T>::multiply(mat2,vec2) ;
+}
+
+template <class T>
+ Lvector<T> operator*(const Lvector<T> &vec2, const Lmatrix<T> &mat2)
+{
+    return Lmatrix<T>::multiply(vec2,mat2) ;
+}
 
 
 template <class T>

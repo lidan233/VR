@@ -456,7 +456,7 @@ int main(int arg, char **argv)
    #endif
 
    #ifndef STBTT_cos
-   #include <math.h>
+   #include <Lmath.h>
    #define STBTT_cos(x)       cos(x)
    #define STBTT_acos(x)      acos(x)
    #endif

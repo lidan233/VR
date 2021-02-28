@@ -43,19 +43,19 @@ NULL=nul
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\lidan\Desktop\result\project\VR
+CMAKE_SOURCE_DIR = C:\Users\lidan\Desktop\result\VR
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -63,31 +63,31 @@ CMAKE_BINARY_DIR = C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
 # Special rule for the target install/local
 install\local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	echo >nul && "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	echo >nul && "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install\local
 
 # Special rule for the target install/local
 install\local\fast: preinstall\fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	echo >nul && "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	echo >nul && "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install\local\fast
 
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	echo >nul && "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+	echo >nul && "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install\fast: preinstall\fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	echo >nul && "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+	echo >nul && "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
 .PHONY : install\fast
 
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	echo >nul && "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	echo >nul && "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -98,7 +98,7 @@ edit_cache\fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	echo >nul && "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	echo >nul && "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -118,9 +118,9 @@ list_install_components\fast: list_install_components
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -173,6 +173,60 @@ imgui: cmake_check_build_system
 imgui\fast:
 	$(MAKE) $(MAKESILENT) -f external\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) external\imgui\CMakeFiles\imgui.dir\build
 .PHONY : imgui\fast
+
+geometry\Rectangle.obj: geometry\Rectangle.cpp.obj
+
+.PHONY : geometry\Rectangle.obj
+
+# target to build an object file
+geometry\Rectangle.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\geometry\Rectangle.cpp.obj
+.PHONY : geometry\Rectangle.cpp.obj
+
+geometry\Rectangle.i: geometry\Rectangle.cpp.i
+
+.PHONY : geometry\Rectangle.i
+
+# target to preprocess a source file
+geometry\Rectangle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\geometry\Rectangle.cpp.i
+.PHONY : geometry\Rectangle.cpp.i
+
+geometry\Rectangle.s: geometry\Rectangle.cpp.s
+
+.PHONY : geometry\Rectangle.s
+
+# target to generate assembly for a file
+geometry\Rectangle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\geometry\Rectangle.cpp.s
+.PHONY : geometry\Rectangle.cpp.s
+
+geometry\Size.obj: geometry\Size.cpp.obj
+
+.PHONY : geometry\Size.obj
+
+# target to build an object file
+geometry\Size.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\geometry\Size.cpp.obj
+.PHONY : geometry\Size.cpp.obj
+
+geometry\Size.i: geometry\Size.cpp.i
+
+.PHONY : geometry\Size.i
+
+# target to preprocess a source file
+geometry\Size.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\geometry\Size.cpp.i
+.PHONY : geometry\Size.cpp.i
+
+geometry\Size.s: geometry\Size.cpp.s
+
+.PHONY : geometry\Size.s
+
+# target to generate assembly for a file
+geometry\Size.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\geometry\Size.cpp.s
+.PHONY : geometry\Size.cpp.s
 
 geometry\Vertex.obj: geometry\Vertex.cpp.obj
 
@@ -228,6 +282,60 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\main.cpp.s
 .PHONY : main.cpp.s
 
+opengl\BufferObject.obj: opengl\BufferObject.cpp.obj
+
+.PHONY : opengl\BufferObject.obj
+
+# target to build an object file
+opengl\BufferObject.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\opengl\BufferObject.cpp.obj
+.PHONY : opengl\BufferObject.cpp.obj
+
+opengl\BufferObject.i: opengl\BufferObject.cpp.i
+
+.PHONY : opengl\BufferObject.i
+
+# target to preprocess a source file
+opengl\BufferObject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\opengl\BufferObject.cpp.i
+.PHONY : opengl\BufferObject.cpp.i
+
+opengl\BufferObject.s: opengl\BufferObject.cpp.s
+
+.PHONY : opengl\BufferObject.s
+
+# target to generate assembly for a file
+opengl\BufferObject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\opengl\BufferObject.cpp.s
+.PHONY : opengl\BufferObject.cpp.s
+
+opengl\FrameBuffer.obj: opengl\FrameBuffer.cpp.obj
+
+.PHONY : opengl\FrameBuffer.obj
+
+# target to build an object file
+opengl\FrameBuffer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\opengl\FrameBuffer.cpp.obj
+.PHONY : opengl\FrameBuffer.cpp.obj
+
+opengl\FrameBuffer.i: opengl\FrameBuffer.cpp.i
+
+.PHONY : opengl\FrameBuffer.i
+
+# target to preprocess a source file
+opengl\FrameBuffer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\opengl\FrameBuffer.cpp.i
+.PHONY : opengl\FrameBuffer.cpp.i
+
+opengl\FrameBuffer.s: opengl\FrameBuffer.cpp.s
+
+.PHONY : opengl\FrameBuffer.s
+
+# target to generate assembly for a file
+opengl\FrameBuffer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\opengl\FrameBuffer.cpp.s
+.PHONY : opengl\FrameBuffer.cpp.s
+
 opengl\Sample2D.obj: opengl\Sample2D.cpp.obj
 
 .PHONY : opengl\Sample2D.obj
@@ -254,6 +362,60 @@ opengl\Sample2D.s: opengl\Sample2D.cpp.s
 opengl\Sample2D.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\opengl\Sample2D.cpp.s
 .PHONY : opengl\Sample2D.cpp.s
+
+opengl\Shader.obj: opengl\Shader.cpp.obj
+
+.PHONY : opengl\Shader.obj
+
+# target to build an object file
+opengl\Shader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\opengl\Shader.cpp.obj
+.PHONY : opengl\Shader.cpp.obj
+
+opengl\Shader.i: opengl\Shader.cpp.i
+
+.PHONY : opengl\Shader.i
+
+# target to preprocess a source file
+opengl\Shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\opengl\Shader.cpp.i
+.PHONY : opengl\Shader.cpp.i
+
+opengl\Shader.s: opengl\Shader.cpp.s
+
+.PHONY : opengl\Shader.s
+
+# target to generate assembly for a file
+opengl\Shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\opengl\Shader.cpp.s
+.PHONY : opengl\Shader.cpp.s
+
+opengl\Window.obj: opengl\Window.cpp.obj
+
+.PHONY : opengl\Window.obj
+
+# target to build an object file
+opengl\Window.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\opengl\Window.cpp.obj
+.PHONY : opengl\Window.cpp.obj
+
+opengl\Window.i: opengl\Window.cpp.i
+
+.PHONY : opengl\Window.i
+
+# target to preprocess a source file
+opengl\Window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\opengl\Window.cpp.i
+.PHONY : opengl\Window.cpp.i
+
+opengl\Window.s: opengl\Window.cpp.s
+
+.PHONY : opengl\Window.s
+
+# target to generate assembly for a file
+opengl\Window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\opengl\Window.cpp.s
+.PHONY : opengl\Window.cpp.s
 
 render\Camera.obj: render\Camera.cpp.obj
 
@@ -282,6 +444,87 @@ render\Camera.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\render\Camera.cpp.s
 .PHONY : render\Camera.cpp.s
 
+render\EulerAngles.obj: render\EulerAngles.cpp.obj
+
+.PHONY : render\EulerAngles.obj
+
+# target to build an object file
+render\EulerAngles.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\render\EulerAngles.cpp.obj
+.PHONY : render\EulerAngles.cpp.obj
+
+render\EulerAngles.i: render\EulerAngles.cpp.i
+
+.PHONY : render\EulerAngles.i
+
+# target to preprocess a source file
+render\EulerAngles.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\render\EulerAngles.cpp.i
+.PHONY : render\EulerAngles.cpp.i
+
+render\EulerAngles.s: render\EulerAngles.cpp.s
+
+.PHONY : render\EulerAngles.s
+
+# target to generate assembly for a file
+render\EulerAngles.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\render\EulerAngles.cpp.s
+.PHONY : render\EulerAngles.cpp.s
+
+render\Quaternion.obj: render\Quaternion.cpp.obj
+
+.PHONY : render\Quaternion.obj
+
+# target to build an object file
+render\Quaternion.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\render\Quaternion.cpp.obj
+.PHONY : render\Quaternion.cpp.obj
+
+render\Quaternion.i: render\Quaternion.cpp.i
+
+.PHONY : render\Quaternion.i
+
+# target to preprocess a source file
+render\Quaternion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\render\Quaternion.cpp.i
+.PHONY : render\Quaternion.cpp.i
+
+render\Quaternion.s: render\Quaternion.cpp.s
+
+.PHONY : render\Quaternion.s
+
+# target to generate assembly for a file
+render\Quaternion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\render\Quaternion.cpp.s
+.PHONY : render\Quaternion.cpp.s
+
+render\Timer.obj: render\Timer.cpp.obj
+
+.PHONY : render\Timer.obj
+
+# target to build an object file
+render\Timer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\render\Timer.cpp.obj
+.PHONY : render\Timer.cpp.obj
+
+render\Timer.i: render\Timer.cpp.i
+
+.PHONY : render\Timer.i
+
+# target to preprocess a source file
+render\Timer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\render\Timer.cpp.i
+.PHONY : render\Timer.cpp.i
+
+render\Timer.s: render\Timer.cpp.s
+
+.PHONY : render\Timer.s
+
+# target to generate assembly for a file
+render\Timer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\render\Timer.cpp.s
+.PHONY : render\Timer.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -295,18 +538,45 @@ help:
 	@echo ... rebuild_cache
 	@echo ... VR
 	@echo ... imgui
+	@echo ... geometry/Rectangle.obj
+	@echo ... geometry/Rectangle.i
+	@echo ... geometry/Rectangle.s
+	@echo ... geometry/Size.obj
+	@echo ... geometry/Size.i
+	@echo ... geometry/Size.s
 	@echo ... geometry/Vertex.obj
 	@echo ... geometry/Vertex.i
 	@echo ... geometry/Vertex.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... opengl/BufferObject.obj
+	@echo ... opengl/BufferObject.i
+	@echo ... opengl/BufferObject.s
+	@echo ... opengl/FrameBuffer.obj
+	@echo ... opengl/FrameBuffer.i
+	@echo ... opengl/FrameBuffer.s
 	@echo ... opengl/Sample2D.obj
 	@echo ... opengl/Sample2D.i
 	@echo ... opengl/Sample2D.s
+	@echo ... opengl/Shader.obj
+	@echo ... opengl/Shader.i
+	@echo ... opengl/Shader.s
+	@echo ... opengl/Window.obj
+	@echo ... opengl/Window.i
+	@echo ... opengl/Window.s
 	@echo ... render/Camera.obj
 	@echo ... render/Camera.i
 	@echo ... render/Camera.s
+	@echo ... render/EulerAngles.obj
+	@echo ... render/EulerAngles.i
+	@echo ... render/EulerAngles.s
+	@echo ... render/Quaternion.obj
+	@echo ... render/Quaternion.i
+	@echo ... render/Quaternion.s
+	@echo ... render/Timer.obj
+	@echo ... render/Timer.i
+	@echo ... render/Timer.s
 .PHONY : help
 
 

@@ -38,19 +38,19 @@ NULL=nul
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\lidan\Desktop\result\project\VR
+CMAKE_SOURCE_DIR = C:\Users\lidan\Desktop\result\VR
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles\VR.dir\depend.make
@@ -61,102 +61,291 @@ include CMakeFiles\VR.dir\progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles\VR.dir\flags.make
 
+CMakeFiles\VR.dir\opengl\BufferObject.cpp.obj: CMakeFiles\VR.dir\flags.make
+CMakeFiles\VR.dir\opengl\BufferObject.cpp.obj: ..\opengl\BufferObject.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/VR.dir/opengl/BufferObject.cpp.obj"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\VR.dir\opengl\BufferObject.cpp.obj /FdCMakeFiles\VR.dir\ /FS -c C:\Users\lidan\Desktop\result\VR\opengl\BufferObject.cpp
+<<
+
+CMakeFiles\VR.dir\opengl\BufferObject.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VR.dir/opengl/BufferObject.cpp.i"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe > CMakeFiles\VR.dir\opengl\BufferObject.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\VR\opengl\BufferObject.cpp
+<<
+
+CMakeFiles\VR.dir\opengl\BufferObject.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VR.dir/opengl/BufferObject.cpp.s"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\opengl\BufferObject.cpp.s /c C:\Users\lidan\Desktop\result\VR\opengl\BufferObject.cpp
+<<
+
+CMakeFiles\VR.dir\opengl\FrameBuffer.cpp.obj: CMakeFiles\VR.dir\flags.make
+CMakeFiles\VR.dir\opengl\FrameBuffer.cpp.obj: ..\opengl\FrameBuffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/VR.dir/opengl/FrameBuffer.cpp.obj"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\VR.dir\opengl\FrameBuffer.cpp.obj /FdCMakeFiles\VR.dir\ /FS -c C:\Users\lidan\Desktop\result\VR\opengl\FrameBuffer.cpp
+<<
+
+CMakeFiles\VR.dir\opengl\FrameBuffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VR.dir/opengl/FrameBuffer.cpp.i"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe > CMakeFiles\VR.dir\opengl\FrameBuffer.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\VR\opengl\FrameBuffer.cpp
+<<
+
+CMakeFiles\VR.dir\opengl\FrameBuffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VR.dir/opengl/FrameBuffer.cpp.s"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\opengl\FrameBuffer.cpp.s /c C:\Users\lidan\Desktop\result\VR\opengl\FrameBuffer.cpp
+<<
+
 CMakeFiles\VR.dir\opengl\Sample2D.cpp.obj: CMakeFiles\VR.dir\flags.make
 CMakeFiles\VR.dir\opengl\Sample2D.cpp.obj: ..\opengl\Sample2D.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/VR.dir/opengl/Sample2D.cpp.obj"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\VR.dir\opengl\Sample2D.cpp.obj /FdCMakeFiles\VR.dir\ /FS -c C:\Users\lidan\Desktop\result\project\VR\opengl\Sample2D.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/VR.dir/opengl/Sample2D.cpp.obj"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\VR.dir\opengl\Sample2D.cpp.obj /FdCMakeFiles\VR.dir\ /FS -c C:\Users\lidan\Desktop\result\VR\opengl\Sample2D.cpp
 <<
 
 CMakeFiles\VR.dir\opengl\Sample2D.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VR.dir/opengl/Sample2D.cpp.i"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe > CMakeFiles\VR.dir\opengl\Sample2D.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\project\VR\opengl\Sample2D.cpp
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe > CMakeFiles\VR.dir\opengl\Sample2D.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\VR\opengl\Sample2D.cpp
 <<
 
 CMakeFiles\VR.dir\opengl\Sample2D.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VR.dir/opengl/Sample2D.cpp.s"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\opengl\Sample2D.cpp.s /c C:\Users\lidan\Desktop\result\project\VR\opengl\Sample2D.cpp
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\opengl\Sample2D.cpp.s /c C:\Users\lidan\Desktop\result\VR\opengl\Sample2D.cpp
+<<
+
+CMakeFiles\VR.dir\opengl\Shader.cpp.obj: CMakeFiles\VR.dir\flags.make
+CMakeFiles\VR.dir\opengl\Shader.cpp.obj: ..\opengl\Shader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/VR.dir/opengl/Shader.cpp.obj"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\VR.dir\opengl\Shader.cpp.obj /FdCMakeFiles\VR.dir\ /FS -c C:\Users\lidan\Desktop\result\VR\opengl\Shader.cpp
+<<
+
+CMakeFiles\VR.dir\opengl\Shader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VR.dir/opengl/Shader.cpp.i"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe > CMakeFiles\VR.dir\opengl\Shader.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\VR\opengl\Shader.cpp
+<<
+
+CMakeFiles\VR.dir\opengl\Shader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VR.dir/opengl/Shader.cpp.s"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\opengl\Shader.cpp.s /c C:\Users\lidan\Desktop\result\VR\opengl\Shader.cpp
+<<
+
+CMakeFiles\VR.dir\opengl\Window.cpp.obj: CMakeFiles\VR.dir\flags.make
+CMakeFiles\VR.dir\opengl\Window.cpp.obj: ..\opengl\Window.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/VR.dir/opengl/Window.cpp.obj"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\VR.dir\opengl\Window.cpp.obj /FdCMakeFiles\VR.dir\ /FS -c C:\Users\lidan\Desktop\result\VR\opengl\Window.cpp
+<<
+
+CMakeFiles\VR.dir\opengl\Window.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VR.dir/opengl/Window.cpp.i"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe > CMakeFiles\VR.dir\opengl\Window.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\VR\opengl\Window.cpp
+<<
+
+CMakeFiles\VR.dir\opengl\Window.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VR.dir/opengl/Window.cpp.s"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\opengl\Window.cpp.s /c C:\Users\lidan\Desktop\result\VR\opengl\Window.cpp
 <<
 
 CMakeFiles\VR.dir\main.cpp.obj: CMakeFiles\VR.dir\flags.make
 CMakeFiles\VR.dir\main.cpp.obj: ..\main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/VR.dir/main.cpp.obj"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\VR.dir\main.cpp.obj /FdCMakeFiles\VR.dir\ /FS -c C:\Users\lidan\Desktop\result\project\VR\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/VR.dir/main.cpp.obj"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\VR.dir\main.cpp.obj /FdCMakeFiles\VR.dir\ /FS -c C:\Users\lidan\Desktop\result\VR\main.cpp
 <<
 
 CMakeFiles\VR.dir\main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VR.dir/main.cpp.i"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe > CMakeFiles\VR.dir\main.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\project\VR\main.cpp
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe > CMakeFiles\VR.dir\main.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\VR\main.cpp
 <<
 
 CMakeFiles\VR.dir\main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VR.dir/main.cpp.s"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\main.cpp.s /c C:\Users\lidan\Desktop\result\project\VR\main.cpp
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\main.cpp.s /c C:\Users\lidan\Desktop\result\VR\main.cpp
 <<
 
 CMakeFiles\VR.dir\render\Camera.cpp.obj: CMakeFiles\VR.dir\flags.make
 CMakeFiles\VR.dir\render\Camera.cpp.obj: ..\render\Camera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/VR.dir/render/Camera.cpp.obj"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\VR.dir\render\Camera.cpp.obj /FdCMakeFiles\VR.dir\ /FS -c C:\Users\lidan\Desktop\result\project\VR\render\Camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/VR.dir/render/Camera.cpp.obj"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\VR.dir\render\Camera.cpp.obj /FdCMakeFiles\VR.dir\ /FS -c C:\Users\lidan\Desktop\result\VR\render\Camera.cpp
 <<
 
 CMakeFiles\VR.dir\render\Camera.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VR.dir/render/Camera.cpp.i"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe > CMakeFiles\VR.dir\render\Camera.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\project\VR\render\Camera.cpp
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe > CMakeFiles\VR.dir\render\Camera.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\VR\render\Camera.cpp
 <<
 
 CMakeFiles\VR.dir\render\Camera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VR.dir/render/Camera.cpp.s"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\render\Camera.cpp.s /c C:\Users\lidan\Desktop\result\project\VR\render\Camera.cpp
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\render\Camera.cpp.s /c C:\Users\lidan\Desktop\result\VR\render\Camera.cpp
 <<
 
 CMakeFiles\VR.dir\geometry\Vertex.cpp.obj: CMakeFiles\VR.dir\flags.make
 CMakeFiles\VR.dir\geometry\Vertex.cpp.obj: ..\geometry\Vertex.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/VR.dir/geometry/Vertex.cpp.obj"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\VR.dir\geometry\Vertex.cpp.obj /FdCMakeFiles\VR.dir\ /FS -c C:\Users\lidan\Desktop\result\project\VR\geometry\Vertex.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/VR.dir/geometry/Vertex.cpp.obj"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\VR.dir\geometry\Vertex.cpp.obj /FdCMakeFiles\VR.dir\ /FS -c C:\Users\lidan\Desktop\result\VR\geometry\Vertex.cpp
 <<
 
 CMakeFiles\VR.dir\geometry\Vertex.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VR.dir/geometry/Vertex.cpp.i"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe > CMakeFiles\VR.dir\geometry\Vertex.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\project\VR\geometry\Vertex.cpp
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe > CMakeFiles\VR.dir\geometry\Vertex.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\VR\geometry\Vertex.cpp
 <<
 
 CMakeFiles\VR.dir\geometry\Vertex.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VR.dir/geometry/Vertex.cpp.s"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\geometry\Vertex.cpp.s /c C:\Users\lidan\Desktop\result\project\VR\geometry\Vertex.cpp
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\geometry\Vertex.cpp.s /c C:\Users\lidan\Desktop\result\VR\geometry\Vertex.cpp
+<<
+
+CMakeFiles\VR.dir\geometry\Size.cpp.obj: CMakeFiles\VR.dir\flags.make
+CMakeFiles\VR.dir\geometry\Size.cpp.obj: ..\geometry\Size.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/VR.dir/geometry/Size.cpp.obj"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\VR.dir\geometry\Size.cpp.obj /FdCMakeFiles\VR.dir\ /FS -c C:\Users\lidan\Desktop\result\VR\geometry\Size.cpp
+<<
+
+CMakeFiles\VR.dir\geometry\Size.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VR.dir/geometry/Size.cpp.i"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe > CMakeFiles\VR.dir\geometry\Size.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\VR\geometry\Size.cpp
+<<
+
+CMakeFiles\VR.dir\geometry\Size.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VR.dir/geometry/Size.cpp.s"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\geometry\Size.cpp.s /c C:\Users\lidan\Desktop\result\VR\geometry\Size.cpp
+<<
+
+CMakeFiles\VR.dir\geometry\Rectangle.cpp.obj: CMakeFiles\VR.dir\flags.make
+CMakeFiles\VR.dir\geometry\Rectangle.cpp.obj: ..\geometry\Rectangle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/VR.dir/geometry/Rectangle.cpp.obj"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\VR.dir\geometry\Rectangle.cpp.obj /FdCMakeFiles\VR.dir\ /FS -c C:\Users\lidan\Desktop\result\VR\geometry\Rectangle.cpp
+<<
+
+CMakeFiles\VR.dir\geometry\Rectangle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VR.dir/geometry/Rectangle.cpp.i"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe > CMakeFiles\VR.dir\geometry\Rectangle.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\VR\geometry\Rectangle.cpp
+<<
+
+CMakeFiles\VR.dir\geometry\Rectangle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VR.dir/geometry/Rectangle.cpp.s"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\geometry\Rectangle.cpp.s /c C:\Users\lidan\Desktop\result\VR\geometry\Rectangle.cpp
+<<
+
+CMakeFiles\VR.dir\render\EulerAngles.cpp.obj: CMakeFiles\VR.dir\flags.make
+CMakeFiles\VR.dir\render\EulerAngles.cpp.obj: ..\render\EulerAngles.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/VR.dir/render/EulerAngles.cpp.obj"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\VR.dir\render\EulerAngles.cpp.obj /FdCMakeFiles\VR.dir\ /FS -c C:\Users\lidan\Desktop\result\VR\render\EulerAngles.cpp
+<<
+
+CMakeFiles\VR.dir\render\EulerAngles.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VR.dir/render/EulerAngles.cpp.i"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe > CMakeFiles\VR.dir\render\EulerAngles.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\VR\render\EulerAngles.cpp
+<<
+
+CMakeFiles\VR.dir\render\EulerAngles.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VR.dir/render/EulerAngles.cpp.s"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\render\EulerAngles.cpp.s /c C:\Users\lidan\Desktop\result\VR\render\EulerAngles.cpp
+<<
+
+CMakeFiles\VR.dir\render\Quaternion.cpp.obj: CMakeFiles\VR.dir\flags.make
+CMakeFiles\VR.dir\render\Quaternion.cpp.obj: ..\render\Quaternion.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/VR.dir/render/Quaternion.cpp.obj"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\VR.dir\render\Quaternion.cpp.obj /FdCMakeFiles\VR.dir\ /FS -c C:\Users\lidan\Desktop\result\VR\render\Quaternion.cpp
+<<
+
+CMakeFiles\VR.dir\render\Quaternion.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VR.dir/render/Quaternion.cpp.i"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe > CMakeFiles\VR.dir\render\Quaternion.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\VR\render\Quaternion.cpp
+<<
+
+CMakeFiles\VR.dir\render\Quaternion.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VR.dir/render/Quaternion.cpp.s"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\render\Quaternion.cpp.s /c C:\Users\lidan\Desktop\result\VR\render\Quaternion.cpp
+<<
+
+CMakeFiles\VR.dir\render\Timer.cpp.obj: CMakeFiles\VR.dir\flags.make
+CMakeFiles\VR.dir\render\Timer.cpp.obj: ..\render\Timer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/VR.dir/render/Timer.cpp.obj"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\VR.dir\render\Timer.cpp.obj /FdCMakeFiles\VR.dir\ /FS -c C:\Users\lidan\Desktop\result\VR\render\Timer.cpp
+<<
+
+CMakeFiles\VR.dir\render\Timer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VR.dir/render/Timer.cpp.i"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe > CMakeFiles\VR.dir\render\Timer.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\VR\render\Timer.cpp
+<<
+
+CMakeFiles\VR.dir\render\Timer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VR.dir/render/Timer.cpp.s"
+	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\render\Timer.cpp.s /c C:\Users\lidan\Desktop\result\VR\render\Timer.cpp
 <<
 
 # Object files for target VR
 VR_OBJECTS = \
+"CMakeFiles\VR.dir\opengl\BufferObject.cpp.obj" \
+"CMakeFiles\VR.dir\opengl\FrameBuffer.cpp.obj" \
 "CMakeFiles\VR.dir\opengl\Sample2D.cpp.obj" \
+"CMakeFiles\VR.dir\opengl\Shader.cpp.obj" \
+"CMakeFiles\VR.dir\opengl\Window.cpp.obj" \
 "CMakeFiles\VR.dir\main.cpp.obj" \
 "CMakeFiles\VR.dir\render\Camera.cpp.obj" \
-"CMakeFiles\VR.dir\geometry\Vertex.cpp.obj"
+"CMakeFiles\VR.dir\geometry\Vertex.cpp.obj" \
+"CMakeFiles\VR.dir\geometry\Size.cpp.obj" \
+"CMakeFiles\VR.dir\geometry\Rectangle.cpp.obj" \
+"CMakeFiles\VR.dir\render\EulerAngles.cpp.obj" \
+"CMakeFiles\VR.dir\render\Quaternion.cpp.obj" \
+"CMakeFiles\VR.dir\render\Timer.cpp.obj"
 
 # External object files for target VR
 VR_EXTERNAL_OBJECTS =
 
+VR.exe: CMakeFiles\VR.dir\opengl\BufferObject.cpp.obj
+VR.exe: CMakeFiles\VR.dir\opengl\FrameBuffer.cpp.obj
 VR.exe: CMakeFiles\VR.dir\opengl\Sample2D.cpp.obj
+VR.exe: CMakeFiles\VR.dir\opengl\Shader.cpp.obj
+VR.exe: CMakeFiles\VR.dir\opengl\Window.cpp.obj
 VR.exe: CMakeFiles\VR.dir\main.cpp.obj
 VR.exe: CMakeFiles\VR.dir\render\Camera.cpp.obj
 VR.exe: CMakeFiles\VR.dir\geometry\Vertex.cpp.obj
+VR.exe: CMakeFiles\VR.dir\geometry\Size.cpp.obj
+VR.exe: CMakeFiles\VR.dir\geometry\Rectangle.cpp.obj
+VR.exe: CMakeFiles\VR.dir\render\EulerAngles.cpp.obj
+VR.exe: CMakeFiles\VR.dir\render\Quaternion.cpp.obj
+VR.exe: CMakeFiles\VR.dir\render\Timer.cpp.obj
 VR.exe: CMakeFiles\VR.dir\build.make
 VR.exe: external\imgui\imgui.lib
 VR.exe: CMakeFiles\VR.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable VR.exe"
-	"D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\VR.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\VR.dir\objects1.rsp @<<
- /out:VR.exe /implib:VR.lib /pdb:C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\VR.pdb /version:0.0  /machine:x64 /debug /INCREMENTAL /subsystem:console   -LIBPATH:C:\Users\lidan\Desktop\result\project\VR\external\glfw\lib-vc2019  -LIBPATH:C:\Users\lidan\Desktop\result\project\VR\external\SDL\lib-vc2019\lib\x64  external\imgui\imgui.lib glfw3.lib SDL2.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable VR.exe"
+	"F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\VR.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\VR.dir\objects1.rsp @<<
+ /out:VR.exe /implib:VR.lib /pdb:C:\Users\lidan\Desktop\result\VR\cmake-build-debug\VR.pdb /version:0.0  /machine:x64 /debug /INCREMENTAL /subsystem:console   -LIBPATH:C:\Users\lidan\Desktop\result\VR\external\glfw\lib-vc2019  -LIBPATH:C:\Users\lidan\Desktop\result\VR\external\SDL\lib-vc2019\lib\x64  external\imgui\imgui.lib glfw3.lib SDL2.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<
 
 # Rule to build all files generated by this target.
@@ -169,6 +358,6 @@ CMakeFiles\VR.dir\clean:
 .PHONY : CMakeFiles\VR.dir\clean
 
 CMakeFiles\VR.dir\depend:
-	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" C:\Users\lidan\Desktop\result\project\VR C:\Users\lidan\Desktop\result\project\VR C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles\VR.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" C:\Users\lidan\Desktop\result\VR C:\Users\lidan\Desktop\result\VR C:\Users\lidan\Desktop\result\VR\cmake-build-debug C:\Users\lidan\Desktop\result\VR\cmake-build-debug C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles\VR.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles\VR.dir\depend
 

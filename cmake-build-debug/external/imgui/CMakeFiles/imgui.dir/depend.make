@@ -20,17 +20,20 @@ external\imgui\CMakeFiles\imgui.dir\examples\imgui_impl_opengl3.cpp.obj: ..\exte
 external\imgui\CMakeFiles\imgui.dir\examples\imgui_impl_opengl3.cpp.obj: ..\external\imgui\examples\imgui_impl_opengl3.h
 
 external\imgui\CMakeFiles\imgui.dir\imgui.cpp.obj: ..\external\stb\stb_sprintf.h
+external\imgui\CMakeFiles\imgui.dir\imgui.cpp.obj: ..\util\Lmath.h
 external\imgui\CMakeFiles\imgui.dir\imgui.cpp.obj: ..\external\imgui\imconfig.h
 external\imgui\CMakeFiles\imgui.dir\imgui.cpp.obj: ..\external\imgui\imgui.cpp
 external\imgui\CMakeFiles\imgui.dir\imgui.cpp.obj: ..\external\imgui\imgui.h
 external\imgui\CMakeFiles\imgui.dir\imgui.cpp.obj: ..\external\imgui\imgui_internal.h
 external\imgui\CMakeFiles\imgui.dir\imgui.cpp.obj: ..\external\imgui\imstb_textedit.h
 
+external\imgui\CMakeFiles\imgui.dir\imgui_demo.cpp.obj: ..\util\Lmath.h
 external\imgui\CMakeFiles\imgui.dir\imgui_demo.cpp.obj: ..\external\imgui\imconfig.h
 external\imgui\CMakeFiles\imgui.dir\imgui_demo.cpp.obj: ..\external\imgui\imgui.h
 external\imgui\CMakeFiles\imgui.dir\imgui_demo.cpp.obj: ..\external\imgui\imgui_demo.cpp
 
 external\imgui\CMakeFiles\imgui.dir\imgui_draw.cpp.obj: ..\external\stb\stb_truetype.h
+external\imgui\CMakeFiles\imgui.dir\imgui_draw.cpp.obj: ..\util\Lmath.h
 external\imgui\CMakeFiles\imgui.dir\imgui_draw.cpp.obj: ..\external\imgui\imconfig.h
 external\imgui\CMakeFiles\imgui.dir\imgui_draw.cpp.obj: ..\external\imgui\imgui.h
 external\imgui\CMakeFiles\imgui.dir\imgui_draw.cpp.obj: ..\external\imgui\imgui_draw.cpp
@@ -39,6 +42,7 @@ external\imgui\CMakeFiles\imgui.dir\imgui_draw.cpp.obj: ..\external\imgui\imstb_
 external\imgui\CMakeFiles\imgui.dir\imgui_draw.cpp.obj: ..\external\imgui\imstb_textedit.h
 external\imgui\CMakeFiles\imgui.dir\imgui_draw.cpp.obj: ..\external\imgui\imstb_truetype.h
 
+external\imgui\CMakeFiles\imgui.dir\imgui_widgets.cpp.obj: ..\util\Lmath.h
 external\imgui\CMakeFiles\imgui.dir\imgui_widgets.cpp.obj: ..\external\imgui\imconfig.h
 external\imgui\CMakeFiles\imgui.dir\imgui_widgets.cpp.obj: ..\external\imgui\imgui.h
 external\imgui\CMakeFiles\imgui.dir\imgui_widgets.cpp.obj: ..\external\imgui\imgui_internal.h

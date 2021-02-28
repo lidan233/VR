@@ -4,50 +4,52 @@
 
 #ifndef VR_VERTEX_H
 #define VR_VERTEX_H
+#include "Lmath.h"
 
-
+template <class T>
 class Vertex {
 private:
-    float _x, _y ;
+    T _x, _y ;
 public:
     inline Vertex(): _x(0), _y(0)
     {}
 
-    inline Vertex(int x, int y)
+    inline Vertex(T x, T y)
             : _x(x), _y(y)
     {}
 
-    inline Vertex(const Vertex &point)
+    inline Vertex(const Vertex<T> &point)
             : _x(point._x), _y(point._y)
     {}
 
     ~Vertex()
     {}
 
-    inline int x() const { return _x; }
-    inline int y() const { return _y; }
+    inline T x() const { return _x; }
+    inline T y() const { return _y; }
 
-    inline void setX(int x) { _x = x; }
-    inline void setY(int y) { _y = y; }
-    inline void translate(int dx, int dy) { _x += dx; _y += dy; }
+    inline void setX(T x) { _x = x; }
+    inline void setY(T y) { _y = y; }
+    inline void translate(T dx, T dy) { _x += dx; _y += dy; }
 
-    int dotProduct(const Vertex &p1, const Vertex &p2);
-    int manhattanLength() const;
+    float dotProduct(const Vertex<T> &p1, const Vertex<T> &p2);
+    float manhattanLength() const;
 
 
-    Vertex &operator=(const Vertex &point);
-    Vertex &operator+=(const Vertex &point);
-    Vertex &operator-=(const Vertex &point);
-    Vertex &operator*=(int factor);
-    Vertex &operator*=(double factor);
+    Vertex<T> &operator=(const Vertex<T> &point);
+    Vertex<T> &operator+=(const Vertex<T> &point);
+    Vertex<T> &operator-=(const Vertex<T> &point);
+    Vertex<T> &operator*=(T factor);
+    Vertex<T> &operator*=(double factor);
+    Vertex<T> &operator/=(T factor);
 
-    friend bool operator==(const Vertex &p1, const Vertex &p2);
-    friend bool operator!=(const Vertex &p1, const Vertex &p2);
+    friend bool operator==(const Vertex<T> &p1, const Vertex<T> &p2);
+    friend bool operator!=(const Vertex<T> &p1, const Vertex<T> &p2);
 
-    friend Vertex operator+(const Vertex &p1, const Vertex &p2);
-    friend Vertex operator-(const Vertex &p1, const Vertex &p2);
-    friend Vertex operator*(int factor, const Vertex &point);
-    friend Vertex operator*(const Vertex &point, int factor);
+    friend Vertex<T> operator+(const Vertex<T> &p1, const Vertex<T> &p2);
+    friend Vertex<T> operator-(const Vertex<T> &p1, const Vertex<T> &p2);
+    friend Vertex<T> operator*(T factor, const Vertex<T> &point);
+    friend Vertex<T> operator*(const Vertex<T> &point, T factor);
 
 
 };
