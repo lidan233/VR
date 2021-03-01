@@ -1,1 +1,2 @@
 ./cmake-build-debug
+git remote add origin git@github.com:lidan233/RayTracer.git

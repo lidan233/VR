@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/VR.dir/opengl/FrameBuffer.cpp.obj"
   "CMakeFiles/VR.dir/opengl/Sample2D.cpp.obj"
   "CMakeFiles/VR.dir/opengl/Shader.cpp.obj"
+  "CMakeFiles/VR.dir/opengl/ShaderProgram.cpp.obj"
   "CMakeFiles/VR.dir/opengl/Window.cpp.obj"
   "CMakeFiles/VR.dir/render/Camera.cpp.obj"
   "CMakeFiles/VR.dir/render/EulerAngles.cpp.obj"

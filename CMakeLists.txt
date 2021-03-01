@@ -47,7 +47,7 @@ add_executable(VR
         ${utildir}
         ${shadertoydir}
         ${opengldir}
-        main.cpp opengl/Sample2D.cpp opengl/Sample2D.h util/util.h render/Camera.cpp render/Camera.h geometry/Vertex.cpp geometry/Vertex.h util/Lmath.h util/Matrix.h geometry/Size.cpp geometry/Size.h geometry/Rectangle.cpp geometry/Rectangle.h render/EulerAngles.cpp render/EulerAngles.h render/Quaternion.cpp render/Quaternion.h render/Timer.cpp render/Timer.h util/FileReader.h opengl/Window.cpp opengl/Window.h opengl/Shader.cpp opengl/Shader.h opengl/BufferObject.cpp opengl/BufferObject.h opengl/FrameBuffer.cpp opengl/FrameBuffer.h)
+        main.cpp opengl/Sample2D.cpp opengl/Sample2D.h util/util.h render/Camera.cpp render/Camera.h geometry/Vertex.cpp geometry/Vertex.h util/Lmath.h util/Matrix.h geometry/Size.cpp geometry/Size.h geometry/Rectangle.cpp geometry/Rectangle.h render/EulerAngles.cpp render/EulerAngles.h render/Quaternion.cpp render/Quaternion.h render/Timer.cpp render/Timer.h util/FileReader.h opengl/Window.cpp opengl/Window.h opengl/Shader.cpp opengl/Shader.h opengl/BufferObject.cpp opengl/BufferObject.h opengl/FrameBuffer.cpp opengl/FrameBuffer.h opengl/ShaderProgram.cpp opengl/ShaderProgram.h util/Log.h)
 
 
 
