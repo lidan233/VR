@@ -38,19 +38,19 @@ NULL=nul
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\lidan\Desktop\result\VR
+CMAKE_SOURCE_DIR = C:\Users\lidan\Desktop\result\project\VR
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\lidan\Desktop\result\VR\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include external\imgui\CMakeFiles\imgui.dir\depend.make
@@ -63,178 +63,178 @@ include external\imgui\CMakeFiles\imgui.dir\flags.make
 
 external\imgui\CMakeFiles\imgui.dir\imgui.cpp.obj: external\imgui\CMakeFiles\imgui.dir\flags.make
 external\imgui\CMakeFiles\imgui.dir\imgui.cpp.obj: ..\external\imgui\imgui.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object external/imgui/CMakeFiles/imgui.dir/imgui.cpp.obj"
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
-	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\imgui.dir\imgui.cpp.obj /FdCMakeFiles\imgui.dir\imgui.pdb /FS -c C:\Users\lidan\Desktop\result\VR\external\imgui\imgui.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object external/imgui/CMakeFiles/imgui.dir/imgui.cpp.obj"
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\imgui.dir\imgui.cpp.obj /FdCMakeFiles\imgui.dir\imgui.pdb /FS -c C:\Users\lidan\Desktop\result\project\VR\external\imgui\imgui.cpp
 <<
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
 
 external\imgui\CMakeFiles\imgui.dir\imgui.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/imgui.dir/imgui.cpp.i"
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
-	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe > CMakeFiles\imgui.dir\imgui.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\VR\external\imgui\imgui.cpp
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe > CMakeFiles\imgui.dir\imgui.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\project\VR\external\imgui\imgui.cpp
 <<
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
 
 external\imgui\CMakeFiles\imgui.dir\imgui.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/imgui.dir/imgui.cpp.s"
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
-	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\imgui.dir\imgui.cpp.s /c C:\Users\lidan\Desktop\result\VR\external\imgui\imgui.cpp
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\imgui.dir\imgui.cpp.s /c C:\Users\lidan\Desktop\result\project\VR\external\imgui\imgui.cpp
 <<
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
 
 external\imgui\CMakeFiles\imgui.dir\imgui_demo.cpp.obj: external\imgui\CMakeFiles\imgui.dir\flags.make
 external\imgui\CMakeFiles\imgui.dir\imgui_demo.cpp.obj: ..\external\imgui\imgui_demo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object external/imgui/CMakeFiles/imgui.dir/imgui_demo.cpp.obj"
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
-	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\imgui.dir\imgui_demo.cpp.obj /FdCMakeFiles\imgui.dir\imgui.pdb /FS -c C:\Users\lidan\Desktop\result\VR\external\imgui\imgui_demo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object external/imgui/CMakeFiles/imgui.dir/imgui_demo.cpp.obj"
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\imgui.dir\imgui_demo.cpp.obj /FdCMakeFiles\imgui.dir\imgui.pdb /FS -c C:\Users\lidan\Desktop\result\project\VR\external\imgui\imgui_demo.cpp
 <<
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
 
 external\imgui\CMakeFiles\imgui.dir\imgui_demo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/imgui.dir/imgui_demo.cpp.i"
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
-	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe > CMakeFiles\imgui.dir\imgui_demo.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\VR\external\imgui\imgui_demo.cpp
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe > CMakeFiles\imgui.dir\imgui_demo.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\project\VR\external\imgui\imgui_demo.cpp
 <<
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
 
 external\imgui\CMakeFiles\imgui.dir\imgui_demo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/imgui.dir/imgui_demo.cpp.s"
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
-	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\imgui.dir\imgui_demo.cpp.s /c C:\Users\lidan\Desktop\result\VR\external\imgui\imgui_demo.cpp
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\imgui.dir\imgui_demo.cpp.s /c C:\Users\lidan\Desktop\result\project\VR\external\imgui\imgui_demo.cpp
 <<
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
 
 external\imgui\CMakeFiles\imgui.dir\imgui_draw.cpp.obj: external\imgui\CMakeFiles\imgui.dir\flags.make
 external\imgui\CMakeFiles\imgui.dir\imgui_draw.cpp.obj: ..\external\imgui\imgui_draw.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object external/imgui/CMakeFiles/imgui.dir/imgui_draw.cpp.obj"
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
-	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\imgui.dir\imgui_draw.cpp.obj /FdCMakeFiles\imgui.dir\imgui.pdb /FS -c C:\Users\lidan\Desktop\result\VR\external\imgui\imgui_draw.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object external/imgui/CMakeFiles/imgui.dir/imgui_draw.cpp.obj"
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\imgui.dir\imgui_draw.cpp.obj /FdCMakeFiles\imgui.dir\imgui.pdb /FS -c C:\Users\lidan\Desktop\result\project\VR\external\imgui\imgui_draw.cpp
 <<
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
 
 external\imgui\CMakeFiles\imgui.dir\imgui_draw.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/imgui.dir/imgui_draw.cpp.i"
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
-	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe > CMakeFiles\imgui.dir\imgui_draw.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\VR\external\imgui\imgui_draw.cpp
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe > CMakeFiles\imgui.dir\imgui_draw.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\project\VR\external\imgui\imgui_draw.cpp
 <<
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
 
 external\imgui\CMakeFiles\imgui.dir\imgui_draw.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/imgui.dir/imgui_draw.cpp.s"
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
-	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\imgui.dir\imgui_draw.cpp.s /c C:\Users\lidan\Desktop\result\VR\external\imgui\imgui_draw.cpp
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\imgui.dir\imgui_draw.cpp.s /c C:\Users\lidan\Desktop\result\project\VR\external\imgui\imgui_draw.cpp
 <<
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
 
 external\imgui\CMakeFiles\imgui.dir\imgui_widgets.cpp.obj: external\imgui\CMakeFiles\imgui.dir\flags.make
 external\imgui\CMakeFiles\imgui.dir\imgui_widgets.cpp.obj: ..\external\imgui\imgui_widgets.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object external/imgui/CMakeFiles/imgui.dir/imgui_widgets.cpp.obj"
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
-	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\imgui.dir\imgui_widgets.cpp.obj /FdCMakeFiles\imgui.dir\imgui.pdb /FS -c C:\Users\lidan\Desktop\result\VR\external\imgui\imgui_widgets.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object external/imgui/CMakeFiles/imgui.dir/imgui_widgets.cpp.obj"
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\imgui.dir\imgui_widgets.cpp.obj /FdCMakeFiles\imgui.dir\imgui.pdb /FS -c C:\Users\lidan\Desktop\result\project\VR\external\imgui\imgui_widgets.cpp
 <<
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
 
 external\imgui\CMakeFiles\imgui.dir\imgui_widgets.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/imgui.dir/imgui_widgets.cpp.i"
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
-	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe > CMakeFiles\imgui.dir\imgui_widgets.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\VR\external\imgui\imgui_widgets.cpp
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe > CMakeFiles\imgui.dir\imgui_widgets.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\project\VR\external\imgui\imgui_widgets.cpp
 <<
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
 
 external\imgui\CMakeFiles\imgui.dir\imgui_widgets.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/imgui.dir/imgui_widgets.cpp.s"
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
-	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\imgui.dir\imgui_widgets.cpp.s /c C:\Users\lidan\Desktop\result\VR\external\imgui\imgui_widgets.cpp
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\imgui.dir\imgui_widgets.cpp.s /c C:\Users\lidan\Desktop\result\project\VR\external\imgui\imgui_widgets.cpp
 <<
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
 
 external\imgui\CMakeFiles\imgui.dir\examples\imgui_impl_glfw.cpp.obj: external\imgui\CMakeFiles\imgui.dir\flags.make
 external\imgui\CMakeFiles\imgui.dir\examples\imgui_impl_glfw.cpp.obj: ..\external\imgui\examples\imgui_impl_glfw.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object external/imgui/CMakeFiles/imgui.dir/examples/imgui_impl_glfw.cpp.obj"
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
-	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\imgui.dir\examples\imgui_impl_glfw.cpp.obj /FdCMakeFiles\imgui.dir\imgui.pdb /FS -c C:\Users\lidan\Desktop\result\VR\external\imgui\examples\imgui_impl_glfw.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object external/imgui/CMakeFiles/imgui.dir/examples/imgui_impl_glfw.cpp.obj"
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\imgui.dir\examples\imgui_impl_glfw.cpp.obj /FdCMakeFiles\imgui.dir\imgui.pdb /FS -c C:\Users\lidan\Desktop\result\project\VR\external\imgui\examples\imgui_impl_glfw.cpp
 <<
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
 
 external\imgui\CMakeFiles\imgui.dir\examples\imgui_impl_glfw.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/imgui.dir/examples/imgui_impl_glfw.cpp.i"
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
-	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe > CMakeFiles\imgui.dir\examples\imgui_impl_glfw.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\VR\external\imgui\examples\imgui_impl_glfw.cpp
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe > CMakeFiles\imgui.dir\examples\imgui_impl_glfw.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\project\VR\external\imgui\examples\imgui_impl_glfw.cpp
 <<
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
 
 external\imgui\CMakeFiles\imgui.dir\examples\imgui_impl_glfw.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/imgui.dir/examples/imgui_impl_glfw.cpp.s"
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
-	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\imgui.dir\examples\imgui_impl_glfw.cpp.s /c C:\Users\lidan\Desktop\result\VR\external\imgui\examples\imgui_impl_glfw.cpp
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\imgui.dir\examples\imgui_impl_glfw.cpp.s /c C:\Users\lidan\Desktop\result\project\VR\external\imgui\examples\imgui_impl_glfw.cpp
 <<
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
 
 external\imgui\CMakeFiles\imgui.dir\examples\imgui_impl_opengl3.cpp.obj: external\imgui\CMakeFiles\imgui.dir\flags.make
 external\imgui\CMakeFiles\imgui.dir\examples\imgui_impl_opengl3.cpp.obj: ..\external\imgui\examples\imgui_impl_opengl3.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object external/imgui/CMakeFiles/imgui.dir/examples/imgui_impl_opengl3.cpp.obj"
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
-	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\imgui.dir\examples\imgui_impl_opengl3.cpp.obj /FdCMakeFiles\imgui.dir\imgui.pdb /FS -c C:\Users\lidan\Desktop\result\VR\external\imgui\examples\imgui_impl_opengl3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object external/imgui/CMakeFiles/imgui.dir/examples/imgui_impl_opengl3.cpp.obj"
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\imgui.dir\examples\imgui_impl_opengl3.cpp.obj /FdCMakeFiles\imgui.dir\imgui.pdb /FS -c C:\Users\lidan\Desktop\result\project\VR\external\imgui\examples\imgui_impl_opengl3.cpp
 <<
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
 
 external\imgui\CMakeFiles\imgui.dir\examples\imgui_impl_opengl3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/imgui.dir/examples/imgui_impl_opengl3.cpp.i"
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
-	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe > CMakeFiles\imgui.dir\examples\imgui_impl_opengl3.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\VR\external\imgui\examples\imgui_impl_opengl3.cpp
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe > CMakeFiles\imgui.dir\examples\imgui_impl_opengl3.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\project\VR\external\imgui\examples\imgui_impl_opengl3.cpp
 <<
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
 
 external\imgui\CMakeFiles\imgui.dir\examples\imgui_impl_opengl3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/imgui.dir/examples/imgui_impl_opengl3.cpp.s"
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
-	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\imgui.dir\examples\imgui_impl_opengl3.cpp.s /c C:\Users\lidan\Desktop\result\VR\external\imgui\examples\imgui_impl_opengl3.cpp
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\imgui.dir\examples\imgui_impl_opengl3.cpp.s /c C:\Users\lidan\Desktop\result\project\VR\external\imgui\examples\imgui_impl_opengl3.cpp
 <<
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
 
 external\imgui\CMakeFiles\imgui.dir\__\glad\src\glad.cpp.obj: external\imgui\CMakeFiles\imgui.dir\flags.make
 external\imgui\CMakeFiles\imgui.dir\__\glad\src\glad.cpp.obj: ..\external\glad\src\glad.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object external/imgui/CMakeFiles/imgui.dir/__/glad/src/glad.cpp.obj"
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
-	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\imgui.dir\__\glad\src\glad.cpp.obj /FdCMakeFiles\imgui.dir\imgui.pdb /FS -c C:\Users\lidan\Desktop\result\VR\external\glad\src\glad.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object external/imgui/CMakeFiles/imgui.dir/__/glad/src/glad.cpp.obj"
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\imgui.dir\__\glad\src\glad.cpp.obj /FdCMakeFiles\imgui.dir\imgui.pdb /FS -c C:\Users\lidan\Desktop\result\project\VR\external\glad\src\glad.cpp
 <<
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
 
 external\imgui\CMakeFiles\imgui.dir\__\glad\src\glad.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/imgui.dir/__/glad/src/glad.cpp.i"
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
-	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe > CMakeFiles\imgui.dir\__\glad\src\glad.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\VR\external\glad\src\glad.cpp
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe > CMakeFiles\imgui.dir\__\glad\src\glad.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\project\VR\external\glad\src\glad.cpp
 <<
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
 
 external\imgui\CMakeFiles\imgui.dir\__\glad\src\glad.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/imgui.dir/__/glad/src/glad.cpp.s"
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
-	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\imgui.dir\__\glad\src\glad.cpp.s /c C:\Users\lidan\Desktop\result\VR\external\glad\src\glad.cpp
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\imgui.dir\__\glad\src\glad.cpp.s /c C:\Users\lidan\Desktop\result\project\VR\external\glad\src\glad.cpp
 <<
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
 
 # Object files for target imgui
 imgui_OBJECTS = \
@@ -258,13 +258,13 @@ external\imgui\imgui.lib: external\imgui\CMakeFiles\imgui.dir\examples\imgui_imp
 external\imgui\imgui.lib: external\imgui\CMakeFiles\imgui.dir\__\glad\src\glad.cpp.obj
 external\imgui\imgui.lib: external\imgui\CMakeFiles\imgui.dir\build.make
 external\imgui\imgui.lib: external\imgui\CMakeFiles\imgui.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library imgui.lib"
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library imgui.lib"
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
 	$(CMAKE_COMMAND) -P CMakeFiles\imgui.dir\cmake_clean_target.cmake
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
-	F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\bin\Hostx64\x64\link.exe /lib /nologo /machine:x64 /out:imgui.lib @CMakeFiles\imgui.dir\objects1.rsp 
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\link.exe /lib /nologo /machine:x64 /out:imgui.lib @CMakeFiles\imgui.dir\objects1.rsp 
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
 
 # Rule to build all files generated by this target.
 external\imgui\CMakeFiles\imgui.dir\build: external\imgui\imgui.lib
@@ -272,12 +272,12 @@ external\imgui\CMakeFiles\imgui.dir\build: external\imgui\imgui.lib
 .PHONY : external\imgui\CMakeFiles\imgui.dir\build
 
 external\imgui\CMakeFiles\imgui.dir\clean:
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
 	$(CMAKE_COMMAND) -P CMakeFiles\imgui.dir\cmake_clean.cmake
-	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
 .PHONY : external\imgui\CMakeFiles\imgui.dir\clean
 
 external\imgui\CMakeFiles\imgui.dir\depend:
-	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" C:\Users\lidan\Desktop\result\VR C:\Users\lidan\Desktop\result\VR\external\imgui C:\Users\lidan\Desktop\result\VR\cmake-build-debug C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui\CMakeFiles\imgui.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" C:\Users\lidan\Desktop\result\project\VR C:\Users\lidan\Desktop\result\project\VR\external\imgui C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui\CMakeFiles\imgui.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : external\imgui\CMakeFiles\imgui.dir\depend
 

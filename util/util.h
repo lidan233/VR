@@ -12,8 +12,6 @@
 #include <SDL_log.h>
 
 #include "EigenLidan.h"
-
-
-
+#include "Log.h"
 
 #endif //VR_UTIL_H
