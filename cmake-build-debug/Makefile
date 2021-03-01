@@ -255,33 +255,6 @@ geometry\Vertex.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\geometry\Vertex.cpp.s
 .PHONY : geometry\Vertex.cpp.s
 
-main.obj: main.cpp.obj
-
-.PHONY : main.obj
-
-# target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\main.cpp.obj
-.PHONY : main.cpp.obj
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\main.cpp.s
-.PHONY : main.cpp.s
-
 opengl\BufferObject.obj: opengl\BufferObject.cpp.obj
 
 .PHONY : opengl\BufferObject.obj
@@ -498,6 +471,33 @@ render\EulerAngles.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\render\EulerAngles.cpp.s
 .PHONY : render\EulerAngles.cpp.s
 
+render\MatrixCalculation.obj: render\MatrixCalculation.cpp.obj
+
+.PHONY : render\MatrixCalculation.obj
+
+# target to build an object file
+render\MatrixCalculation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\render\MatrixCalculation.cpp.obj
+.PHONY : render\MatrixCalculation.cpp.obj
+
+render\MatrixCalculation.i: render\MatrixCalculation.cpp.i
+
+.PHONY : render\MatrixCalculation.i
+
+# target to preprocess a source file
+render\MatrixCalculation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\render\MatrixCalculation.cpp.i
+.PHONY : render\MatrixCalculation.cpp.i
+
+render\MatrixCalculation.s: render\MatrixCalculation.cpp.s
+
+.PHONY : render\MatrixCalculation.s
+
+# target to generate assembly for a file
+render\MatrixCalculation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\render\MatrixCalculation.cpp.s
+.PHONY : render\MatrixCalculation.cpp.s
+
 render\Quaternion.obj: render\Quaternion.cpp.obj
 
 .PHONY : render\Quaternion.obj
@@ -574,9 +574,6 @@ help:
 	@echo ... geometry/Vertex.obj
 	@echo ... geometry/Vertex.i
 	@echo ... geometry/Vertex.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
 	@echo ... opengl/BufferObject.obj
 	@echo ... opengl/BufferObject.i
 	@echo ... opengl/BufferObject.s
@@ -601,6 +598,9 @@ help:
 	@echo ... render/EulerAngles.obj
 	@echo ... render/EulerAngles.i
 	@echo ... render/EulerAngles.s
+	@echo ... render/MatrixCalculation.obj
+	@echo ... render/MatrixCalculation.i
+	@echo ... render/MatrixCalculation.s
 	@echo ... render/Quaternion.obj
 	@echo ... render/Quaternion.i
 	@echo ... render/Quaternion.s

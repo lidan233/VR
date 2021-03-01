@@ -175,42 +175,42 @@ CMakeFiles\VR.dir\opengl\Window.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\opengl\Window.cpp.s /c C:\Users\lidan\Desktop\result\project\VR\opengl\Window.cpp
 <<
 
-CMakeFiles\VR.dir\main.cpp.obj: CMakeFiles\VR.dir\flags.make
-CMakeFiles\VR.dir\main.cpp.obj: ..\main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/VR.dir/main.cpp.obj"
+CMakeFiles\VR.dir\geometry\Rectangle.cpp.obj: CMakeFiles\VR.dir\flags.make
+CMakeFiles\VR.dir\geometry\Rectangle.cpp.obj: ..\geometry\Rectangle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/VR.dir/geometry/Rectangle.cpp.obj"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\VR.dir\main.cpp.obj /FdCMakeFiles\VR.dir\ /FS -c C:\Users\lidan\Desktop\result\project\VR\main.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\VR.dir\geometry\Rectangle.cpp.obj /FdCMakeFiles\VR.dir\ /FS -c C:\Users\lidan\Desktop\result\project\VR\geometry\Rectangle.cpp
 <<
 
-CMakeFiles\VR.dir\main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VR.dir/main.cpp.i"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe > CMakeFiles\VR.dir\main.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\project\VR\main.cpp
+CMakeFiles\VR.dir\geometry\Rectangle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VR.dir/geometry/Rectangle.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe > CMakeFiles\VR.dir\geometry\Rectangle.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\project\VR\geometry\Rectangle.cpp
 <<
 
-CMakeFiles\VR.dir\main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VR.dir/main.cpp.s"
+CMakeFiles\VR.dir\geometry\Rectangle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VR.dir/geometry/Rectangle.cpp.s"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\main.cpp.s /c C:\Users\lidan\Desktop\result\project\VR\main.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\geometry\Rectangle.cpp.s /c C:\Users\lidan\Desktop\result\project\VR\geometry\Rectangle.cpp
 <<
 
-CMakeFiles\VR.dir\render\Camera.cpp.obj: CMakeFiles\VR.dir\flags.make
-CMakeFiles\VR.dir\render\Camera.cpp.obj: ..\render\Camera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/VR.dir/render/Camera.cpp.obj"
+CMakeFiles\VR.dir\geometry\Size.cpp.obj: CMakeFiles\VR.dir\flags.make
+CMakeFiles\VR.dir\geometry\Size.cpp.obj: ..\geometry\Size.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/VR.dir/geometry/Size.cpp.obj"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\VR.dir\render\Camera.cpp.obj /FdCMakeFiles\VR.dir\ /FS -c C:\Users\lidan\Desktop\result\project\VR\render\Camera.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\VR.dir\geometry\Size.cpp.obj /FdCMakeFiles\VR.dir\ /FS -c C:\Users\lidan\Desktop\result\project\VR\geometry\Size.cpp
 <<
 
-CMakeFiles\VR.dir\render\Camera.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VR.dir/render/Camera.cpp.i"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe > CMakeFiles\VR.dir\render\Camera.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\project\VR\render\Camera.cpp
+CMakeFiles\VR.dir\geometry\Size.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VR.dir/geometry/Size.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe > CMakeFiles\VR.dir\geometry\Size.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\project\VR\geometry\Size.cpp
 <<
 
-CMakeFiles\VR.dir\render\Camera.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VR.dir/render/Camera.cpp.s"
+CMakeFiles\VR.dir\geometry\Size.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VR.dir/geometry/Size.cpp.s"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\render\Camera.cpp.s /c C:\Users\lidan\Desktop\result\project\VR\render\Camera.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\geometry\Size.cpp.s /c C:\Users\lidan\Desktop\result\project\VR\geometry\Size.cpp
 <<
 
 CMakeFiles\VR.dir\geometry\Vertex.cpp.obj: CMakeFiles\VR.dir\flags.make
@@ -232,47 +232,28 @@ CMakeFiles\VR.dir\geometry\Vertex.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\geometry\Vertex.cpp.s /c C:\Users\lidan\Desktop\result\project\VR\geometry\Vertex.cpp
 <<
 
-CMakeFiles\VR.dir\geometry\Size.cpp.obj: CMakeFiles\VR.dir\flags.make
-CMakeFiles\VR.dir\geometry\Size.cpp.obj: ..\geometry\Size.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/VR.dir/geometry/Size.cpp.obj"
+CMakeFiles\VR.dir\render\Camera.cpp.obj: CMakeFiles\VR.dir\flags.make
+CMakeFiles\VR.dir\render\Camera.cpp.obj: ..\render\Camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/VR.dir/render/Camera.cpp.obj"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\VR.dir\geometry\Size.cpp.obj /FdCMakeFiles\VR.dir\ /FS -c C:\Users\lidan\Desktop\result\project\VR\geometry\Size.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\VR.dir\render\Camera.cpp.obj /FdCMakeFiles\VR.dir\ /FS -c C:\Users\lidan\Desktop\result\project\VR\render\Camera.cpp
 <<
 
-CMakeFiles\VR.dir\geometry\Size.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VR.dir/geometry/Size.cpp.i"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe > CMakeFiles\VR.dir\geometry\Size.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\project\VR\geometry\Size.cpp
+CMakeFiles\VR.dir\render\Camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VR.dir/render/Camera.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe > CMakeFiles\VR.dir\render\Camera.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\project\VR\render\Camera.cpp
 <<
 
-CMakeFiles\VR.dir\geometry\Size.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VR.dir/geometry/Size.cpp.s"
+CMakeFiles\VR.dir\render\Camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VR.dir/render/Camera.cpp.s"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\geometry\Size.cpp.s /c C:\Users\lidan\Desktop\result\project\VR\geometry\Size.cpp
-<<
-
-CMakeFiles\VR.dir\geometry\Rectangle.cpp.obj: CMakeFiles\VR.dir\flags.make
-CMakeFiles\VR.dir\geometry\Rectangle.cpp.obj: ..\geometry\Rectangle.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/VR.dir/geometry/Rectangle.cpp.obj"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\VR.dir\geometry\Rectangle.cpp.obj /FdCMakeFiles\VR.dir\ /FS -c C:\Users\lidan\Desktop\result\project\VR\geometry\Rectangle.cpp
-<<
-
-CMakeFiles\VR.dir\geometry\Rectangle.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VR.dir/geometry/Rectangle.cpp.i"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe > CMakeFiles\VR.dir\geometry\Rectangle.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\project\VR\geometry\Rectangle.cpp
-<<
-
-CMakeFiles\VR.dir\geometry\Rectangle.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VR.dir/geometry/Rectangle.cpp.s"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\geometry\Rectangle.cpp.s /c C:\Users\lidan\Desktop\result\project\VR\geometry\Rectangle.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\render\Camera.cpp.s /c C:\Users\lidan\Desktop\result\project\VR\render\Camera.cpp
 <<
 
 CMakeFiles\VR.dir\render\EulerAngles.cpp.obj: CMakeFiles\VR.dir\flags.make
 CMakeFiles\VR.dir\render\EulerAngles.cpp.obj: ..\render\EulerAngles.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/VR.dir/render/EulerAngles.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/VR.dir/render/EulerAngles.cpp.obj"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\VR.dir\render\EulerAngles.cpp.obj /FdCMakeFiles\VR.dir\ /FS -c C:\Users\lidan\Desktop\result\project\VR\render\EulerAngles.cpp
 <<
@@ -287,6 +268,25 @@ CMakeFiles\VR.dir\render\EulerAngles.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VR.dir/render/EulerAngles.cpp.s"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\render\EulerAngles.cpp.s /c C:\Users\lidan\Desktop\result\project\VR\render\EulerAngles.cpp
+<<
+
+CMakeFiles\VR.dir\render\MatrixCalculation.cpp.obj: CMakeFiles\VR.dir\flags.make
+CMakeFiles\VR.dir\render\MatrixCalculation.cpp.obj: ..\render\MatrixCalculation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/VR.dir/render/MatrixCalculation.cpp.obj"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\VR.dir\render\MatrixCalculation.cpp.obj /FdCMakeFiles\VR.dir\ /FS -c C:\Users\lidan\Desktop\result\project\VR\render\MatrixCalculation.cpp
+<<
+
+CMakeFiles\VR.dir\render\MatrixCalculation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VR.dir/render/MatrixCalculation.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe > CMakeFiles\VR.dir\render\MatrixCalculation.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lidan\Desktop\result\project\VR\render\MatrixCalculation.cpp
+<<
+
+CMakeFiles\VR.dir\render\MatrixCalculation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VR.dir/render/MatrixCalculation.cpp.s"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\VR.dir\render\MatrixCalculation.cpp.s /c C:\Users\lidan\Desktop\result\project\VR\render\MatrixCalculation.cpp
 <<
 
 CMakeFiles\VR.dir\render\Quaternion.cpp.obj: CMakeFiles\VR.dir\flags.make
@@ -335,12 +335,12 @@ VR_OBJECTS = \
 "CMakeFiles\VR.dir\opengl\Shader.cpp.obj" \
 "CMakeFiles\VR.dir\opengl\ShaderProgram.cpp.obj" \
 "CMakeFiles\VR.dir\opengl\Window.cpp.obj" \
-"CMakeFiles\VR.dir\main.cpp.obj" \
-"CMakeFiles\VR.dir\render\Camera.cpp.obj" \
-"CMakeFiles\VR.dir\geometry\Vertex.cpp.obj" \
-"CMakeFiles\VR.dir\geometry\Size.cpp.obj" \
 "CMakeFiles\VR.dir\geometry\Rectangle.cpp.obj" \
+"CMakeFiles\VR.dir\geometry\Size.cpp.obj" \
+"CMakeFiles\VR.dir\geometry\Vertex.cpp.obj" \
+"CMakeFiles\VR.dir\render\Camera.cpp.obj" \
 "CMakeFiles\VR.dir\render\EulerAngles.cpp.obj" \
+"CMakeFiles\VR.dir\render\MatrixCalculation.cpp.obj" \
 "CMakeFiles\VR.dir\render\Quaternion.cpp.obj" \
 "CMakeFiles\VR.dir\render\Timer.cpp.obj"
 
@@ -353,12 +353,12 @@ VR.exe: CMakeFiles\VR.dir\opengl\Sample2D.cpp.obj
 VR.exe: CMakeFiles\VR.dir\opengl\Shader.cpp.obj
 VR.exe: CMakeFiles\VR.dir\opengl\ShaderProgram.cpp.obj
 VR.exe: CMakeFiles\VR.dir\opengl\Window.cpp.obj
-VR.exe: CMakeFiles\VR.dir\main.cpp.obj
-VR.exe: CMakeFiles\VR.dir\render\Camera.cpp.obj
-VR.exe: CMakeFiles\VR.dir\geometry\Vertex.cpp.obj
-VR.exe: CMakeFiles\VR.dir\geometry\Size.cpp.obj
 VR.exe: CMakeFiles\VR.dir\geometry\Rectangle.cpp.obj
+VR.exe: CMakeFiles\VR.dir\geometry\Size.cpp.obj
+VR.exe: CMakeFiles\VR.dir\geometry\Vertex.cpp.obj
+VR.exe: CMakeFiles\VR.dir\render\Camera.cpp.obj
 VR.exe: CMakeFiles\VR.dir\render\EulerAngles.cpp.obj
+VR.exe: CMakeFiles\VR.dir\render\MatrixCalculation.cpp.obj
 VR.exe: CMakeFiles\VR.dir\render\Quaternion.cpp.obj
 VR.exe: CMakeFiles\VR.dir\render\Timer.cpp.obj
 VR.exe: CMakeFiles\VR.dir\build.make

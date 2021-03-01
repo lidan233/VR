@@ -29,6 +29,8 @@
 					<Add directory="C:/Users/lidan/Desktop/result/project/VR/util"/>
 					<Add directory="C:/Users/lidan/Desktop/result/project/VR/shadertoy"/>
 					<Add directory="C:/Users/lidan/Desktop/result/project/VR/opengl"/>
+					<Add directory="C:/Users/lidan/Desktop/result/project/VR/geometry"/>
+					<Add directory="C:/Users/lidan/Desktop/result/project/VR/render"/>
 					<Add directory="C:/Users/lidan/Desktop/result/project/VR/external/glad"/>
 					<Add directory="C:/Users/lidan/Desktop/result/project/VR/external/SDL"/>
 					<Add directory="C:/Users/lidan/Desktop/result/project/VR/external/glm"/>
@@ -67,6 +69,8 @@
 					<Add directory="C:/Users/lidan/Desktop/result/project/VR/util"/>
 					<Add directory="C:/Users/lidan/Desktop/result/project/VR/shadertoy"/>
 					<Add directory="C:/Users/lidan/Desktop/result/project/VR/opengl"/>
+					<Add directory="C:/Users/lidan/Desktop/result/project/VR/geometry"/>
+					<Add directory="C:/Users/lidan/Desktop/result/project/VR/render"/>
 					<Add directory="C:/Users/lidan/Desktop/result/project/VR/external/glad"/>
 					<Add directory="C:/Users/lidan/Desktop/result/project/VR/external/SDL"/>
 					<Add directory="C:/Users/lidan/Desktop/result/project/VR/external/glm"/>
@@ -156,6 +160,8 @@
 					<Add directory="C:/Users/lidan/Desktop/result/project/VR/util"/>
 					<Add directory="C:/Users/lidan/Desktop/result/project/VR/shadertoy"/>
 					<Add directory="C:/Users/lidan/Desktop/result/project/VR/opengl"/>
+					<Add directory="C:/Users/lidan/Desktop/result/project/VR/geometry"/>
+					<Add directory="C:/Users/lidan/Desktop/result/project/VR/render"/>
 					<Add directory="C:/Users/lidan/Desktop/result/project/VR/external/glad"/>
 					<Add directory="C:/Users/lidan/Desktop/result/project/VR/external/SDL"/>
 					<Add directory="C:/Users/lidan/Desktop/result/project/VR/external/glm"/>
@@ -194,6 +200,8 @@
 					<Add directory="C:/Users/lidan/Desktop/result/project/VR/util"/>
 					<Add directory="C:/Users/lidan/Desktop/result/project/VR/shadertoy"/>
 					<Add directory="C:/Users/lidan/Desktop/result/project/VR/opengl"/>
+					<Add directory="C:/Users/lidan/Desktop/result/project/VR/geometry"/>
+					<Add directory="C:/Users/lidan/Desktop/result/project/VR/render"/>
 					<Add directory="C:/Users/lidan/Desktop/result/project/VR/external/glad"/>
 					<Add directory="C:/Users/lidan/Desktop/result/project/VR/external/SDL"/>
 					<Add directory="C:/Users/lidan/Desktop/result/project/VR/external/glm"/>
@@ -268,9 +276,6 @@
 		<Unit filename="C:/Users/lidan/Desktop/result/project/VR/geometry/Vertex.h">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/project/VR/main.cpp">
-			<Option target="VR"/>
-		</Unit>
 		<Unit filename="C:/Users/lidan/Desktop/result/project/VR/opengl/BufferObject.cpp">
 			<Option target="VR"/>
 		</Unit>
@@ -317,6 +322,12 @@
 			<Option target="VR"/>
 		</Unit>
 		<Unit filename="C:/Users/lidan/Desktop/result/project/VR/render/EulerAngles.h">
+			<Option target="VR"/>
+		</Unit>
+		<Unit filename="C:/Users/lidan/Desktop/result/project/VR/render/MatrixCalculation.cpp">
+			<Option target="VR"/>
+		</Unit>
+		<Unit filename="C:/Users/lidan/Desktop/result/project/VR/render/MatrixCalculation.h">
 			<Option target="VR"/>
 		</Unit>
 		<Unit filename="C:/Users/lidan/Desktop/result/project/VR/render/Quaternion.cpp">

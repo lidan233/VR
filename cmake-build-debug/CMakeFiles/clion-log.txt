@@ -7,6 +7,10 @@
 -- C:/Users/lidan/Desktop/result/project/VR/shadertoy/ShaderToy.h
 -- Add C:/Users/lidan/Desktop/result/project/VR/opengl;
 -- C:/Users/lidan/Desktop/result/project/VR/opengl/BufferObject.cppC:/Users/lidan/Desktop/result/project/VR/opengl/BufferObject.hC:/Users/lidan/Desktop/result/project/VR/opengl/FrameBuffer.cppC:/Users/lidan/Desktop/result/project/VR/opengl/FrameBuffer.hC:/Users/lidan/Desktop/result/project/VR/opengl/Sample2D.cppC:/Users/lidan/Desktop/result/project/VR/opengl/Sample2D.hC:/Users/lidan/Desktop/result/project/VR/opengl/Shader.cppC:/Users/lidan/Desktop/result/project/VR/opengl/Shader.hC:/Users/lidan/Desktop/result/project/VR/opengl/ShaderProgram.cppC:/Users/lidan/Desktop/result/project/VR/opengl/ShaderProgram.hC:/Users/lidan/Desktop/result/project/VR/opengl/Window.cppC:/Users/lidan/Desktop/result/project/VR/opengl/Window.h
+-- Add C:/Users/lidan/Desktop/result/project/VR/geometry;
+-- C:/Users/lidan/Desktop/result/project/VR/geometry/Rectangle.cppC:/Users/lidan/Desktop/result/project/VR/geometry/Rectangle.hC:/Users/lidan/Desktop/result/project/VR/geometry/Size.cppC:/Users/lidan/Desktop/result/project/VR/geometry/Size.hC:/Users/lidan/Desktop/result/project/VR/geometry/Vertex.cppC:/Users/lidan/Desktop/result/project/VR/geometry/Vertex.h
+-- Add C:/Users/lidan/Desktop/result/project/VR/render;
+-- C:/Users/lidan/Desktop/result/project/VR/render/Camera.cppC:/Users/lidan/Desktop/result/project/VR/render/Camera.hC:/Users/lidan/Desktop/result/project/VR/render/EulerAngles.cppC:/Users/lidan/Desktop/result/project/VR/render/EulerAngles.hC:/Users/lidan/Desktop/result/project/VR/render/MatrixCalculation.cppC:/Users/lidan/Desktop/result/project/VR/render/MatrixCalculation.hC:/Users/lidan/Desktop/result/project/VR/render/Quaternion.cppC:/Users/lidan/Desktop/result/project/VR/render/Quaternion.hC:/Users/lidan/Desktop/result/project/VR/render/Timer.cppC:/Users/lidan/Desktop/result/project/VR/render/Timer.h
 -- ----------
 -- C:/Users/lidan/Desktop/result/project/VR/external/glfw/ TRUE glfw3 
 -- C:/Users/lidan/Desktop/result/project/VR/external/glfw

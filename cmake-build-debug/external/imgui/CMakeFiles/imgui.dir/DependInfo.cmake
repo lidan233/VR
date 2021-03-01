@@ -26,6 +26,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../util"
   "../shadertoy"
   "../opengl"
+  "../geometry"
+  "../render"
   "../external/glad"
   "../external/SDL"
   "../external/glm"
