@@ -7,6 +7,7 @@
 
 #include "EigenLidan.h"
 #include "Rectangle.h"
+#include "Lmath.h"
 
 class MatrixCalculation {
 public:

@@ -5,17 +5,17 @@
 #include "Rectangle.h"
 
 template <class T>
-void Rectangle<T>::setTop(float pos)
+void Rectangle<T>::setTop(T pos)
 {
-    float diff = pos - _y;
+    T diff = pos - _y;
     _y += diff;
     _h -= diff;
 }
 
 template <class T>
-void Rectangle<T>::setLeft(float pos)
+void Rectangle<T>::setLeft(T pos)
 {
-    float diff = pos - _x;
+    T diff = pos - _x;
     _x += diff;
     _w -= diff;
 }
@@ -37,7 +37,7 @@ void Rectangle<T>::setRectangle(const Rectangle<T> &rect)
 }
 
 template <class T>
-void Rectangle<T>::setRectangle(float x, float y, float w, float h)
+void Rectangle<T>::setRectangle(T x, T y, T w, T h)
 {
     _x = x;
     _y = y;
@@ -53,7 +53,7 @@ bool Rectangle<T>::contains(const Rectangle<T> &rect) const
 }
 
 template <class T>
-void Rectangle<T>::inflate(float width, float height)
+void Rectangle<T>::inflate(T width, T height)
 {
     _x -= width;
     _y -= height;

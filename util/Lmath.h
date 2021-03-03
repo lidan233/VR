@@ -32,6 +32,8 @@ public:
         return f;
     }
 
+    inline static float acos(float radian) { return acosf(radian); }
+    inline static float asin(float radian) { return asinf(radian); }
     inline static float atan(float radian) { return atanf(radian); }
     // atan(r1/r2)
     inline static float atan2(float r1, float r2) { return atan2f(r1, r2); }

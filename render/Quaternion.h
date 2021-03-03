@@ -85,7 +85,6 @@ public:
 
     static Quaternion nlerp(const Quaternion &q1, const Quaternion &q2, float t);
     static Quaternion slerp(const Quaternion &q1, const Quaternion &q2, float t);
-    static Quaternion squad(const Quaternion &q1, const Quaternion &q2, float t);
 
     static Quaternion add(const Quaternion &left, const Quaternion &right);
     static Quaternion subtract(const Quaternion &left, const Quaternion &right);

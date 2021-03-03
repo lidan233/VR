@@ -19,11 +19,10 @@ private:
 public:
     ShaderProgram() ;
     ~ShaderProgram() ;
-    const Shader* vShader() const { return _vs ; }
-    const Shader* fShader() const { return _ys ; }
+
 
     bool addShader(Shader* shader) ;
-    bool addShaderFromSource(ShaderType type, const std::string& file) ;
+    bool addShaderFromSource(ShaderType type, const std::string& source) ;
     bool addShaderFromFile(ShaderType type, const std::string& file) ;
 
     void removeAllShader() ;
@@ -53,15 +52,14 @@ public:
 
     void setAttributeArray(int location, const GLfloat *values, int tupleSize, int stride);
     void setAttributeArray(int location, const Vec3 *valus, int stride);
-    void setAttributeArray(int location, const Vector3 *values, int stride);
-    void setAttributeArray(int location, const Vector4 *values, int stride);
+    void setAttributeArray(int location, const Vec4 *values, int stride);
     void setAttributeArray(int location, GLenum type, const void *values, int tupleSize, int stride);
 
     void setAttributeBuffer(int location, GLenum type, int offset, int tupleSize, int stride);
 
     void setAttributeArray(const char *name, const GLfloat *values, int tupleSize, int stride);
-    void setAttributeArray(const char *name, const Vector3 *values, int stride);
-    void setAttributeArray(const char *name, const Vector4 *values, int stride);
+    void setAttributeArray(const char *name, const Vec3 *values, int stride);
+    void setAttributeArray(const char *name, const Vec4 *values, int stride);
     void setAttributeArray(const char *name, GLenum type, const void *values, int tupleSize, int stride);
 
     void setAttributeBuffer(const char *name, GLenum type, int offset, int tupleSize, int stride);
@@ -70,15 +68,15 @@ public:
     void setAttributeValue(int location, GLfloat x, GLfloat y);
     void setAttributeValue(int location, GLfloat x, GLfloat y, GLfloat z);
     void setAttributeValue(int location, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
-    void setAttributeValue(int location, const Vector3 &value);
-    void setAttributeValue(int location, const Vector4 &value);
+    void setAttributeValue(int location, const Vec3 &value);
+    void setAttributeValue(int location, const Vec4 &value);
 
     void setAttributeValue(const char *name, GLfloat value);
     void setAttributeValue(const char *name, GLfloat x, GLfloat y);
     void setAttributeValue(const char *name, GLfloat x, GLfloat y, GLfloat z);
     void setAttributeValue(const char *name, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
-    void setAttributeValue(const char *name, const Vector3 &value);
-    void setAttributeValue(const char *name, const Vector4 &value);
+    void setAttributeValue(const char *name, const Vec3 &value);
+    void setAttributeValue(const char *name, const Vec4 &value);
 
     void setUniformValue(int location, GLint value);
     void setUniformValue(int location, GLuint value);
@@ -86,17 +84,10 @@ public:
     void setUniformValue(int location, GLfloat x, GLfloat y);
     void setUniformValue(int location, GLfloat x, GLfloat y, GLfloat z);
     void setUniformValue(int location, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
-    void setUniformValue(int location, const Vector3 &value);
-    void setUniformValue(int location, const Vector4 &value);
-    void setUniformValue(int location, const Matrix2x2 &value);
-    void setUniformValue(int location, const Matrix2x3 &value);
-    void setUniformValue(int location, const Matrix2x4 &value);
-    void setUniformValue(int location, const Matrix3x2 &value);
-    void setUniformValue(int location, const Matrix3x3 &value);
-    void setUniformValue(int location, const Matrix3x4 &value);
-    void setUniformValue(int location, const Matrix4x2 &value);
-    void setUniformValue(int location, const Matrix4x3 &value);
-    void setUniformValue(int location, const Matrix4x4 &value);
+    void setUniformValue(int location, const Vec3 &value);
+    void setUniformValue(int location, const Vec4 &value);
+    void setUniformValue(int location, const Lmatrix<float> &value);
+
 
     void setUniformValue(const char *name, GLint value);
     void setUniformValue(const char *name, GLuint value);
@@ -104,47 +95,26 @@ public:
     void setUniformValue(const char *name, GLfloat x, GLfloat y);
     void setUniformValue(const char *name, GLfloat x, GLfloat y, GLfloat z);
     void setUniformValue(const char *name, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
-    void setUniformValue(const char *name, const Vector3 &value);
-    void setUniformValue(const char *name, const Vector4 &value);
-    void setUniformValue(const char *name, const Matrix2x2 &value);
-    void setUniformValue(const char *name, const Matrix2x3 &value);
-    void setUniformValue(const char *name, const Matrix2x4 &value);
-    void setUniformValue(const char *name, const Matrix3x2 &value);
-    void setUniformValue(const char *name, const Matrix3x3 &value);
-    void setUniformValue(const char *name, const Matrix3x4 &value);
-    void setUniformValue(const char *name, const Matrix4x2 &value);
-    void setUniformValue(const char *name, const Matrix4x3 &value);
-    void setUniformValue(const char *name, const Matrix4x4 &value);
+    void setUniformValue(const char *name, const Vec3 &value);
+    void setUniformValue(const char *name, const Vec4 &value);
+    void setUniformValue(const char *name, const Lmatrix<float> &value);
+
 
     void setUniformValueArray(int location, const GLint *values, int count);
     void setUniformValueArray(int location, const GLuint *values, int count);
     void setUniformValueArray(int location, const GLfloat *values, int count, int tupleSize);
-    void setUniformValueArray(int location, const Vector3 *values, int count);
-    void setUniformValueArray(int location, const Vector4 *values, int count);
-    void setUniformValueArray(int location, const Matrix2x2 *values, int count);
-    void setUniformValueArray(int location, const Matrix2x3 *values, int count);
-    void setUniformValueArray(int location, const Matrix2x4 *values, int count);
-    void setUniformValueArray(int location, const Matrix3x2 *values, int count);
-    void setUniformValueArray(int location, const Matrix3x3 *values, int count);
-    void setUniformValueArray(int location, const Matrix3x4 *values, int count);
-    void setUniformValueArray(int location, const Matrix4x2 *values, int count);
-    void setUniformValueArray(int location, const Matrix4x3 *values, int count);
-    void setUniformValueArray(int location, const Matrix4x4 *values, int count);
+    void setUniformValueArray(int location, const Vec3 *values, int count);
+    void setUniformValueArray(int location, const Vec4 *values, int count);
+//    void setUniformValueArray(int location, const Lmatrix<float> *values, int count);
+
 
     void setUniformValueArray(const char *name, const GLint *values, int count);
     void setUniformValueArray(const char *name, const GLuint *values, int count);
     void setUniformValueArray(const char *name, const GLfloat *values, int count, int tupleSize);
-    void setUniformValueArray(const char *name, const Vector3 *values, int count);
-    void setUniformValueArray(const char *name, const Vector4 *values, int count);
-    void setUniformValueArray(const char *name, const Matrix2x2 *values, int count);
-    void setUniformValueArray(const char *name, const Matrix2x3 *values, int count);
-    void setUniformValueArray(const char *name, const Matrix2x4 *values, int count);
-    void setUniformValueArray(const char *name, const Matrix3x2 *values, int count);
-    void setUniformValueArray(const char *name, const Matrix3x3 *values, int count);
-    void setUniformValueArray(const char *name, const Matrix3x4 *values, int count);
-    void setUniformValueArray(const char *name, const Matrix4x2 *values, int count);
-    void setUniformValueArray(const char *name, const Matrix4x3 *values, int count);
-    void setUniformValueArray(const char *name, const Matrix4x4 *values, int count);
+    void setUniformValueArray(const char *name, const Vec3 *values, int count);
+    void setUniformValueArray(const char *name, const Vec4 *values, int count);
+    void setUniformValueArray(const char *name, const Lmatrix<float> *values, int count);
+
 
     GLint uniformLocation(const char *name);
     GLint uniformLocation(const std::string &name);

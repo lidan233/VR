@@ -48,6 +48,7 @@ endif()
 
 
 add_executable(VR
+        main.cpp
         ${utildir}
         ${shadertoydir}
         ${opengldir}

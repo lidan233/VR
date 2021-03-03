@@ -41,6 +41,7 @@ public:
     bool isLoaded() const { return _isLoaded; }
     GLuint id() const { return _id ; }
 
+    static bool savePixelsToFile(const char *filepath, GLubyte *pixels, GLint w, GLint h, int depth);
 
 protected:
     void loadData(GLubyte* pixels, GLint w, GLint h, GLint c, GLuint d, bool isFloat, GLint mapLayer) ;

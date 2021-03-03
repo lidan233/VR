@@ -10,8 +10,8 @@
 template <class T> 
 class Rectangle {
 private:
-    float _x,_y ;//start point 
-    float _h,_w ;//size 
+    T _x,_y ;//start point 
+    T _h,_w ;//size 
 
 public:
      Rectangle()
@@ -19,7 +19,7 @@ public:
     {
     }
 
-     Rectangle(float x, float y, float w, float h)
+     Rectangle(T x, T y, T w, T h)
             : _x(x), _y(y), _w(w), _h(h)
     {
     }
@@ -60,31 +60,31 @@ public:
     inline bool isEmpty() const { return (_w <= 0.0f || _h <= 0.0f); }
     inline bool isValid() const { return (_w > 0.0f && _h > 0.0f); }
 
-    inline float x() const { return _x; }
-    inline float y() const { return _y; }
+    inline T x() const { return _x; }
+    inline T y() const { return _y; }
 
-    inline void setX(float x) { _x = x; }
-    inline void setY(float y) { _y = y; }
+    inline void setX(T x) { _x = x; }
+    inline void setY(T y) { _y = y; }
 
-    inline float width() const { return _w; }
-    inline float height() const { return _h; }
+    inline T width() const { return _w; }
+    inline T height() const { return _h; }
 
-    inline void setWidth(float w) { _w = w; }
-    inline void setHeight(float h) { _h = h; }
+    inline void setWidth(T w) { _w = w; }
+    inline void setHeight(T h) { _h = h; }
 
-    inline float top() const { return _y; }
-    inline float bottom() const { return _y + _h; }
-    inline float left() const { return _x; }
-    inline float right() const { return _x + _w; }
+    inline T top() const { return _y; }
+    inline T bottom() const { return _y + _h; }
+    inline T left() const { return _x; }
+    inline T right() const { return _x + _w; }
 
-    void setTop(float pos);
-    void setLeft(float pos);
+    void setTop(T pos);
+    void setLeft(T pos);
 
-    inline void setBottom(float pos) { _h = pos - _y; }
-    inline void setRight(float pos) { _w = pos - _x; }
+    inline void setBottom(T pos) { _h = pos - _y; }
+    inline void setRight(T pos) { _w = pos - _x; }
 
-    inline float area() const { return _w * _h; }
-    inline float perimeter() const { return (_w + _h) * 2.0f; }
+    inline T area() const { return _w * _h; }
+    inline T perimeter() const { return (_w + _h) * 2.0f; }
 
     inline Vertex<T> topLeft() const { return Vertex<T>(_x, _y); }
     inline Vertex<T> bottomLeft() const { return Vertex<T>(_x, _y + _h); }
@@ -99,15 +99,15 @@ public:
 
     void setCenter(const Vertex<T> &point);
     void setRectangle(const Rectangle<T> &Rectangle);
-    void setRectangle(float x, float y, float w, float h);
+    void setRectangle(T x, T y, T w, T h);
 
     inline Size<T> size() const { return Size<T>(_w, _h); }
     inline void setSize(const Size<T> &s) { _w = s.width(); _h = s.height(); }
 
-    inline void moveTop(float pos) { _y = pos; }
-    inline void moveBottom(float pos) { _y = pos - _h; }
-    inline void moveLeft(float pos) { _x = pos; }
-    inline void moveRight(float pos) { _x = pos - _w; }
+    inline void moveTop(T pos) { _y = pos; }
+    inline void moveBottom(T pos) { _y = pos - _h; }
+    inline void moveLeft(T pos) { _x = pos; }
+    inline void moveRight(T pos) { _x = pos - _w; }
 
     inline void moveTopLeft(const Vertex<T> &point) { moveTop(point.x()); moveLeft(point.y()); }
     inline void moveBottomLeft(const Vertex<T> &point) { moveBottom(point.x()); moveLeft(point.y()); }
@@ -115,13 +115,13 @@ public:
     inline void moveBottomRight(const Vertex<T> &point) { moveBottom(point.y()); moveRight(point.x()); }
     inline void moveCenter(const Vertex<T> &point) { _x = point.x() - _w / 2; _y = point.y() - _h / 2; }
 
-    inline bool contains(float x, float y) const { return x >= _x && x <= _x + _w && y >= _y && y <= _y + _h; }
+    inline bool contains(T x, T y) const { return x >= _x && x <= _x + _w && y >= _y && y <= _y + _h; }
     inline bool contains(const Vertex<T> &point) const { return contains(point.x(), point.y()); }
     inline void inflate(Size<T> &size) { inflate(size.width(), size.height()); }
     //inline void inflate(Rectangle<T> &rect) { inflate(rect.size()); }
 
     bool contains(const Rectangle<T> &rect) const;
-    void inflate(float width, float height);
+    void inflate(T width, T height);
 
     static Rectangle<T> intersects(const Rectangle<T> &rect1, const Rectangle<T> &rect2);
     static Rectangle<T> unions(const Rectangle<T> &rect1, const Rectangle<T> &rect2);

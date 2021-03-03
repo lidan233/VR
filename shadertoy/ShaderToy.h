@@ -39,6 +39,6 @@ public:
     float iSampleRate ;
     float iGlobalTime ;
 
-    Sampler2D texture[3] ;
+    Sample2D* texture[3] ;
 };
 #endif //VR_SHADERTOY_H

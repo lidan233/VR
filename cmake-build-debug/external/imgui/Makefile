@@ -43,19 +43,19 @@ NULL=nul
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\lidan\Desktop\result\project\VR
+CMAKE_SOURCE_DIR = C:\Users\lidan\Desktop\result\VR
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -73,31 +73,31 @@ list_install_components\fast: list_install_components
 # Special rule for the target install/local
 install\local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	echo >nul && "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	echo >nul && "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install\local
 
 # Special rule for the target install/local
 install\local\fast: preinstall\fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	echo >nul && "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	echo >nul && "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install\local\fast
 
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	echo >nul && "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+	echo >nul && "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install\fast: preinstall\fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	echo >nul && "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+	echo >nul && "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
 .PHONY : install\fast
 
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	echo >nul && "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	echo >nul && "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -108,7 +108,7 @@ edit_cache\fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	echo >nul && "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	echo >nul && "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -118,18 +118,18 @@ rebuild_cache\fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui\CMakeFiles\progress.marks
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) external\imgui\all
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles 0
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) external\imgui\clean
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : clean
 
 # The main clean target
@@ -139,30 +139,30 @@ clean\fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) external\imgui\preinstall
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall\fast:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) external\imgui\preinstall
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : preinstall\fast
 
 # clear depends
 depend:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : depend
 
 # Convenience name for target.
 external\imgui\CMakeFiles\imgui.dir\rule:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) external\imgui\CMakeFiles\imgui.dir\rule
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : external\imgui\CMakeFiles\imgui.dir\rule
 
 # Convenience name for target.
@@ -172,9 +172,9 @@ imgui: external\imgui\CMakeFiles\imgui.dir\rule
 
 # fast build rule for target.
 imgui\fast:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f external\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) external\imgui\CMakeFiles\imgui.dir\build
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : imgui\fast
 
 __\glad\src\glad.obj: __\glad\src\glad.cpp.obj
@@ -183,9 +183,9 @@ __\glad\src\glad.obj: __\glad\src\glad.cpp.obj
 
 # target to build an object file
 __\glad\src\glad.cpp.obj:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f external\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) external\imgui\CMakeFiles\imgui.dir\__\glad\src\glad.cpp.obj
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : __\glad\src\glad.cpp.obj
 
 __\glad\src\glad.i: __\glad\src\glad.cpp.i
@@ -194,9 +194,9 @@ __\glad\src\glad.i: __\glad\src\glad.cpp.i
 
 # target to preprocess a source file
 __\glad\src\glad.cpp.i:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f external\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) external\imgui\CMakeFiles\imgui.dir\__\glad\src\glad.cpp.i
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : __\glad\src\glad.cpp.i
 
 __\glad\src\glad.s: __\glad\src\glad.cpp.s
@@ -205,9 +205,9 @@ __\glad\src\glad.s: __\glad\src\glad.cpp.s
 
 # target to generate assembly for a file
 __\glad\src\glad.cpp.s:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f external\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) external\imgui\CMakeFiles\imgui.dir\__\glad\src\glad.cpp.s
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : __\glad\src\glad.cpp.s
 
 examples\imgui_impl_glfw.obj: examples\imgui_impl_glfw.cpp.obj
@@ -216,9 +216,9 @@ examples\imgui_impl_glfw.obj: examples\imgui_impl_glfw.cpp.obj
 
 # target to build an object file
 examples\imgui_impl_glfw.cpp.obj:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f external\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) external\imgui\CMakeFiles\imgui.dir\examples\imgui_impl_glfw.cpp.obj
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : examples\imgui_impl_glfw.cpp.obj
 
 examples\imgui_impl_glfw.i: examples\imgui_impl_glfw.cpp.i
@@ -227,9 +227,9 @@ examples\imgui_impl_glfw.i: examples\imgui_impl_glfw.cpp.i
 
 # target to preprocess a source file
 examples\imgui_impl_glfw.cpp.i:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f external\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) external\imgui\CMakeFiles\imgui.dir\examples\imgui_impl_glfw.cpp.i
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : examples\imgui_impl_glfw.cpp.i
 
 examples\imgui_impl_glfw.s: examples\imgui_impl_glfw.cpp.s
@@ -238,9 +238,9 @@ examples\imgui_impl_glfw.s: examples\imgui_impl_glfw.cpp.s
 
 # target to generate assembly for a file
 examples\imgui_impl_glfw.cpp.s:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f external\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) external\imgui\CMakeFiles\imgui.dir\examples\imgui_impl_glfw.cpp.s
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : examples\imgui_impl_glfw.cpp.s
 
 examples\imgui_impl_opengl3.obj: examples\imgui_impl_opengl3.cpp.obj
@@ -249,9 +249,9 @@ examples\imgui_impl_opengl3.obj: examples\imgui_impl_opengl3.cpp.obj
 
 # target to build an object file
 examples\imgui_impl_opengl3.cpp.obj:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f external\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) external\imgui\CMakeFiles\imgui.dir\examples\imgui_impl_opengl3.cpp.obj
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : examples\imgui_impl_opengl3.cpp.obj
 
 examples\imgui_impl_opengl3.i: examples\imgui_impl_opengl3.cpp.i
@@ -260,9 +260,9 @@ examples\imgui_impl_opengl3.i: examples\imgui_impl_opengl3.cpp.i
 
 # target to preprocess a source file
 examples\imgui_impl_opengl3.cpp.i:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f external\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) external\imgui\CMakeFiles\imgui.dir\examples\imgui_impl_opengl3.cpp.i
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : examples\imgui_impl_opengl3.cpp.i
 
 examples\imgui_impl_opengl3.s: examples\imgui_impl_opengl3.cpp.s
@@ -271,9 +271,9 @@ examples\imgui_impl_opengl3.s: examples\imgui_impl_opengl3.cpp.s
 
 # target to generate assembly for a file
 examples\imgui_impl_opengl3.cpp.s:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f external\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) external\imgui\CMakeFiles\imgui.dir\examples\imgui_impl_opengl3.cpp.s
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : examples\imgui_impl_opengl3.cpp.s
 
 imgui.obj: imgui.cpp.obj
@@ -282,9 +282,9 @@ imgui.obj: imgui.cpp.obj
 
 # target to build an object file
 imgui.cpp.obj:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f external\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) external\imgui\CMakeFiles\imgui.dir\imgui.cpp.obj
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : imgui.cpp.obj
 
 imgui.i: imgui.cpp.i
@@ -293,9 +293,9 @@ imgui.i: imgui.cpp.i
 
 # target to preprocess a source file
 imgui.cpp.i:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f external\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) external\imgui\CMakeFiles\imgui.dir\imgui.cpp.i
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : imgui.cpp.i
 
 imgui.s: imgui.cpp.s
@@ -304,9 +304,9 @@ imgui.s: imgui.cpp.s
 
 # target to generate assembly for a file
 imgui.cpp.s:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f external\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) external\imgui\CMakeFiles\imgui.dir\imgui.cpp.s
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : imgui.cpp.s
 
 imgui_demo.obj: imgui_demo.cpp.obj
@@ -315,9 +315,9 @@ imgui_demo.obj: imgui_demo.cpp.obj
 
 # target to build an object file
 imgui_demo.cpp.obj:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f external\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) external\imgui\CMakeFiles\imgui.dir\imgui_demo.cpp.obj
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : imgui_demo.cpp.obj
 
 imgui_demo.i: imgui_demo.cpp.i
@@ -326,9 +326,9 @@ imgui_demo.i: imgui_demo.cpp.i
 
 # target to preprocess a source file
 imgui_demo.cpp.i:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f external\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) external\imgui\CMakeFiles\imgui.dir\imgui_demo.cpp.i
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : imgui_demo.cpp.i
 
 imgui_demo.s: imgui_demo.cpp.s
@@ -337,9 +337,9 @@ imgui_demo.s: imgui_demo.cpp.s
 
 # target to generate assembly for a file
 imgui_demo.cpp.s:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f external\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) external\imgui\CMakeFiles\imgui.dir\imgui_demo.cpp.s
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : imgui_demo.cpp.s
 
 imgui_draw.obj: imgui_draw.cpp.obj
@@ -348,9 +348,9 @@ imgui_draw.obj: imgui_draw.cpp.obj
 
 # target to build an object file
 imgui_draw.cpp.obj:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f external\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) external\imgui\CMakeFiles\imgui.dir\imgui_draw.cpp.obj
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : imgui_draw.cpp.obj
 
 imgui_draw.i: imgui_draw.cpp.i
@@ -359,9 +359,9 @@ imgui_draw.i: imgui_draw.cpp.i
 
 # target to preprocess a source file
 imgui_draw.cpp.i:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f external\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) external\imgui\CMakeFiles\imgui.dir\imgui_draw.cpp.i
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : imgui_draw.cpp.i
 
 imgui_draw.s: imgui_draw.cpp.s
@@ -370,9 +370,9 @@ imgui_draw.s: imgui_draw.cpp.s
 
 # target to generate assembly for a file
 imgui_draw.cpp.s:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f external\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) external\imgui\CMakeFiles\imgui.dir\imgui_draw.cpp.s
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : imgui_draw.cpp.s
 
 imgui_widgets.obj: imgui_widgets.cpp.obj
@@ -381,9 +381,9 @@ imgui_widgets.obj: imgui_widgets.cpp.obj
 
 # target to build an object file
 imgui_widgets.cpp.obj:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f external\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) external\imgui\CMakeFiles\imgui.dir\imgui_widgets.cpp.obj
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : imgui_widgets.cpp.obj
 
 imgui_widgets.i: imgui_widgets.cpp.i
@@ -392,9 +392,9 @@ imgui_widgets.i: imgui_widgets.cpp.i
 
 # target to preprocess a source file
 imgui_widgets.cpp.i:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f external\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) external\imgui\CMakeFiles\imgui.dir\imgui_widgets.cpp.i
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : imgui_widgets.cpp.i
 
 imgui_widgets.s: imgui_widgets.cpp.s
@@ -403,9 +403,9 @@ imgui_widgets.s: imgui_widgets.cpp.s
 
 # target to generate assembly for a file
 imgui_widgets.cpp.s:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(MAKE) $(MAKESILENT) -f external\imgui\CMakeFiles\imgui.dir\build.make /nologo -$(MAKEFLAGS) external\imgui\CMakeFiles\imgui.dir\imgui_widgets.cpp.s
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : imgui_widgets.cpp.s
 
 # Help Target
@@ -452,8 +452,8 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
-	cd C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\external\imgui
+	cd C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui
 .PHONY : cmake_check_build_system
 

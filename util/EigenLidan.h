@@ -24,7 +24,7 @@
 
 
 using namespace std ;
-# define M_PI           3.14159265358979323846  /* pi */
+//# define M_PI           3.14159265358979323846  /* pi */
 
 
 template<class T>
@@ -115,16 +115,24 @@ public:
     inline T& operator[](const int i) ; // why is it inline?
     inline const T& operator[](const int i) const ;
     T multiply(const Lvector<T>& other) ;
-
+    T* getData() const { return this->data ;}
     T length_squared() ;
 
     inline int size() ;
     void resize(int newsize) ;
     void assign(int newsize, const T& a) ;
+    void normlize() ;
 
     std::string toString() const;
     ~Lvector() ;
 };
+
+template<class T>
+void Lvector<T>::normlize()
+{
+    T res = sqrt(double(length_squared())) ;
+    for(int i = 0 ; i < size_vector;i++) data[i] /= res ;
+}
 
 template<class T>
 T Lvector<T>::multiply(const Lvector<T>& other)
@@ -293,6 +301,7 @@ public:
     Lvec3& operator/=(const T t) ;
     T length() const ;
     T length_square() const ;
+    Lvec3<T> normalized() const;
     static Lvec3 random()
     {
         return Lvec3<T>(T( rand()/RAND_MAX), T( rand()/RAND_MAX), T( rand()/RAND_MAX));
@@ -305,6 +314,16 @@ public:
 
 
 };
+
+template <class T>
+Lvec3<T> Lvec3<T>::normalized() const
+{
+    T t1 = this->data[0]/length() ;
+    T t2 = this->data[1]/length() ;
+    T t3 = this->data[2]/length() ;
+    Lvec3<T> res(t1,t2,t3) ;
+    return res ;
+}
 
 template<class T>
 Lvec3<T>::Lvec3(T e0, T e1, T e2)
@@ -592,6 +611,7 @@ public:
     void resize(int newn, int newm) ;
     void assign(int newn, int newm, const T& a) ;
 
+    T* getData() const { return data[0] ; }
 
     Lvector<T> row(int index) ;
     Lvector<T> col(int index) ;

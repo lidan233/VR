@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/lidan/Desktop/result/project/VR/external/imgui
+# Install script for directory: C:/Users/lidan/Desktop/result/VR/external/imgui
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

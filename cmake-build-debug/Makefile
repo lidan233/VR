@@ -43,19 +43,19 @@ NULL=nul
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\lidan\Desktop\result\project\VR
+CMAKE_SOURCE_DIR = C:\Users\lidan\Desktop\result\VR
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\lidan\Desktop\result\VR\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -63,31 +63,31 @@ CMAKE_BINARY_DIR = C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug
 # Special rule for the target install/local
 install\local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	echo >nul && "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	echo >nul && "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install\local
 
 # Special rule for the target install/local
 install\local\fast: preinstall\fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	echo >nul && "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	echo >nul && "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install\local\fast
 
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	echo >nul && "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+	echo >nul && "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install\fast: preinstall\fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	echo >nul && "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+	echo >nul && "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
 .PHONY : install\fast
 
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	echo >nul && "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	echo >nul && "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -98,7 +98,7 @@ edit_cache\fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	echo >nul && "D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	echo >nul && "F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -118,9 +118,9 @@ list_install_components\fast: list_install_components
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\lidan\Desktop\result\project\VR\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\lidan\Desktop\result\VR\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -255,6 +255,33 @@ geometry\Vertex.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\geometry\Vertex.cpp.s
 .PHONY : geometry\Vertex.cpp.s
 
+main.obj: main.cpp.obj
+
+.PHONY : main.obj
+
+# target to build an object file
+main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\main.cpp.obj
+.PHONY : main.cpp.obj
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\main.cpp.s
+.PHONY : main.cpp.s
+
 opengl\BufferObject.obj: opengl\BufferObject.cpp.obj
 
 .PHONY : opengl\BufferObject.obj
@@ -308,6 +335,33 @@ opengl\FrameBuffer.s: opengl\FrameBuffer.cpp.s
 opengl\FrameBuffer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\opengl\FrameBuffer.cpp.s
 .PHONY : opengl\FrameBuffer.cpp.s
+
+opengl\RenderWindow.obj: opengl\RenderWindow.cpp.obj
+
+.PHONY : opengl\RenderWindow.obj
+
+# target to build an object file
+opengl\RenderWindow.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\opengl\RenderWindow.cpp.obj
+.PHONY : opengl\RenderWindow.cpp.obj
+
+opengl\RenderWindow.i: opengl\RenderWindow.cpp.i
+
+.PHONY : opengl\RenderWindow.i
+
+# target to preprocess a source file
+opengl\RenderWindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\opengl\RenderWindow.cpp.i
+.PHONY : opengl\RenderWindow.cpp.i
+
+opengl\RenderWindow.s: opengl\RenderWindow.cpp.s
+
+.PHONY : opengl\RenderWindow.s
+
+# target to generate assembly for a file
+opengl\RenderWindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\opengl\RenderWindow.cpp.s
+.PHONY : opengl\RenderWindow.cpp.s
 
 opengl\Sample2D.obj: opengl\Sample2D.cpp.obj
 
@@ -389,6 +443,33 @@ opengl\ShaderProgram.s: opengl\ShaderProgram.cpp.s
 opengl\ShaderProgram.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\opengl\ShaderProgram.cpp.s
 .PHONY : opengl\ShaderProgram.cpp.s
+
+opengl\VertexArrayObject.obj: opengl\VertexArrayObject.cpp.obj
+
+.PHONY : opengl\VertexArrayObject.obj
+
+# target to build an object file
+opengl\VertexArrayObject.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\opengl\VertexArrayObject.cpp.obj
+.PHONY : opengl\VertexArrayObject.cpp.obj
+
+opengl\VertexArrayObject.i: opengl\VertexArrayObject.cpp.i
+
+.PHONY : opengl\VertexArrayObject.i
+
+# target to preprocess a source file
+opengl\VertexArrayObject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\opengl\VertexArrayObject.cpp.i
+.PHONY : opengl\VertexArrayObject.cpp.i
+
+opengl\VertexArrayObject.s: opengl\VertexArrayObject.cpp.s
+
+.PHONY : opengl\VertexArrayObject.s
+
+# target to generate assembly for a file
+opengl\VertexArrayObject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\opengl\VertexArrayObject.cpp.s
+.PHONY : opengl\VertexArrayObject.cpp.s
 
 opengl\Window.obj: opengl\Window.cpp.obj
 
@@ -552,6 +633,33 @@ render\Timer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\render\Timer.cpp.s
 .PHONY : render\Timer.cpp.s
 
+util\util.obj: util\util.cpp.obj
+
+.PHONY : util\util.obj
+
+# target to build an object file
+util\util.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\util\util.cpp.obj
+.PHONY : util\util.cpp.obj
+
+util\util.i: util\util.cpp.i
+
+.PHONY : util\util.i
+
+# target to preprocess a source file
+util\util.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\util\util.cpp.i
+.PHONY : util\util.cpp.i
+
+util\util.s: util\util.cpp.s
+
+.PHONY : util\util.s
+
+# target to generate assembly for a file
+util\util.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VR.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\VR.dir\util\util.cpp.s
+.PHONY : util\util.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -574,12 +682,18 @@ help:
 	@echo ... geometry/Vertex.obj
 	@echo ... geometry/Vertex.i
 	@echo ... geometry/Vertex.s
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 	@echo ... opengl/BufferObject.obj
 	@echo ... opengl/BufferObject.i
 	@echo ... opengl/BufferObject.s
 	@echo ... opengl/FrameBuffer.obj
 	@echo ... opengl/FrameBuffer.i
 	@echo ... opengl/FrameBuffer.s
+	@echo ... opengl/RenderWindow.obj
+	@echo ... opengl/RenderWindow.i
+	@echo ... opengl/RenderWindow.s
 	@echo ... opengl/Sample2D.obj
 	@echo ... opengl/Sample2D.i
 	@echo ... opengl/Sample2D.s
@@ -589,6 +703,9 @@ help:
 	@echo ... opengl/ShaderProgram.obj
 	@echo ... opengl/ShaderProgram.i
 	@echo ... opengl/ShaderProgram.s
+	@echo ... opengl/VertexArrayObject.obj
+	@echo ... opengl/VertexArrayObject.i
+	@echo ... opengl/VertexArrayObject.s
 	@echo ... opengl/Window.obj
 	@echo ... opengl/Window.i
 	@echo ... opengl/Window.s
@@ -607,6 +724,9 @@ help:
 	@echo ... render/Timer.obj
 	@echo ... render/Timer.i
 	@echo ... render/Timer.s
+	@echo ... util/util.obj
+	@echo ... util/util.i
+	@echo ... util/util.s
 .PHONY : help
 
 
