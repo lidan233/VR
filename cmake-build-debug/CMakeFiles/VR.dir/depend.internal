@@ -157,8 +157,6 @@ CMakeFiles/VR.dir/main.cpp.obj
  ../external/glm/glm/vec3.hpp
  ../external/glm/glm/vec4.hpp
  ../external/glm/glm/vector_relational.hpp
- ../external/stb/stb_image.h
- ../external/stb/stb_image_write.h
  ../geometry/Rectangle.h
  ../geometry/Size.h
  ../geometry/Vertex.h
@@ -232,7 +230,6 @@ CMakeFiles/VR.dir/opengl/BufferObject.cpp.obj
  ../external/glad/include/glad/glad.h
  ../util/EigenLidan.h
  ../util/Lmath.h
- ../util/Log.h
  ../util/util.h
  C:/Users/lidan/Desktop/result/VR/opengl/BufferObject.cpp
  C:/Users/lidan/Desktop/result/VR/opengl/BufferObject.h
@@ -291,7 +288,6 @@ CMakeFiles/VR.dir/opengl/FrameBuffer.cpp.obj
  ../external/glad/include/glad/glad.h
  ../util/EigenLidan.h
  ../util/Lmath.h
- ../util/Log.h
  ../util/util.h
  C:/Users/lidan/Desktop/result/VR/opengl/FrameBuffer.cpp
  C:/Users/lidan/Desktop/result/VR/opengl/FrameBuffer.h
@@ -436,7 +432,6 @@ CMakeFiles/VR.dir/opengl/RenderWindow.cpp.obj
  ../external/glm/glm/vec4.hpp
  ../external/glm/glm/vector_relational.hpp
  ../external/stb/stb_image.h
- ../external/stb/stb_image_write.h
  ../geometry/Rectangle.h
  ../geometry/Size.h
  ../geometry/Vertex.h
@@ -511,7 +506,6 @@ CMakeFiles/VR.dir/opengl/Sample2D.cpp.obj
  ../external/stb/stb_image_write.h
  ../util/EigenLidan.h
  ../util/Lmath.h
- ../util/Log.h
  ../util/util.h
  C:/Users/lidan/Desktop/result/VR/opengl/Sample2D.cpp
  C:/Users/lidan/Desktop/result/VR/opengl/Sample2D.h
@@ -661,7 +655,6 @@ CMakeFiles/VR.dir/opengl/Shader.cpp.obj
  ../util/util.h
  C:/Users/lidan/Desktop/result/VR/opengl/Shader.cpp
  C:/Users/lidan/Desktop/result/VR/opengl/Shader.h
- C:/Users/lidan/Desktop/result/VR/opengl/ShaderProgram.h
 CMakeFiles/VR.dir/opengl/ShaderProgram.cpp.obj
  ../external/SDL/lib-vc2019/include/SDL.h
  ../external/SDL/lib-vc2019/include/SDL_assert.h
@@ -864,7 +857,6 @@ CMakeFiles/VR.dir/opengl/VertexArrayObject.cpp.obj
  ../external/glad/include/glad/glad.h
  ../util/EigenLidan.h
  ../util/Lmath.h
- ../util/Log.h
  ../util/util.h
  C:/Users/lidan/Desktop/result/VR/opengl/VertexArrayObject.cpp
  C:/Users/lidan/Desktop/result/VR/opengl/VertexArrayObject.h
@@ -926,7 +918,6 @@ CMakeFiles/VR.dir/opengl/Window.cpp.obj
  ../geometry/Vertex.h
  ../util/EigenLidan.h
  ../util/Lmath.h
- ../util/Log.h
  ../util/util.h
  C:/Users/lidan/Desktop/result/VR/opengl/Window.cpp
  C:/Users/lidan/Desktop/result/VR/opengl/Window.h
@@ -936,11 +927,8 @@ CMakeFiles/VR.dir/render/Camera.cpp.obj
  C:/Users/lidan/Desktop/result/VR/render/Camera.cpp
  C:/Users/lidan/Desktop/result/VR/render/Camera.h
 CMakeFiles/VR.dir/render/EulerAngles.cpp.obj
- ../util/EigenLidan.h
- ../util/Lmath.h
  C:/Users/lidan/Desktop/result/VR/render/EulerAngles.cpp
  C:/Users/lidan/Desktop/result/VR/render/EulerAngles.h
- C:/Users/lidan/Desktop/result/VR/render/Quaternion.h
 CMakeFiles/VR.dir/render/MatrixCalculation.cpp.obj
  ../geometry/Rectangle.h
  ../geometry/Size.h
@@ -1010,7 +998,6 @@ CMakeFiles/VR.dir/render/Timer.cpp.obj
  ../external/glad/include/glad/glad.h
  ../util/EigenLidan.h
  ../util/Lmath.h
- ../util/Log.h
  ../util/util.h
  C:/Users/lidan/Desktop/result/VR/render/Timer.cpp
  C:/Users/lidan/Desktop/result/VR/render/Timer.h
@@ -1069,6 +1056,5 @@ CMakeFiles/VR.dir/util/util.cpp.obj
  ../external/glad/include/glad/glad.h
  ../util/Lmath.h
  C:/Users/lidan/Desktop/result/VR/util/EigenLidan.h
- C:/Users/lidan/Desktop/result/VR/util/Log.h
  C:/Users/lidan/Desktop/result/VR/util/util.cpp
  C:/Users/lidan/Desktop/result/VR/util/util.h

@@ -6,17 +6,17 @@
 
 void EulerAngles::identity()
 {
-    m_yaw   = 0.0f;
-    m_roll  = 0.0f;
-    m_pitch = 0.0f;
+    _yaw   = 0.0f;
+    _roll  = 0.0f;
+    _pitch = 0.0f;
 }
 
-void EulerAngles::fromQuaternion(const Quaternion& quat)
-{
-
-}
-
-Quaternion EulerAngles::toQuaternion() const
-{
-
-}
+//void EulerAngles::fromQuaternion(const Quaternion& quat)
+//{
+//
+//}
+//
+//Quaternion EulerAngles::toQuaternion() const
+//{
+//
+//}

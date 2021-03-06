@@ -8,28 +8,28 @@
 #include "Size.h"
 
 template <class T> 
-class Rectangle {
+class RectangleF {
 private:
     T _x,_y ;//start point 
     T _h,_w ;//size 
 
 public:
-     Rectangle()
+    RectangleF()
             : _x(0.0f), _y(0.0f), _w(0.0f), _h(0.0f)
     {
     }
 
-     Rectangle(T x, T y, T w, T h)
+    RectangleF(T x, T y, T w, T h)
             : _x(x), _y(y), _w(w), _h(h)
     {
     }
 
-    inline Rectangle(const Rectangle<T> &rect)
+    RectangleF(const RectangleF<T> &rect)
             : _x(rect._x), _y(rect._y), _w(rect._w), _h(rect._h)
     {
     }
 
-    inline Rectangle(const Vertex<T> &startPoint, const Size<T> &size)
+    RectangleF(const Vertex<T> &startPoint, const Size<T> &size)
             : _x(point.x()),
               _y(point.y()),
               _w(size.width()),
@@ -37,7 +37,7 @@ public:
     {
     }
 
-    inline Rectangle(const Size<T> &size, const Vertex<T> &point)
+    RectangleF(const Size<T> &size, const Vertex<T> &point)
             : _x(point.x()),
               _y(point.y()),
               _w(size.width()),
@@ -45,7 +45,7 @@ public:
     {
     }
 
-    inline Rectangle(const Vertex<T> &topleft, const Vertex<T> &bottomright)
+    RectangleF(const Vertex<T> &topleft, const Vertex<T> &bottomright)
             : _x(topleft.x()),
               _y(topleft.y()),
               _w(bottomright.x()),
@@ -53,7 +53,7 @@ public:
     {
     }
 
-    ~Rectangle()
+    ~RectangleF()
     {
     }
     
@@ -98,7 +98,7 @@ public:
     inline void setBottomRight(const Vertex<T> &point) { setBottom(point.y()); setRight(point.x()); }
 
     void setCenter(const Vertex<T> &point);
-    void setRectangle(const Rectangle<T> &Rectangle);
+    void setRectangle(const RectangleF<T> &Rectangle);
     void setRectangle(T x, T y, T w, T h);
 
     inline Size<T> size() const { return Size<T>(_w, _h); }
@@ -120,16 +120,16 @@ public:
     inline void inflate(Size<T> &size) { inflate(size.width(), size.height()); }
     //inline void inflate(Rectangle<T> &rect) { inflate(rect.size()); }
 
-    bool contains(const Rectangle<T> &rect) const;
+    bool contains(const RectangleF<T> &rect) const;
     void inflate(T width, T height);
 
-    static Rectangle<T> intersects(const Rectangle<T> &rect1, const Rectangle<T> &rect2);
-    static Rectangle<T> unions(const Rectangle<T> &rect1, const Rectangle<T> &rect2);
+    static RectangleF<T> intersects(const RectangleF<T> &rect1, const RectangleF<T> &rect2);
+    static RectangleF<T> unions(const RectangleF<T> &rect1, const RectangleF<T> &rect2);
 
-    Rectangle<T> &operator=(const Rectangle<T> &rect);
+    RectangleF<T> &operator=(const RectangleF<T> &rect);
  
-    friend bool operator==(const Rectangle<T> &rect1, const Rectangle<T> &rect2);
-    friend bool operator!=(const Rectangle<T> &rect1, const Rectangle<T> &rect2);
+    friend bool operator==(const RectangleF<T> &rect1, const RectangleF<T> &rect2);
+    friend bool operator!=(const RectangleF<T> &rect1, const RectangleF<T> &rect2);
 };
 
 

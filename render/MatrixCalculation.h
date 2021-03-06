@@ -24,7 +24,7 @@ public:
     static Lmatrix<double> translate2D(float x, float y);
 
     // 3D transform
-    static void ortho(Lmatrix<double> &result, const Rectangle<double> &rect);
+    static void ortho(Lmatrix<double> &result, const RectangleF<double> &rect);
     static void ortho(Lmatrix<double> &result, float left, float right, float bottom, float top, float zNear, float zFar);
 
     static void frustum(Lmatrix<double> &result, float left, float right, float bottom, float top, float zNear, float zFar);
@@ -36,7 +36,7 @@ public:
                        float centerX, float centerY, float centerZ,
                        float upX, float upY, float upZ);
 
-    static void viewport(Lmatrix<double> &result, const Rectangle<double> &rect);
+    static void viewport(Lmatrix<double> &result, const RectangleF<double> &rect);
     static void viewport(Lmatrix<double> &result, float left, float bottom, float width, float height, float zNear, float zFar);
 
 
@@ -49,7 +49,7 @@ public:
 
     static void translate( Lmatrix<double> &mat4, float x, float y, float z);
 
-    static Lmatrix<double> ortho(const Rectangle<double> &rect);
+    static Lmatrix<double> ortho(const RectangleF<double> &rect);
     static Lmatrix<double> ortho(float left, float right, float bottom, float top, float zNear, float zFar);
     static Lmatrix<double> frustum(float left, float right, float bottom, float top, float zNear, float zFar);
     static Lmatrix<double> perspective(float fov, float ratio, float zNear, float zFar);
@@ -57,7 +57,7 @@ public:
     static Lmatrix<double> lookAt(float eyeX, float eyeY, float eyeZ,
                             float centerX, float centerY, float centerZ,
                             float upX, float upY, float upZ);
-    static Lmatrix<double> viewport(const Rectangle<double> &rect);
+    static Lmatrix<double> viewport(const RectangleF<double> &rect);
     static Lmatrix<double> viewport(float left, float bottom, float width, float height, float zNear, float zFar);
 
     static Lmatrix<double> fromAxisAngle(float angle, float x, float y, float z);

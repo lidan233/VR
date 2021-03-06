@@ -6,9 +6,9 @@
 #define VR_SAMPLE2D_H
 
 #include "util.h"
-#include "stb_image.h"
-#include "stb_image_write.h"
 
+
+#include <string>
 
 typedef unsigned int uint ;
 

@@ -8,24 +8,47 @@
 #include <iostream>
 #include <string>
 
-enum INFO{ERROR,WARNNING,INFO,NOTE} info ;
+enum INFO {
+    ERROR1 = 1 << 1,
+    WARNNING1 = 1 << 2,
+    IF1 =  1 << 3 ,
+    NOTE1 = 1 << 4
+} ;
 
 
-void llog(enum INFO level,std::string str)
+inline void llog( INFO level,std::string str)
 {
-    switch(level)
+
+    if(level == INFO::ERROR1)
     {
-        case ERROR:
-            std::cout<<"ERROR: "<<str<<std::endl ;
-        case WARNNING:
-            std::cout<<"WARNNING: "<<str<<std::endl ;
-
-        case NOTE:
-            std::cout<<"NOTE: "<<str<<std::endl ;
-
-        case INFO:
-            std::cout<<"INFO: "<<str<<std::endl ;
+        std::cout<<"ERROR: "<<str<<std::endl ;
+    } else if ( level == INFO::WARNNING1 )
+    {
+        std::cout<<"WARNNING: "<<str<<std::endl ;
+    } else if ( level == INFO::NOTE1 )
+    {
+        std::cout<<"NOTE: "<<str<<std::endl ;
+    } else if ( level == INFO::IF1)
+    {
+        std::cout<<"INFO: "<<str<<std::endl ;
     }
+
+
+//    switch(level)
+//    {
+//        case INFO::ERROR:
+//            std::cout<<"ERROR: "<<str<<std::endl ;
+//            break ;
+//        case INFO::WARNNING:
+//            std::cout<<"WARNNING: "<<str<<std::endl ;
+//            break ;
+//        case INFO::NOTE:
+//            std::cout<<"NOTE: "<<str<<std::endl ;
+//            break ;
+//        case INFO::IF:
+//            std::cout<<"INFO: "<<str<<std::endl ;
+//            break ;
+//    }
     std::cout<<str<<std::endl;
 }
 

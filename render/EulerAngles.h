@@ -4,7 +4,7 @@
 
 #ifndef VR_EULERANGLES_H
 #define VR_EULERANGLES_H
-#include "Quaternion.h"
+class Quaternion;
 
 class EulerAngles {
 private:

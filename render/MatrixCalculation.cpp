@@ -79,7 +79,7 @@ Lmatrix<double> MatrixCalculation::translate2D(float x, float y)
 }
 
 // 3D transform
-void MatrixCalculation::ortho(Lmatrix<double> &result, const Rectangle<double> &rect)
+void MatrixCalculation::ortho(Lmatrix<double> &result, const RectangleF<double> &rect)
 {
     
 }
@@ -206,7 +206,7 @@ void MatrixCalculation::lookAt(Lmatrix<double> &result, float eyeX, float eyeY, 
            Vec3(upX, upY, upZ));
 }
 
-void MatrixCalculation::viewport(Lmatrix<double> &result, const Rectangle<double> &rect) {
+void MatrixCalculation::viewport(Lmatrix<double> &result, const RectangleF<double> &rect) {
     viewport(result, rect.left(), rect.bottom(), rect.width(), rect.height(), 1.0f, -1.0f);
 }   
 
@@ -312,7 +312,7 @@ void MatrixCalculation::translate( Lmatrix<double> &mat4, float x, float y, floa
     mat4[3][2] = z;
 }
 
-Lmatrix<double> MatrixCalculation::ortho(const Rectangle<double> &rect) {
+Lmatrix<double> MatrixCalculation::ortho(const RectangleF<double> &rect) {
     Lmatrix<double> result;
     ortho(result, rect.left(), rect.right(), rect.bottom(), rect.top(), -1.0f, 1.0f);
     return result;
@@ -357,7 +357,7 @@ Lmatrix<double> MatrixCalculation::lookAt(float eyeX, float eyeY, float eyeZ,
     return result;
 }
 
-Lmatrix<double> MatrixCalculation::viewport(const Rectangle<double> &rect)
+Lmatrix<double> MatrixCalculation::viewport(const RectangleF<double> &rect)
 {
     Lmatrix<double> result;
     viewport(result, rect);

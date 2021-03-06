@@ -13,8 +13,8 @@ private:
     int _link ;
     int ID ;
     std::string _message ;
-    Shader* _vs ;
-    Shader* _ys ;
+    Shader* _vs = nullptr ;
+    Shader* _ys = nullptr ;
 
 public:
     ShaderProgram() ;

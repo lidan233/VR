@@ -24,7 +24,7 @@
 
 
 using namespace std ;
-//# define M_PI           3.14159265358979323846  /* pi */
+# define M_PI_L           3.14159265358979323846  /* pi */
 
 
 template<class T>
@@ -118,7 +118,7 @@ public:
     T* getData() const { return this->data ;}
     T length_squared() ;
 
-    inline int size() ;
+    inline int size() const ;
     void resize(int newsize) ;
     void assign(int newsize, const T& a) ;
     void normlize() ;
@@ -159,7 +159,7 @@ std::string Lvector<T>::toString() const
 }
 
 template <class T>
-inline int Lvector<T>::size() { return size_vector; }
+inline int Lvector<T>::size() const { return size_vector; }
 
 template <class T>
 Lvector<T>::Lvector() : size_vector(0), data(NULL) {}
@@ -432,14 +432,14 @@ inline Lvec3<double> unit_vector(Lvec3<double> v) {
     return v / v.length();
 }
 
-Lvec3<double> random_unit_vector() {
-    auto a = double(rand()/RAND_MAX)*2*M_PI+0;
+inline Lvec3<double> random_unit_vector() {
+    auto a = double(rand()/RAND_MAX)*2*M_PI_L+0;
     auto z = double(rand()/RAND_MAX)*2+-1;
     auto r = sqrt(1 - z*z);
     return Lvec3<double>(r*cos(a), r*sin(a), z);
 }
 
-Lvec3<double> random_in_unit_disk() {
+inline Lvec3<double> random_in_unit_disk() {
     while (true) {
         auto p = Lvec3<double>(double(rand())/RAND_MAX*2-1, double(rand())/RAND_MAX*2-1, 0.0);
         if (p.length_squared() >= 1) {
@@ -451,7 +451,7 @@ Lvec3<double> random_in_unit_disk() {
 }
 
 
-Lvec3<double> random_in_unit_sphere() {
+inline Lvec3<double> random_in_unit_sphere() {
     while (true) {
         auto p = Lvec3<double>::random(-1.0,1.0);
         if (p.length_squared() >= 1) continue;
@@ -459,7 +459,7 @@ Lvec3<double> random_in_unit_sphere() {
     }
 }
 
-Lvec3<double> random_in_hemisphere(const Lvec3<double>& normal) {
+inline Lvec3<double> random_in_hemisphere(const Lvec3<double>& normal) {
     Lvec3<double> in_unit_sphere = random_in_unit_sphere();
     if (dot(in_unit_sphere, normal) > 0.0) // In the same hemisphere as the normal
         return in_unit_sphere;
@@ -467,11 +467,11 @@ Lvec3<double> random_in_hemisphere(const Lvec3<double>& normal) {
         return -in_unit_sphere;
 }
 
-Lvec3<double> reflect(const Lvec3<double>& v, const Lvec3<double>& n) {
+inline Lvec3<double> reflect(const Lvec3<double>& v, const Lvec3<double>& n) {
     return v - 2*dot(v,n)*n;
 }
 
-Lvec3<double> refract(const Lvec3<double>& uv, const Lvec3<double>& n, double etai_over_etat) {
+inline Lvec3<double> refract(const Lvec3<double>& uv, const Lvec3<double>& n, double etai_over_etat) {
     auto cos_theta = fmin(dot(-uv, n), 1.0);
     Lvec3<double> r_out_perp =  etai_over_etat * (uv + cos_theta*n);
     Lvec3<double> r_out_parallel = -sqrt(fabs(1.0 - r_out_perp.length_squared())) * n;
@@ -899,7 +899,7 @@ void Lmatrix<T>::setRow(int index, const Lvector<T>& res)
 template <class T>
 void Lmatrix<T>::setCol(int index, const Lvector<T>& res)
 {
-    assert(this->mrows() == res.size_vector) ;
+    assert(this->mrows() == res.size()) ;
     for(int i = 0 ; i < this->mrows() ;i++)
     {
         data[i][index] = res[i] ;

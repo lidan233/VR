@@ -8,7 +8,7 @@
 #include <SDL_main.h>
 
 void printUsage();
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
     SDL_LogSetPriority(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_VERBOSE);
 

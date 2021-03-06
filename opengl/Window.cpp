@@ -67,8 +67,8 @@ void Window::createWindow()
     SDL_GetWindowPosition(_window, &x, &y);
     SDL_GL_GetDrawableSize(_window, &w, &h);
 
-    _rect = new Rectangle<float>(y, y + _mode.h, x, x + _mode.w);
-    _drawrect = new Rectangle<float>(0, h, 0, w);
+    _rect = new RectangleF<float>(y, y + _mode.h, x, x + _mode.w);
+    _drawrect = new RectangleF<float>(0, h, 0, w);
 
     if (!gladLoadGLLoader((GLADloadproc) SDL_GL_GetProcAddress)) {
         std::cout << "Glad initalize failed" << std::endl;

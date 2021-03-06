@@ -17,7 +17,7 @@ private:
     SDL_Window *_window ;
     SDL_DisplayMode  _mode ;
     SDL_GLContext _context ;
-    Rectangle<float> *_rect, *_drawrect ;
+    RectangleF<float> *_rect, *_drawrect ;
 
     void createWindow() ;
     void closeWindow() ;
@@ -32,8 +32,8 @@ public:
     int width() ;
     int height() ;
 
-    const Rectangle<float>* rect() const { return _rect; }
-    const Rectangle<float>* drawRect() const { return _drawrect; }
+    const RectangleF<float>* rect() const { return _rect; }
+    const RectangleF<float>* drawRect() const { return _drawrect; }
 
     void run() ;
     void move(int x, int y) ;

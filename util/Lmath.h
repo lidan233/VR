@@ -4,7 +4,7 @@
 
 #ifndef VR_LMATH_H
 #define VR_LMATH_H
-#include <math.h>
+#include <cmath>
 #include <limits>
 
 
@@ -42,13 +42,13 @@ public:
     inline static float tan(float radian) { return tanf(radian); }
     inline static float cot(float radian) { return 1.0f / tanf(radian); }
 
-    inline static int max(int a, int b) {  return a > b ? a : b; }
-    inline static float max(float a, float b) { return a > b ? a : b; }
-    inline static double max(double a, double b) { return a > b ? a : b; }
-
-    inline static int min(int a, int b) { return a < b ? a : b; }
-    inline static float min(float a, float b) { return a < b ? a : b; }
-    inline static double min(double a, double b) { return a < b ? a : b; }
+//    inline static int max(int a, int b) {  return a > b ? a : b; }
+//    inline static float max(float a, float b) { return a > b ? a : b; }
+//    inline static double max(double a, double b) { return a > b ? a : b; }
+//
+//    inline static int min(int a, int b) { return a < b ? a : b; }
+//    inline static float min(float a, float b) { return a < b ? a : b; }
+//    inline static double min(double a, double b) { return a < b ? a : b; }
 
     inline static float log(float n) { return log(n); }
     inline static float log10(float n) { return log10(n); }
@@ -67,8 +67,8 @@ public:
     inline static float radToDeg(float radian) { return radian * (180.0 / PI); }
     inline static float degToRad(float degree) { return degree * (PI * 180.0); }
 
-    inline static int clamp(int value, int _min, int _max) { return max(min(value, _max), _min); }
-    inline static float clamp(float value, float _min, float _max) { return max(min(value, _max), _min); }
+    inline static int clamp(int value, int _min, int _max) { return fmax(fmin(value, _max), _min); }
+    inline static float clamp(float value, float _min, float _max) { return fmax(fmin(value, _max), _min); }
 
 };
 #endif //VR_LMATH_H

@@ -156,8 +156,6 @@ CMakeFiles\VR.dir\main.cpp.obj: ..\external\glm\glm\vec2.hpp
 CMakeFiles\VR.dir\main.cpp.obj: ..\external\glm\glm\vec3.hpp
 CMakeFiles\VR.dir\main.cpp.obj: ..\external\glm\glm\vec4.hpp
 CMakeFiles\VR.dir\main.cpp.obj: ..\external\glm\glm\vector_relational.hpp
-CMakeFiles\VR.dir\main.cpp.obj: ..\external\stb\stb_image.h
-CMakeFiles\VR.dir\main.cpp.obj: ..\external\stb\stb_image_write.h
 CMakeFiles\VR.dir\main.cpp.obj: ..\geometry\Rectangle.h
 CMakeFiles\VR.dir\main.cpp.obj: ..\geometry\Size.h
 CMakeFiles\VR.dir\main.cpp.obj: ..\geometry\Vertex.h
@@ -231,7 +229,6 @@ CMakeFiles\VR.dir\opengl\BufferObject.cpp.obj: ..\external\glad\include\KHR\khrp
 CMakeFiles\VR.dir\opengl\BufferObject.cpp.obj: ..\external\glad\include\glad\glad.h
 CMakeFiles\VR.dir\opengl\BufferObject.cpp.obj: ..\util\EigenLidan.h
 CMakeFiles\VR.dir\opengl\BufferObject.cpp.obj: ..\util\Lmath.h
-CMakeFiles\VR.dir\opengl\BufferObject.cpp.obj: ..\util\Log.h
 CMakeFiles\VR.dir\opengl\BufferObject.cpp.obj: ..\util\util.h
 CMakeFiles\VR.dir\opengl\BufferObject.cpp.obj: ..\opengl\BufferObject.cpp
 CMakeFiles\VR.dir\opengl\BufferObject.cpp.obj: ..\opengl\BufferObject.h
@@ -290,7 +287,6 @@ CMakeFiles\VR.dir\opengl\FrameBuffer.cpp.obj: ..\external\glad\include\KHR\khrpl
 CMakeFiles\VR.dir\opengl\FrameBuffer.cpp.obj: ..\external\glad\include\glad\glad.h
 CMakeFiles\VR.dir\opengl\FrameBuffer.cpp.obj: ..\util\EigenLidan.h
 CMakeFiles\VR.dir\opengl\FrameBuffer.cpp.obj: ..\util\Lmath.h
-CMakeFiles\VR.dir\opengl\FrameBuffer.cpp.obj: ..\util\Log.h
 CMakeFiles\VR.dir\opengl\FrameBuffer.cpp.obj: ..\util\util.h
 CMakeFiles\VR.dir\opengl\FrameBuffer.cpp.obj: ..\opengl\FrameBuffer.cpp
 CMakeFiles\VR.dir\opengl\FrameBuffer.cpp.obj: ..\opengl\FrameBuffer.h
@@ -435,7 +431,6 @@ CMakeFiles\VR.dir\opengl\RenderWindow.cpp.obj: ..\external\glm\glm\vec3.hpp
 CMakeFiles\VR.dir\opengl\RenderWindow.cpp.obj: ..\external\glm\glm\vec4.hpp
 CMakeFiles\VR.dir\opengl\RenderWindow.cpp.obj: ..\external\glm\glm\vector_relational.hpp
 CMakeFiles\VR.dir\opengl\RenderWindow.cpp.obj: ..\external\stb\stb_image.h
-CMakeFiles\VR.dir\opengl\RenderWindow.cpp.obj: ..\external\stb\stb_image_write.h
 CMakeFiles\VR.dir\opengl\RenderWindow.cpp.obj: ..\geometry\Rectangle.h
 CMakeFiles\VR.dir\opengl\RenderWindow.cpp.obj: ..\geometry\Size.h
 CMakeFiles\VR.dir\opengl\RenderWindow.cpp.obj: ..\geometry\Vertex.h
@@ -510,7 +505,6 @@ CMakeFiles\VR.dir\opengl\Sample2D.cpp.obj: ..\external\stb\stb_image.h
 CMakeFiles\VR.dir\opengl\Sample2D.cpp.obj: ..\external\stb\stb_image_write.h
 CMakeFiles\VR.dir\opengl\Sample2D.cpp.obj: ..\util\EigenLidan.h
 CMakeFiles\VR.dir\opengl\Sample2D.cpp.obj: ..\util\Lmath.h
-CMakeFiles\VR.dir\opengl\Sample2D.cpp.obj: ..\util\Log.h
 CMakeFiles\VR.dir\opengl\Sample2D.cpp.obj: ..\util\util.h
 CMakeFiles\VR.dir\opengl\Sample2D.cpp.obj: ..\opengl\Sample2D.cpp
 CMakeFiles\VR.dir\opengl\Sample2D.cpp.obj: ..\opengl\Sample2D.h
@@ -660,7 +654,6 @@ CMakeFiles\VR.dir\opengl\Shader.cpp.obj: ..\util\Log.h
 CMakeFiles\VR.dir\opengl\Shader.cpp.obj: ..\util\util.h
 CMakeFiles\VR.dir\opengl\Shader.cpp.obj: ..\opengl\Shader.cpp
 CMakeFiles\VR.dir\opengl\Shader.cpp.obj: ..\opengl\Shader.h
-CMakeFiles\VR.dir\opengl\Shader.cpp.obj: ..\opengl\ShaderProgram.h
 
 CMakeFiles\VR.dir\opengl\ShaderProgram.cpp.obj: ..\external\SDL\lib-vc2019\include\SDL.h
 CMakeFiles\VR.dir\opengl\ShaderProgram.cpp.obj: ..\external\SDL\lib-vc2019\include\SDL_assert.h
@@ -863,7 +856,6 @@ CMakeFiles\VR.dir\opengl\VertexArrayObject.cpp.obj: ..\external\glad\include\KHR
 CMakeFiles\VR.dir\opengl\VertexArrayObject.cpp.obj: ..\external\glad\include\glad\glad.h
 CMakeFiles\VR.dir\opengl\VertexArrayObject.cpp.obj: ..\util\EigenLidan.h
 CMakeFiles\VR.dir\opengl\VertexArrayObject.cpp.obj: ..\util\Lmath.h
-CMakeFiles\VR.dir\opengl\VertexArrayObject.cpp.obj: ..\util\Log.h
 CMakeFiles\VR.dir\opengl\VertexArrayObject.cpp.obj: ..\util\util.h
 CMakeFiles\VR.dir\opengl\VertexArrayObject.cpp.obj: ..\opengl\VertexArrayObject.cpp
 CMakeFiles\VR.dir\opengl\VertexArrayObject.cpp.obj: ..\opengl\VertexArrayObject.h
@@ -925,7 +917,6 @@ CMakeFiles\VR.dir\opengl\Window.cpp.obj: ..\geometry\Size.h
 CMakeFiles\VR.dir\opengl\Window.cpp.obj: ..\geometry\Vertex.h
 CMakeFiles\VR.dir\opengl\Window.cpp.obj: ..\util\EigenLidan.h
 CMakeFiles\VR.dir\opengl\Window.cpp.obj: ..\util\Lmath.h
-CMakeFiles\VR.dir\opengl\Window.cpp.obj: ..\util\Log.h
 CMakeFiles\VR.dir\opengl\Window.cpp.obj: ..\util\util.h
 CMakeFiles\VR.dir\opengl\Window.cpp.obj: ..\opengl\Window.cpp
 CMakeFiles\VR.dir\opengl\Window.cpp.obj: ..\opengl\Window.h
@@ -935,11 +926,8 @@ CMakeFiles\VR.dir\render\Camera.cpp.obj: ..\util\Lmath.h
 CMakeFiles\VR.dir\render\Camera.cpp.obj: ..\render\Camera.cpp
 CMakeFiles\VR.dir\render\Camera.cpp.obj: ..\render\Camera.h
 
-CMakeFiles\VR.dir\render\EulerAngles.cpp.obj: ..\util\EigenLidan.h
-CMakeFiles\VR.dir\render\EulerAngles.cpp.obj: ..\util\Lmath.h
 CMakeFiles\VR.dir\render\EulerAngles.cpp.obj: ..\render\EulerAngles.cpp
 CMakeFiles\VR.dir\render\EulerAngles.cpp.obj: ..\render\EulerAngles.h
-CMakeFiles\VR.dir\render\EulerAngles.cpp.obj: ..\render\Quaternion.h
 
 CMakeFiles\VR.dir\render\MatrixCalculation.cpp.obj: ..\geometry\Rectangle.h
 CMakeFiles\VR.dir\render\MatrixCalculation.cpp.obj: ..\geometry\Size.h
@@ -1009,7 +997,6 @@ CMakeFiles\VR.dir\render\Timer.cpp.obj: ..\external\glad\include\KHR\khrplatform
 CMakeFiles\VR.dir\render\Timer.cpp.obj: ..\external\glad\include\glad\glad.h
 CMakeFiles\VR.dir\render\Timer.cpp.obj: ..\util\EigenLidan.h
 CMakeFiles\VR.dir\render\Timer.cpp.obj: ..\util\Lmath.h
-CMakeFiles\VR.dir\render\Timer.cpp.obj: ..\util\Log.h
 CMakeFiles\VR.dir\render\Timer.cpp.obj: ..\util\util.h
 CMakeFiles\VR.dir\render\Timer.cpp.obj: ..\render\Timer.cpp
 CMakeFiles\VR.dir\render\Timer.cpp.obj: ..\render\Timer.h
@@ -1068,7 +1055,6 @@ CMakeFiles\VR.dir\util\util.cpp.obj: ..\external\glad\include\KHR\khrplatform.h
 CMakeFiles\VR.dir\util\util.cpp.obj: ..\external\glad\include\glad\glad.h
 CMakeFiles\VR.dir\util\util.cpp.obj: ..\util\Lmath.h
 CMakeFiles\VR.dir\util\util.cpp.obj: ..\util\EigenLidan.h
-CMakeFiles\VR.dir\util\util.cpp.obj: ..\util\Log.h
 CMakeFiles\VR.dir\util\util.cpp.obj: ..\util\util.cpp
 CMakeFiles\VR.dir\util\util.cpp.obj: ..\util\util.h
 

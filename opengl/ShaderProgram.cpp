@@ -320,35 +320,35 @@ void ShaderProgram::setAttributeValue(const char *name, const Vec4 &value){
     glVertexAttrib3fv(location,data) ;
 }
 
-void setUniformValue(int location, GLint value){
+void ShaderProgram::setUniformValue(int location, GLint value){
     glUniform1i(location, value);
 }
-void setUniformValue(int location, GLuint value){
+void ShaderProgram::setUniformValue(int location, GLuint value){
     glUniform1i(location, value);
 }
-void setUniformValue(int location, GLfloat value){
+void ShaderProgram::setUniformValue(int location, GLfloat value){
     glUniform1f(location, value);
 }
-void setUniformValue(int location, GLfloat x, GLfloat y){
+void ShaderProgram::setUniformValue(int location, GLfloat x, GLfloat y){
     glUniform2f(location, x, y);
 }
-void setUniformValue(int location, GLfloat x, GLfloat y, GLfloat z){
+void ShaderProgram::setUniformValue(int location, GLfloat x, GLfloat y, GLfloat z){
     glUniform3f(location, x, y, z);
 }
-void setUniformValue(int location, GLfloat x, GLfloat y, GLfloat z, GLfloat w){
+void ShaderProgram::setUniformValue(int location, GLfloat x, GLfloat y, GLfloat z, GLfloat w){
     glUniform4f(location, x, y, z, w);
 }
-void setUniformValue(int location, const Vec3 &value){
+void ShaderProgram::setUniformValue(int location, const Vec3 &value){
     float* data = new float[3] ;
     for(int i = 0 ; i < 3; i++)  data[i] = value[i] ;
     glUniform3fv(location, 1, data);
 }
-void setUniformValue(int location, const Vec4 &value){
+void ShaderProgram::setUniformValue(int location, const Vec4 &value){
     float* data = new float[4] ;
     for(int i = 0 ; i < 4; i++)  data[i] = value[i] ;
     glUniform3fv(location, 1, data);
 }
-void setUniformValue(int location, const Lmatrix<float> &value){
+void ShaderProgram::setUniformValue(int location, const Lmatrix<float> &value){
     const float* data = value.getData() ;
     int m = value.mrows() ;
     int n = value.ncols() ;
@@ -585,3 +585,77 @@ GLint ShaderProgram::uniformLocation(const std::string &name)
 {
     return glGetUniformLocation(ID, name.c_str());
 }
+
+
+//void ShaderProgram::setUniformValue(int location, GLint value)
+//{
+//
+//}
+//
+//void ShaderProgram::setUniformValue(int location, GLuint value)
+//{
+//
+//}
+//
+//void ShaderProgram::setUniformValue(int location, GLfloat value)
+//{
+//
+//}
+//
+//void ShaderProgram::setUniformValue(int location, GLfloat x, GLfloat y)
+//{
+//
+//}
+//
+//void ShaderProgram::setUniformValue(int location, GLfloat x, GLfloat y, GLfloat z)
+//{
+//
+//}
+//
+//void ShaderProgram::setUniformValue(int location, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
+//{
+//
+//}
+//
+//void ShaderProgram::setUniformValue(int location, const Vec3 &value)
+//{
+//
+//}
+//
+//void ShaderProgram::setUniformValue(int location, const Vec4 &value)
+//{
+//
+//}
+//
+//void ShaderProgram::setUniformValue(int location, const Lmatrix<float> &value)
+//{
+//
+//}
+
+
+
+void ShaderProgram::setUniformValue(const char *name, GLint value)
+{
+    GLint location = glGetUniformLocation(ID, name);
+    glUniform1i(location, value);
+}
+
+void ShaderProgram::setUniformValue(const char *name, GLuint value)
+{
+    GLint location = glGetUniformLocation(ID, name);
+    glUniform1i(location, value);
+}
+
+void ShaderProgram::setUniformValue(const char *name, GLfloat value)
+{
+    GLint location = glGetUniformLocation(ID, name);
+    glUniform1f(location, value);
+}
+
+void ShaderProgram::setUniformValue(const char *name, GLfloat x, GLfloat y)
+{
+    GLint location = glGetUniformLocation(ID, name);
+    glUniform2f(location, x, y);
+}
+
+

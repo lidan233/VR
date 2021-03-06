@@ -1,6 +1,12 @@
 //
 // Created by lidan on 2021/3/2.
 //
+#ifdef WIN32
+#include <windows.h>
+#else
+#include <sys/time.h>
+#endif
+
 
 #include "RenderWindow.h"
 #include "Rectangle.h"
@@ -12,11 +18,7 @@
 #include "BufferObject.h"
 #include "ShaderToy.h"
 
-#ifdef WIN32
-#include <windows.h>
-#else
-#include <sys/time.h>
-#endif
+
 
 int gettimeofday(struct timeval * tp, struct timezone * tzp)
 {
@@ -266,7 +268,7 @@ void RenderWindow::mouseButtonUpEvent(SDL_MouseButtonEvent *event)
 }
 void RenderWindow::mouseButtonDownEvent(SDL_MouseButtonEvent *event)
 {
-    const Rectangle<float> *rect = drawRect();
+    const RectangleF<float> *rect = drawRect();
     mInput.iMouse[2] =(Math::floor((event->x - rect->left()) / rect->width() * width()));
     mInput.iMouse[3] =(Math::floor(height() - (event->y - rect->top()) / rect->height() * height()));
     mInput.iMouse[0] =(mInput.iMouse.b());
@@ -274,8 +276,8 @@ void RenderWindow::mouseButtonDownEvent(SDL_MouseButtonEvent *event)
 }
 void RenderWindow::mouseMotionEvent(SDL_MouseMotionEvent *event)
 {
-    const Rectangle<float> *winrect = rect();
-    const Rectangle<float> *drawrect = drawRect();
+    const RectangleF<float>* winrect = rect();
+    const RectangleF<float>* drawrect = drawRect();
 
     float widthRatio = drawrect->width() / winrect->width();
     float heightRatio = drawrect->height() / winrect->height();
@@ -283,3 +285,73 @@ void RenderWindow::mouseMotionEvent(SDL_MouseMotionEvent *event)
     mInput.iMouse[0] = (Math::floor(event->x - drawrect->left()) * widthRatio);
     mInput.iMouse[1] = (Math::floor(height() - (event->y - drawrect->top()) * heightRatio));
 }
+
+void RenderWindow::createIcon(const unsigned char *buffer, size_t size)
+{
+    stbi_set_flip_vertically_on_load(0);
+
+    int w, h, n;
+    stbi_uc *pixels = stbi_load_from_memory(icon, size, &w, &h, &n, STBI_rgb_alpha);
+    setWindowIcon(pixels, w, h, n);
+    stbi_image_free(pixels);
+}
+
+void RenderWindow::initilizeUniformValue()
+{
+    mInput.iResolution  = Vec3(width() * 1.0f, height() * 1.0f, 1.0f);
+    mInput.iTime        = 0.0f;
+    mInput.iGlobalTime  = 0.0f;
+    mInput.iMouse       = Vec4(0.0f, 0.0f, 0.0f, 0.0f);
+    mInput.iDate        = Vec4(0.0f, 0.0f, 0.0f, 0.0f);
+    mInput.iSampleRate  = 44100 * 1.0f;
+
+    auto size = mTextures.size();
+
+    if (size <= 4)
+    {
+        for (int i = 0; i < size; i++)
+        {
+            mInput.iChannelResolution[i] = Vec3(mTextures[i]->width(),
+                                                   mTextures[i]->height(),
+                                                   1.0f);
+            mInput.iChannelTime[i] = 0.0f;
+        }
+    }
+
+    mInput.iFrame       = 0;
+    mInput.iTimeDelta   = 0.0f;
+    mInput.iFrameRate   = 0.0f;
+}
+
+void RenderWindow::bindUniform()
+{
+    if (mProgram != nullptr) {
+        mProgram->setUniformValue("iResolution", mInput.iResolution);
+        mProgram->setUniformValue("iTime", mInput.iTime);
+        mProgram->setUniformValue("iGlobalTime", mInput.iGlobalTime);
+        mProgram->setUniformValue("iMouse", mInput.iMouse);
+        mProgram->setUniformValue("iDate", mInput.iDate);
+        mProgram->setUniformValue("iSampleRate", mInput.iSampleRate);
+        mProgram->setUniformValueArray("iChannelResolution", mInput.iChannelResolution, 4);
+        mProgram->setUniformValueArray("iChannelTime", mInput.iChannelTime, 4, 1);
+        mProgram->setUniformValue("iTimeDelta", mInput.iTimeDelta);
+        mProgram->setUniformValue("iFrame", mInput.iFrame);
+        mProgram->setUniformValue("iFrameRate", mInput.iFrameRate);
+
+        mProgram->setUniformValue("iChannel0", 0);
+        mProgram->setUniformValue("iChannel1", 1);
+        mProgram->setUniformValue("iChannel2", 2);
+        mProgram->setUniformValue("iChannel3", 3);
+
+        mProgram->setUniformValue("iChannel[0].resolution", mInput.iChannelResolution[0]);
+        mProgram->setUniformValue("iChannel[1].resolution", mInput.iChannelResolution[1]);
+        mProgram->setUniformValue("iChannel[2].resolution", mInput.iChannelResolution[2]);
+        mProgram->setUniformValue("iChannel[3].resolution", mInput.iChannelResolution[3]);
+
+        mProgram->setUniformValue("iChannel[0].time", mInput.iChannelTime[0]);
+        mProgram->setUniformValue("iChannel[1].time", mInput.iChannelTime[1]);
+        mProgram->setUniformValue("iChannel[2].time", mInput.iChannelTime[2]);
+        mProgram->setUniformValue("iChannel[3].time", mInput.iChannelTime[3]);
+    }
+}
+

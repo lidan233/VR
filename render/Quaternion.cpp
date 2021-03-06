@@ -3,6 +3,14 @@
 //
 
 #include "Quaternion.h"
+#include "EigenLidan.h"
+
+inline double dot1(const Lvec3<double> &u, const Lvec3<double> &v) {
+    return u[0] * v[0]
+           + u[1] * v[1]
+           + u[2] * v[2];
+}
+
 
 
 Quaternion::Quaternion(float w, const Vec3 &vec3)
@@ -276,12 +284,13 @@ EulerAngles Quaternion::toEulerAngles() const
     return Quaternion::fromAxes(xAxis, yAxis, zAxis);
 }
 
+
  Quaternion Quaternion::rotationTo(const Vec3 &from, const Vec3 &to)
 {
     const Vec3 v0(from.normalized());
     const Vec3 v1(to.normalized());
 
-    float d = dot(v0,v1) + 1.0f;
+    float d = dot1(v0,v1) + 1.0f;
 
     if (d == 0.0f)
     {
