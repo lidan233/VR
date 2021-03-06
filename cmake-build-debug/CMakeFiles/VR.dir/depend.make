@@ -166,6 +166,8 @@ CMakeFiles\VR.dir\main.cpp.obj: ..\opengl\Shader.h
 CMakeFiles\VR.dir\main.cpp.obj: ..\opengl\ShaderProgram.h
 CMakeFiles\VR.dir\main.cpp.obj: ..\opengl\VertexArrayObject.h
 CMakeFiles\VR.dir\main.cpp.obj: ..\opengl\window.h
+CMakeFiles\VR.dir\main.cpp.obj: ..\render\Cam.h
+CMakeFiles\VR.dir\main.cpp.obj: ..\render\MatrixCalculation.h
 CMakeFiles\VR.dir\main.cpp.obj: ..\render\Timer.h
 CMakeFiles\VR.dir\main.cpp.obj: ..\shadertoy\ShaderToy.h
 CMakeFiles\VR.dir\main.cpp.obj: ..\util\EigenLidan.h
@@ -434,6 +436,8 @@ CMakeFiles\VR.dir\opengl\RenderWindow.cpp.obj: ..\external\stb\stb_image.h
 CMakeFiles\VR.dir\opengl\RenderWindow.cpp.obj: ..\geometry\Rectangle.h
 CMakeFiles\VR.dir\opengl\RenderWindow.cpp.obj: ..\geometry\Size.h
 CMakeFiles\VR.dir\opengl\RenderWindow.cpp.obj: ..\geometry\Vertex.h
+CMakeFiles\VR.dir\opengl\RenderWindow.cpp.obj: ..\render\Cam.h
+CMakeFiles\VR.dir\opengl\RenderWindow.cpp.obj: ..\render\MatrixCalculation.h
 CMakeFiles\VR.dir\opengl\RenderWindow.cpp.obj: ..\render\Timer.h
 CMakeFiles\VR.dir\opengl\RenderWindow.cpp.obj: ..\shadertoy\ShaderToy.h
 CMakeFiles\VR.dir\opengl\RenderWindow.cpp.obj: ..\util\EigenLidan.h
@@ -915,11 +919,22 @@ CMakeFiles\VR.dir\opengl\Window.cpp.obj: ..\external\glad\include\glad\glad.h
 CMakeFiles\VR.dir\opengl\Window.cpp.obj: ..\geometry\Rectangle.h
 CMakeFiles\VR.dir\opengl\Window.cpp.obj: ..\geometry\Size.h
 CMakeFiles\VR.dir\opengl\Window.cpp.obj: ..\geometry\Vertex.h
+CMakeFiles\VR.dir\opengl\Window.cpp.obj: ..\render\Cam.h
+CMakeFiles\VR.dir\opengl\Window.cpp.obj: ..\render\MatrixCalculation.h
 CMakeFiles\VR.dir\opengl\Window.cpp.obj: ..\util\EigenLidan.h
 CMakeFiles\VR.dir\opengl\Window.cpp.obj: ..\util\Lmath.h
 CMakeFiles\VR.dir\opengl\Window.cpp.obj: ..\util\util.h
 CMakeFiles\VR.dir\opengl\Window.cpp.obj: ..\opengl\Window.cpp
 CMakeFiles\VR.dir\opengl\Window.cpp.obj: ..\opengl\Window.h
+
+CMakeFiles\VR.dir\render\Cam.cpp.obj: ..\geometry\Rectangle.h
+CMakeFiles\VR.dir\render\Cam.cpp.obj: ..\geometry\Size.h
+CMakeFiles\VR.dir\render\Cam.cpp.obj: ..\geometry\Vertex.h
+CMakeFiles\VR.dir\render\Cam.cpp.obj: ..\util\EigenLidan.h
+CMakeFiles\VR.dir\render\Cam.cpp.obj: ..\util\Lmath.h
+CMakeFiles\VR.dir\render\Cam.cpp.obj: ..\render\Cam.cpp
+CMakeFiles\VR.dir\render\Cam.cpp.obj: ..\render\Cam.h
+CMakeFiles\VR.dir\render\Cam.cpp.obj: ..\render\MatrixCalculation.h
 
 CMakeFiles\VR.dir\render\Camera.cpp.obj: ..\util\EigenLidan.h
 CMakeFiles\VR.dir\render\Camera.cpp.obj: ..\util\Lmath.h

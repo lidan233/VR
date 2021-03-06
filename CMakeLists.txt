@@ -54,7 +54,7 @@ add_executable(VR
         ${opengldir}
         ${geometrydir}
         ${renderdir}
-        )
+        render/Cam.cpp render/Cam.h)
 
 
 

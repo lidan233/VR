@@ -140,38 +140,6 @@ void RenderWindow::addUserFragmentMainCode(const char *fragmentMain)
     if (!mProgram->isLinked())
         SDL_LogWarn(SDL_LOG_CATEGORY_APPLICATION, "Linked Error: %s", mProgram->log().c_str());
 }
-bool RenderWindow::screenshot()
-{
-    int w = width();
-    int h = height();
-
-    GLubyte *pixels = new GLubyte[w * h * 4];
-    glReadPixels(0, 0, w, h, GL_RGBA, GL_UNSIGNED_BYTE, pixels);
-
-    time_t t = time(nullptr);
-    struct tm *dt = localtime(&t);
-
-    const char *homepath = getenv("HOME");
-    if (homepath == nullptr)
-    {
-        delete[] pixels;
-        return false;
-    }
-
-    size_t len = strlen(homepath);
-
-    char *filename = new char[len + 20];
-    sprintf(filename, "%s/%d%d%d%d%d%d%d%d%d%d%d.png", homepath, dt->tm_year + 1900, NUMBER(dt->tm_mon + 1),
-            (dt->tm_mon + 1) % 10, NUMBER(dt->tm_mday), dt->tm_mday % 10, NUMBER(dt->tm_hour),
-            dt->tm_hour % 10, NUMBER(dt->tm_min), dt->tm_min % 10, NUMBER(dt->tm_sec),
-            dt->tm_sec % 10);
-
-    bool ret = Sample2D::savePixelsToFile(filename, pixels, w, h, 4);
-
-    delete[] pixels;
-    delete[] filename;
-    return ret;
-}
 
 void RenderWindow::initilizeGL()
 {
@@ -255,10 +223,7 @@ void RenderWindow::keydownEvent(SDL_KeyboardEvent *event)
 {
     if (event->keysym.sym == SDLK_x)
     {
-        if (screenshot() == false)
-        {
-            SDL_LogWarn(SDL_LOG_CATEGORY_APPLICATION, "Save screenshot failed\n");
-        }
+
     }
 }
 void RenderWindow::mouseButtonUpEvent(SDL_MouseButtonEvent *event)

@@ -1,33 +1,33 @@
-"F:\softengine\clion\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" C:\Users\lidan\Desktop\result\VR
+"D:\software\clion\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" C:\Users\lidan\Desktop\VR
 -- include LidanBuild.cmake
 -- include LidanBase.cmake
--- Add C:/Users/lidan/Desktop/result/VR/util;
--- C:/Users/lidan/Desktop/result/VR/util/EigenLidan.hC:/Users/lidan/Desktop/result/VR/util/FileReader.hC:/Users/lidan/Desktop/result/VR/util/Lmath.hC:/Users/lidan/Desktop/result/VR/util/Log.hC:/Users/lidan/Desktop/result/VR/util/Matrix.hC:/Users/lidan/Desktop/result/VR/util/util.cppC:/Users/lidan/Desktop/result/VR/util/util.h
--- Add C:/Users/lidan/Desktop/result/VR/shadertoy;
--- C:/Users/lidan/Desktop/result/VR/shadertoy/ShaderToy.h
--- Add C:/Users/lidan/Desktop/result/VR/opengl;
--- C:/Users/lidan/Desktop/result/VR/opengl/BufferObject.cppC:/Users/lidan/Desktop/result/VR/opengl/BufferObject.hC:/Users/lidan/Desktop/result/VR/opengl/FrameBuffer.cppC:/Users/lidan/Desktop/result/VR/opengl/FrameBuffer.hC:/Users/lidan/Desktop/result/VR/opengl/RenderWindow.cppC:/Users/lidan/Desktop/result/VR/opengl/RenderWindow.hC:/Users/lidan/Desktop/result/VR/opengl/Sample2D.cppC:/Users/lidan/Desktop/result/VR/opengl/Sample2D.hC:/Users/lidan/Desktop/result/VR/opengl/Shader.cppC:/Users/lidan/Desktop/result/VR/opengl/Shader.hC:/Users/lidan/Desktop/result/VR/opengl/ShaderProgram.cppC:/Users/lidan/Desktop/result/VR/opengl/ShaderProgram.hC:/Users/lidan/Desktop/result/VR/opengl/VertexArrayObject.cppC:/Users/lidan/Desktop/result/VR/opengl/VertexArrayObject.hC:/Users/lidan/Desktop/result/VR/opengl/Window.cppC:/Users/lidan/Desktop/result/VR/opengl/Window.h
--- Add C:/Users/lidan/Desktop/result/VR/geometry;
--- C:/Users/lidan/Desktop/result/VR/geometry/Rectangle.cppC:/Users/lidan/Desktop/result/VR/geometry/Rectangle.hC:/Users/lidan/Desktop/result/VR/geometry/Size.cppC:/Users/lidan/Desktop/result/VR/geometry/Size.hC:/Users/lidan/Desktop/result/VR/geometry/Vertex.cppC:/Users/lidan/Desktop/result/VR/geometry/Vertex.h
--- Add C:/Users/lidan/Desktop/result/VR/render;
--- C:/Users/lidan/Desktop/result/VR/render/Camera.cppC:/Users/lidan/Desktop/result/VR/render/Camera.hC:/Users/lidan/Desktop/result/VR/render/EulerAngles.cppC:/Users/lidan/Desktop/result/VR/render/EulerAngles.hC:/Users/lidan/Desktop/result/VR/render/MatrixCalculation.cppC:/Users/lidan/Desktop/result/VR/render/MatrixCalculation.hC:/Users/lidan/Desktop/result/VR/render/Quaternion.cppC:/Users/lidan/Desktop/result/VR/render/Quaternion.hC:/Users/lidan/Desktop/result/VR/render/Timer.cppC:/Users/lidan/Desktop/result/VR/render/Timer.h
+-- Add C:/Users/lidan/Desktop/VR/util;
+-- C:/Users/lidan/Desktop/VR/util/EigenLidan.hC:/Users/lidan/Desktop/VR/util/FileReader.hC:/Users/lidan/Desktop/VR/util/Lmath.hC:/Users/lidan/Desktop/VR/util/Log.hC:/Users/lidan/Desktop/VR/util/Matrix.hC:/Users/lidan/Desktop/VR/util/util.cppC:/Users/lidan/Desktop/VR/util/util.h
+-- Add C:/Users/lidan/Desktop/VR/shadertoy;
+-- C:/Users/lidan/Desktop/VR/shadertoy/ShaderToy.h
+-- Add C:/Users/lidan/Desktop/VR/opengl;
+-- C:/Users/lidan/Desktop/VR/opengl/BufferObject.cppC:/Users/lidan/Desktop/VR/opengl/BufferObject.hC:/Users/lidan/Desktop/VR/opengl/FrameBuffer.cppC:/Users/lidan/Desktop/VR/opengl/FrameBuffer.hC:/Users/lidan/Desktop/VR/opengl/RenderWindow.cppC:/Users/lidan/Desktop/VR/opengl/RenderWindow.hC:/Users/lidan/Desktop/VR/opengl/Sample2D.cppC:/Users/lidan/Desktop/VR/opengl/Sample2D.hC:/Users/lidan/Desktop/VR/opengl/Shader.cppC:/Users/lidan/Desktop/VR/opengl/Shader.hC:/Users/lidan/Desktop/VR/opengl/ShaderProgram.cppC:/Users/lidan/Desktop/VR/opengl/ShaderProgram.hC:/Users/lidan/Desktop/VR/opengl/VertexArrayObject.cppC:/Users/lidan/Desktop/VR/opengl/VertexArrayObject.hC:/Users/lidan/Desktop/VR/opengl/Window.cppC:/Users/lidan/Desktop/VR/opengl/Window.h
+-- Add C:/Users/lidan/Desktop/VR/geometry;
+-- C:/Users/lidan/Desktop/VR/geometry/Rectangle.cppC:/Users/lidan/Desktop/VR/geometry/Rectangle.hC:/Users/lidan/Desktop/VR/geometry/Size.cppC:/Users/lidan/Desktop/VR/geometry/Size.hC:/Users/lidan/Desktop/VR/geometry/Vertex.cppC:/Users/lidan/Desktop/VR/geometry/Vertex.h
+-- Add C:/Users/lidan/Desktop/VR/render;
+-- C:/Users/lidan/Desktop/VR/render/Cam.cppC:/Users/lidan/Desktop/VR/render/Cam.hC:/Users/lidan/Desktop/VR/render/Camera.cppC:/Users/lidan/Desktop/VR/render/Camera.hC:/Users/lidan/Desktop/VR/render/EulerAngles.cppC:/Users/lidan/Desktop/VR/render/EulerAngles.hC:/Users/lidan/Desktop/VR/render/MatrixCalculation.cppC:/Users/lidan/Desktop/VR/render/MatrixCalculation.hC:/Users/lidan/Desktop/VR/render/Quaternion.cppC:/Users/lidan/Desktop/VR/render/Quaternion.hC:/Users/lidan/Desktop/VR/render/Timer.cppC:/Users/lidan/Desktop/VR/render/Timer.h
 -- ----------
--- C:/Users/lidan/Desktop/result/VR/external/glfw/ TRUE glfw3 
--- C:/Users/lidan/Desktop/result/VR/external/glfw
--- Add C:/Users/lidan/Desktop/result/VR/external/glfw/include;
--- C:/Users/lidan/Desktop/result/VR/external/glfw/include/GLFW/glfw3.hC:/Users/lidan/Desktop/result/VR/external/glfw/include/GLFW/glfw3native.h
--- C:/Users/lidan/Desktop/result/VR/external/glfw
--- include C:/Users/lidan/Desktop/result/VR/external/glfw/include/}
--- C:/Users/lidan/Desktop/result/VR/external/glfw/lib-vc2019/glfw3
--- link C:/Users/lidan/Desktop/result/VR/external/glfw/lib-vc2019/glfw3.dll
+-- C:/Users/lidan/Desktop/VR/external/glfw/ TRUE glfw3 
+-- C:/Users/lidan/Desktop/VR/external/glfw
+-- Add C:/Users/lidan/Desktop/VR/external/glfw/include;
+-- C:/Users/lidan/Desktop/VR/external/glfw/include/GLFW/glfw3.hC:/Users/lidan/Desktop/VR/external/glfw/include/GLFW/glfw3native.h
+-- C:/Users/lidan/Desktop/VR/external/glfw
+-- include C:/Users/lidan/Desktop/VR/external/glfw/include/}
+-- C:/Users/lidan/Desktop/VR/external/glfw/lib-vc2019/glfw3
+-- link C:/Users/lidan/Desktop/VR/external/glfw/lib-vc2019/glfw3.dll
 -- ----------
--- C:/Users/lidan/Desktop/result/VR/external/glad/   
--- C:/Users/lidan/Desktop/result/VR/external/glad
--- Add C:/Users/lidan/Desktop/result/VR/external/glad/include;
--- C:/Users/lidan/Desktop/result/VR/external/glad/include/KHR/khrplatform.hC:/Users/lidan/Desktop/result/VR/external/glad/include/glad/glad.h
--- Add C:/Users/lidan/Desktop/result/VR/external/glad/src
--- C:/Users/lidan/Desktop/result/VR/external/glad/src/glad.cpp
+-- C:/Users/lidan/Desktop/VR/external/glad/   
+-- C:/Users/lidan/Desktop/VR/external/glad
+-- Add C:/Users/lidan/Desktop/VR/external/glad/include;
+-- C:/Users/lidan/Desktop/VR/external/glad/include/KHR/khrplatform.hC:/Users/lidan/Desktop/VR/external/glad/include/glad/glad.h
+-- Add C:/Users/lidan/Desktop/VR/external/glad/src
+-- C:/Users/lidan/Desktop/VR/external/glad/src/glad.cpp
 -- using windows external
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/lidan/Desktop/result/VR/cmake-build-debug
+-- Build files have been written to: C:/Users/lidan/Desktop/VR/cmake-build-debug

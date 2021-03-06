@@ -3,14 +3,138 @@
 #define mouseDown    ( iMouse.z > 0. && iMouse.w > 0. ) // mouse down even: mouse button just clicked
 #define mouseClicked ( iMouse.w < 0. )                  // mouse clicked:   mouse button currently clicked
 
+
 // --- constant ---------------------------------------------------------
+#define PI 3.1415927
 #define SC (250.0)
 #define MOD3 vec3(.1031,.11369,.13787)
+#define C(x) clamp(x, 0., 1.)
+#define S(a, b, x) smoothstep(a, b, x)
+#define F(x, f) (floor(x * f) / f)
+
+
+// Fireworks control variables
+#define TAU 6.283185307179586
+#define FIREWORK_COUNT 8
+#define FIREWORK_DURATION 8.
+#define FIREWORK_LOW .75
+#define FIREWORK_HIGH 1.05
+#define ROCKET_PARTICES 16
+#define ROCKET_DURATION 1.5
+#define FLASH_DURATION ROCKET_DURATION + .2
+#define THRUSTER_SPEED .25
+#define EXPLOSION_STRENGTH .025;
+#define EXPLOSION_PARTICLES 100
+
+
+vec3 fhash31(float p)
+{
+    uvec3 n = uint(int(p)) * uvec3(1597334673U, 3812015801U, 2798796415U);
+    n = (n.x ^ n.y ^ n.z) * uvec3(1597334673U, 3812015801U, 2798796415U);
+    return vec3(n) * (1. / float(0xffffffffU));
+}
+
+float fhash11(float p)
+{
+    uvec2 n = uint(int(p)) * uvec2(1597334673U, 3812015801U);
+    uint q = (n.x ^ n.y) * 1597334673U;
+    return float(q) * (1. / float(0xffffffffU));
+}
+
+// Function to remap a value from [a, b] to [c, d]
+float fremap(float x, float a, float b, float c, float d)
+{
+    return (((x - a) / (b - a)) * (d - c)) + c;
+}
+
+
+vec3 fireworks(vec2 st)
+{
+    vec2 fireworkPos, particlePos;
+    float radius, theta, radiusScale, spark, sparkDistFromOrigin, shimmer,
+    shimmerThreshold, fade, timeHash, timeOffset, rocketPath;
+    vec3 particleHash, fireworkHash, fireworkCol, finalCol;
+    for (int j = 0; j < FIREWORK_COUNT; ++j)
+    {
+        timeHash = fhash11(float(j + 1) * 9.6144 + 78.6118);
+        timeOffset = float(j + 1) + float(j + 1) * timeHash;
+        // This hash changes after each firework cycle (rocket + explosion)
+        fireworkHash = fhash31(471.5277 * float(j) + 1226.9146
+        + float(int((iTime+timeOffset) / FIREWORK_DURATION))) * 2. - 1.;
+        fireworkCol = fireworkHash * .5 + .5;
+        fireworkHash.y = fremap(fireworkHash.y, -1., 1., FIREWORK_LOW, FIREWORK_HIGH);
+        // Random firework x coordinate but confined to a certain column based on j
+        fireworkHash.x = ((float(j) + .5 + fireworkHash.x * .25)
+        / float(FIREWORK_COUNT)) * 2. - 1.;
+
+        // Duration of each firework with a random start time
+        float time = mod(iTime + timeOffset, FIREWORK_DURATION);
+        if (time > ROCKET_DURATION)
+        {
+            fireworkPos = vec2(fireworkHash.x, fireworkHash.y);
+            for (int i = 0; i < EXPLOSION_PARTICLES; ++i)
+            {
+                // Unique hash that yeilds a separate spread pattern for each explosion
+                particleHash = fhash31(float(j) * 1291.1978 + float(i)
+                * 1619.8196 + 469.7119);
+                theta = fremap(particleHash.x, 0., 1., 0., TAU); // [0, 2.*PI]
+                radiusScale = particleHash.y * EXPLOSION_STRENGTH;
+                // Radius expands exponentially over time, i.e. explosion effect
+                radius = radiusScale * time * time;
+                particlePos = vec2(radius * cos(theta), radius * sin(theta));
+                particlePos.y -= 8. * pow(particlePos.x, 4.); // fake-ish gravity
+                spark = .0003 / pow(length(st - particlePos - fireworkPos), 1.7);
+                sparkDistFromOrigin = 2. * length(fireworkPos - particlePos);
+                // Shimmering effect for explosion particles
+                shimmer = max(0., sqrt(sparkDistFromOrigin)
+                * (sin((iTime + particleHash.y * TAU) * 18.)));
+                shimmerThreshold = FIREWORK_DURATION * .6;
+                // Fade after a certain time threshold
+                fade = C((FIREWORK_DURATION * 2.) * radiusScale - radius);
+                finalCol += mix(spark, spark * shimmer, smoothstep(shimmerThreshold
+                * radiusScale, (shimmerThreshold + 1.) * radiusScale , radius))
+                * fade * fireworkCol;
+            }
+
+            // Initial instant flash for the explosion
+            if(time < FLASH_DURATION)
+            finalCol += spark / (.01 + mod(time, ROCKET_DURATION));
+        }
+        else
+        {
+            rocketPath = mod(time, ROCKET_DURATION) / ROCKET_DURATION;
+            // ease out sine
+            rocketPath = sin(rocketPath / (ROCKET_DURATION * .75) * PI * .5);
+            fireworkPos = vec2(fireworkHash.x,
+            rocketPath * fireworkHash.y);
+            // Slight random wiggle for the rocket's path
+            fireworkPos.x += sin(st.y * 50. + time) * fireworkCol.z * .0035;
+
+            // Rockets flying before the explosion
+            for (int i = 0; i < ROCKET_PARTICES; ++i)
+            {
+                particleHash = fhash31((float(i) * 603.6837) + 1472.3486);
+                // rocket trail size
+                float t = time * (2. - time);
+                radius = mod(time + particleHash.y, THRUSTER_SPEED) / THRUSTER_SPEED
+                * particleHash.z * .1;
+                // Confine theta to a small value for a vertical thrust effect
+                theta = fremap(particleHash.x, 0., 1., 0., PI * .1) + PI * 1.45;
+                particlePos = vec2(radius * cos(theta), radius * sin(theta));
+                finalCol += 8e-5 / pow(length(st - particlePos - fireworkPos), 1.1)
+                * mix(vec3(1.4, .7, .2), vec3(1.4), radius * 16.);
+            }
+        }
+    }
+    return finalCol;
+}
+
 
 uniform vec3 eyes[2] ;
+uniform vec3 target[2] ;
 uniform vec3 direction ;
 uniform vec2 max_min_distance ;
-
+const vec3 lig = normalize( vec3(-0.3,0.4,0.7) );
 
 
 struct Ray{
@@ -34,6 +158,12 @@ float hash( float n )
 {
     return fract(sin(n)*43758.5453123);
 }
+//float hash21(vec2 p3)
+//{
+//    p3  = fract(p3 * MOD3);
+//    p3 += dot(p3, p3.yx + 19.19);
+//    return -1.0 + 2.0 * fract((p3.x + p3.y) * sin(p3.x + p3.y));
+//}
 
 
 vec4 noised4( in vec3 x )
@@ -157,13 +287,30 @@ mat2 m2 = mat2(1.6,-1.2,1.2,1.6);
 float fbm( vec2 p )
 {
     float f = 0.0;
-
     f += 0.5000*noise( p ); p = m2*p*2.02;
     f += 0.2500*noise( p ); p = m2*p*2.03;
     f += 0.1250*noise( p ); p = m2*p*2.01;
     f += 0.0625*noise( p );
-
     return f/0.9375;
+}
+
+
+//-----------------------------------------------------------------------------
+float SmokeParticle(vec2 loc, vec2 pos, float size, float rnd, float time)
+{
+    loc = loc-pos;
+    float d = dot(loc, loc)/size;
+    // Outside the circle? No influence...
+    if (d > 1.0) return 0.0;
+
+    // Rotate the particles...
+    float r= time*rnd*1.85;
+    float si = sin(r);
+    float co = cos(r);
+    // Grab the rotated noise decreasing resolution due to Y position.
+    // Also used 'rnd' as an additional noise changer.
+    d = noise(hash(rnd*828.0)*83.1+mat2(co, si, -si, co)*loc.xy*2./(pos.y*.16)) * pow((1.-d), 3.)*.7;
+    return d;
 }
 
 
@@ -274,6 +421,8 @@ vec3 CamPath( float time )
 }
 
 
+
+
 mat3 setCamera( in vec3 ro, in vec3 ta, in float cr )
 {
     vec3 cw = normalize(ta-ro);
@@ -283,12 +432,48 @@ mat3 setCamera( in vec3 ro, in vec3 ta, in float cr )
     return mat3( cu, cv, cw );
 }
 
+vec4 mapClouds( in vec3 pos )
+{
+    vec2 q = pos.xz *0.5 + vec2(0.0,-iTime);
+
+    float d = clamp( fbm(q)-0.55, 0.0, 1.0 );
+    d *= smoothstep( 0.5, 0.55, terrain(pos.xz)+0.01 );
+
+    vec4 res = vec4( d );
+    res.xyz  = 0.25*mix( vec3(1.0,0.8,0.7), 0.2*vec3(0.4,0.4,0.4), d );
+    res.xyz *= 0.5 + 0.5*smoothstep(-2.0, 1.0, pos.y);
+    return res;
+}
+
+vec4 raymarchClouds( in vec3 ro, in vec3 rd, in vec3 bcol, in vec2 px )
+{
+    vec4 sum = vec4( 0.0 );
+    float sun = pow( clamp( dot(rd,lig), 0.0, 1.0 ), 6.0 );
+    float t = hash(px.x)*25.6;
+    for( int i=0; i<60; i++ )
+    {
+        vec4 col = mapClouds( ro + t*rd );
+        col.xyz += vec3(1.0,0.7,0.4)*0.4*sun*(1.0-col.w);
+        col.xyz = mix( col.xyz, bcol, 1.0-exp(-0.00006*t*t*t) );
+        col.a *= 2.0;
+        col.rgb *= col.a;
+        sum = sum + col*(1.0 - sum.a);
+
+        t += max(0.1,0.05*t);
+        if( t>300 || sum.w>0.95 ) break;
+    }
+    sum.xyz /= (0.001+sum.w);
+    return clamp( sum, 0.0, 1.0 );
+}
+
 
 
 void mainImage(out vec4 fragColor, in vec2 fragCoord)
 {
     vec2 xy = -1.0 + 2.0 * fragCoord.xy / iResolution.xy ;
     vec2 s = xy*vec2(1.75, 1.0) ;
+    vec2 tuv = (fragCoord-.5*iResolution.xy)/iResolution.y;
+
     bool isCyan = 0.5 < mod(fragCoord.x, 2.0 ) ;
     if(.5<mod(fragCoord.y,2.0))isCyan = !isCyan;
     if(isCyan) s.x = s.x - 0.3 ;
@@ -316,11 +501,40 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
     float sundot = clamp(dot(rd, light1),0.0,1.0) ;
     vec3 col ;
     float t ;
+    vec3 diffuse ;
+    vec3 fcol = vec3(0) ;
 
     if(!jintersect(campos, rd, t))
     {
-        col = 0.9 * vec3(0.97,0.99,1.0) ;
-        col += 0.2 * vec3(0.8, 0.7, 0.5) * pow(sundot, 4.0) ;
+        col = vec3(0.3,0.5,0.85) - rd.y*rd.y*0.5;
+        col = mix( col, 0.85*vec3(0.7,0.75,0.85), pow( 1.0-max(rd.y,0.0), 4.0 ) );
+        // sun
+        col += 0.25*vec3(1.0,0.7,0.4)*pow( sundot,5.0 );
+        col += 0.25*vec3(1.0,0.8,0.6)*pow( sundot,64.0 );
+        col += 0.2*vec3(1.0,0.8,0.6)*pow( sundot,512.0 );
+        // clouds
+        vec2 sc = campos.xz + rd.xz*(SC*1000.0-campos.y)/rd.y;
+        col = mix( col, vec3(1.0,0.95,1.0), 0.5*smoothstep(0.5,0.8,fbm(0.0005*sc/SC)) );
+        // horizon
+        col = mix( col, 0.68*vec3(0.4,0.65,1.0), pow( 1.0-max(rd.y,0.0), 16.0 ) );
+        t = -1.0;
+
+
+        vec2 fuv = (2. * fragCoord - iResolution.xy) / min(iResolution.y, iResolution.x);
+        fuv.y += .3; // shift the horizon a bit lower
+        float reflection = 0.;
+
+        if (fuv.y < 0.)
+        {
+            reflection = 1.;
+            fuv.x += cos(fuv.y * 192. - iTime * .6) * sin(fuv.y * 96. + iTime * .75) * .04;
+        }
+        vec2 st = vec2(fuv.x, abs(fuv.y));
+        fcol = C(fireworks(st)) ;
+
+
+//        col = 0.3* fcol+(1.-.3)*col;
+//        col = fcol ;
     }else {
         vec3 pos = campos + t*rd ;
         vec3 nor = calcNormal(pos, t) ;
@@ -356,13 +570,20 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 //        #endif
 
 
+//        vec3  col = vec3(0.36,0.43,0.54) - rd.y*0.5;
+//        float sun = clamp( dot(rd,lig), 0.0, 1.0 );
+//        col += vec3(1.0,0.8,0.4)*0.24*pow( sun, 6.0 );
+//        vec3 bcol = col;
+//        //smoke
+//        vec4 res = raymarchClouds( campos, rd, bcol, fragCoord );
+//        col = mix( col, res.xyz, res.w ) ;
+
         // sum the shadowing and direct light
         vec3 brdf  = 2.0*vec3(0.17,0.19,0.20)*clamp(nor.y,0.0,1.0); //flat surfaces are enhanced
         brdf += 6.0*vec3(1.00,0.95,0.80)*dif1v; // shadow
         brdf += 2.0*vec3(0.20,0.20,0.20)*dif2; //second light source
 
         col *= brdf;
-
         //add distance fog
         float fo = 1.0-exp(-pow(0.0015*t,1.5));
         vec3 fco = vec3(0.7) + 0.6*vec3(0.8,0.7,0.5)*pow( sundot, 4.0 );
@@ -372,10 +593,17 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
     col = sqrt(col); // brightens the image (colors are < 1.0, so sqrt would be a larger number)
 
     // darkens the edges of the image
-    vec2 uv = xy*0.5+0.5;
-    col *= 0.7 + 0.3*pow(16.0*uv.x*uv.y*(1.0-uv.x)*(1.0-uv.y),0.1);
+//    vec2 uv = xy*0.5+0.5;
+//    col *= 0.7 + 0.3*pow(16.0*uv.x*uv.y*(1.0-uv.x)*(1.0-uv.y),0.1);
+
+    vec2 pos= (fragCoord.xy/iResolution.y - vec2(.8,.5))*2.;
+    float gaz = 1.5*fbm(vec2(5.*(pos.x-PI),2.*pos.y-6.*time));
+    col = 0.4* vec3(.2,.3,0.1)*gaz+(1.-.4)*col;
+
+
     if(isCyan)
         fragColor=vec4(col,1.0);
 //    else
+
 //        fragColor=vec4(sqrt(col.r),0.0,0.0,1.0);
 }

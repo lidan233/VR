@@ -7,7 +7,12 @@
 #define SDL_MAIN_HANDLED
 #include <SDL_main.h>
 
-void printUsage();
+void printUsage()
+{
+    fprintf(stdout, "Usage: -shader <shader.frag> -channels <channel1.png> <channel2.png> ....");
+}
+
+
 int main(int argc, char* argv[])
 {
     SDL_LogSetPriority(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_VERBOSE);
@@ -86,7 +91,3 @@ int main(int argc, char* argv[])
     return 0;
 }
 
-void printUsage()
-{
-    fprintf(stdout, "Usage: -shader <shader.frag> -channels <channel1.png> <channel2.png> ....");
-}

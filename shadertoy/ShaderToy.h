@@ -8,7 +8,7 @@
 #include "Sample2D.h"
 
 
-// https://www.shadertoy.com/view/XslGRr
+// 根據https://www.shadertoy.com/view/XslGRr
 //Shader Inputs
 //uniform vec3      iResolution;           // viewport resolution (in pixels)
 //uniform float     iTime;                 // shader playback time (in seconds)

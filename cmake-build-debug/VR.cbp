@@ -8,41 +8,42 @@
 		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\external\;CMake Files\external\imgui\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/lidan/Desktop/result/VR/cmake-build-debug"/>
+				<Option working_dir="C:/Users/lidan/Desktop/VR/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 all"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="VR">
-				<Option output="C:/Users/lidan/Desktop/result/VR/cmake-build-debug/VR.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/lidan/Desktop/result/VR/cmake-build-debug"/>
+				<Option output="C:/Users/lidan/Desktop/VR/cmake-build-debug/VR.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/lidan/Desktop/VR/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/glfw/include"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/glad/include"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/util"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/shadertoy"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/opengl"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/geometry"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/render"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/glad"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/SDL"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/glm"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/eigen"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/imgui"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/stb"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/imgui/examples"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/SDL/lib-vc2019/include"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/imgui/."/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/imgui/./backends"/>
-					<Add directory="F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
-					<Add directory="F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\include"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/glfw/include"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/glad/include"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/util"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/shadertoy"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/opengl"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/geometry"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/render"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/glad"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/SDL"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/glm"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/eigen"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/imgui"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/stb"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/imgui/examples"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/SDL/lib-vc2019/include"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/imgui/."/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/imgui/./backends"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
@@ -50,38 +51,39 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 VR"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 VR"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="VR/fast">
-				<Option output="C:/Users/lidan/Desktop/result/VR/cmake-build-debug/VR.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/lidan/Desktop/result/VR/cmake-build-debug"/>
+				<Option output="C:/Users/lidan/Desktop/VR/cmake-build-debug/VR.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/lidan/Desktop/VR/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/glfw/include"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/glad/include"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/util"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/shadertoy"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/opengl"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/geometry"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/render"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/glad"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/SDL"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/glm"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/eigen"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/imgui"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/stb"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/imgui/examples"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/SDL/lib-vc2019/include"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/imgui/."/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/imgui/./backends"/>
-					<Add directory="F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
-					<Add directory="F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\include"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/glfw/include"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/glad/include"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/util"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/shadertoy"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/opengl"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/geometry"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/render"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/glad"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/SDL"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/glm"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/eigen"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/imgui"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/stb"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/imgui/examples"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/SDL/lib-vc2019/include"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/imgui/."/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/imgui/./backends"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
@@ -89,88 +91,89 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 VR/fast"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 VR/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/local">
-				<Option working_dir="C:/Users/lidan/Desktop/result/VR/cmake-build-debug"/>
+				<Option working_dir="C:/Users/lidan/Desktop/VR/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 install/local"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 install/local"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install">
-				<Option working_dir="C:/Users/lidan/Desktop/result/VR/cmake-build-debug"/>
+				<Option working_dir="C:/Users/lidan/Desktop/VR/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 install"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 install"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/lidan/Desktop/result/VR/cmake-build-debug"/>
+				<Option working_dir="C:/Users/lidan/Desktop/VR/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/lidan/Desktop/result/VR/cmake-build-debug"/>
+				<Option working_dir="C:/Users/lidan/Desktop/VR/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="list_install_components">
-				<Option working_dir="C:/Users/lidan/Desktop/result/VR/cmake-build-debug"/>
+				<Option working_dir="C:/Users/lidan/Desktop/VR/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 list_install_components"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 list_install_components"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="imgui">
-				<Option output="C:/Users/lidan/Desktop/result/VR/cmake-build-debug/external/imgui/imgui.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/lidan/Desktop/result/VR/cmake-build-debug/external/imgui"/>
+				<Option output="C:/Users/lidan/Desktop/VR/cmake-build-debug/external/imgui/imgui.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/lidan/Desktop/VR/cmake-build-debug/external/imgui"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add option="-DIMGUI_IMPL_OPENGL_LOADER_GLAD"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/glfw/include"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/glad/include"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/util"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/shadertoy"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/opengl"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/geometry"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/render"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/glad"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/SDL"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/glm"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/eigen"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/imgui"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/stb"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/imgui/examples"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/imgui/."/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/imgui/./backends"/>
-					<Add directory="F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
-					<Add directory="F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\include"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/glfw/include"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/glad/include"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/util"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/shadertoy"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/opengl"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/geometry"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/render"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/glad"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/SDL"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/glm"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/eigen"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/imgui"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/stb"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/imgui/examples"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/imgui/."/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/imgui/./backends"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
@@ -178,38 +181,39 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui\Makefile VERBOSE=1 imgui"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\external\imgui\Makefile VERBOSE=1 imgui"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\external\imgui\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\external\imgui\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\external\imgui\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="imgui/fast">
-				<Option output="C:/Users/lidan/Desktop/result/VR/cmake-build-debug/external/imgui/imgui.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/lidan/Desktop/result/VR/cmake-build-debug/external/imgui"/>
+				<Option output="C:/Users/lidan/Desktop/VR/cmake-build-debug/external/imgui/imgui.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/lidan/Desktop/VR/cmake-build-debug/external/imgui"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add option="-DIMGUI_IMPL_OPENGL_LOADER_GLAD"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/glfw/include"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/glad/include"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/util"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/shadertoy"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/opengl"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/geometry"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/render"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/glad"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/SDL"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/glm"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/eigen"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/imgui"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/stb"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/imgui/examples"/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/imgui/."/>
-					<Add directory="C:/Users/lidan/Desktop/result/VR/external/imgui/./backends"/>
-					<Add directory="F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
-					<Add directory="F:\softengine\vs2019\VC\Tools\MSVC\14.28.29333\include"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/glfw/include"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/glad/include"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/util"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/shadertoy"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/opengl"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/geometry"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/render"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/glad"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/SDL"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/glm"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/eigen"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/imgui"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/stb"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/imgui/examples"/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/imgui/."/>
+					<Add directory="C:/Users/lidan/Desktop/VR/external/imgui/./backends"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
@@ -217,176 +221,182 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui\Makefile VERBOSE=1 imgui/fast"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\result\VR\cmake-build-debug\external\imgui\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\external\imgui\Makefile VERBOSE=1 imgui/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\external\imgui\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\external\imgui\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\lidan\Desktop\VR\cmake-build-debug\external\imgui\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/external/glad/src/glad.cpp">
+		<Unit filename="C:/Users/lidan/Desktop/VR/external/glad/src/glad.cpp">
 			<Option target="imgui"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/external/imgui/examples/imgui_impl_glfw.cpp">
+		<Unit filename="C:/Users/lidan/Desktop/VR/external/imgui/examples/imgui_impl_glfw.cpp">
 			<Option target="imgui"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/external/imgui/examples/imgui_impl_glfw.h">
+		<Unit filename="C:/Users/lidan/Desktop/VR/external/imgui/examples/imgui_impl_glfw.h">
 			<Option target="imgui"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/external/imgui/examples/imgui_impl_opengl3.cpp">
+		<Unit filename="C:/Users/lidan/Desktop/VR/external/imgui/examples/imgui_impl_opengl3.cpp">
 			<Option target="imgui"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/external/imgui/examples/imgui_impl_opengl3.h">
+		<Unit filename="C:/Users/lidan/Desktop/VR/external/imgui/examples/imgui_impl_opengl3.h">
 			<Option target="imgui"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/external/imgui/imgui.cpp">
+		<Unit filename="C:/Users/lidan/Desktop/VR/external/imgui/imgui.cpp">
 			<Option target="imgui"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/external/imgui/imgui.h">
+		<Unit filename="C:/Users/lidan/Desktop/VR/external/imgui/imgui.h">
 			<Option target="imgui"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/external/imgui/imgui_demo.cpp">
+		<Unit filename="C:/Users/lidan/Desktop/VR/external/imgui/imgui_demo.cpp">
 			<Option target="imgui"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/external/imgui/imgui_draw.cpp">
+		<Unit filename="C:/Users/lidan/Desktop/VR/external/imgui/imgui_draw.cpp">
 			<Option target="imgui"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/external/imgui/imgui_widgets.cpp">
+		<Unit filename="C:/Users/lidan/Desktop/VR/external/imgui/imgui_widgets.cpp">
 			<Option target="imgui"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/geometry/Rectangle.cpp">
+		<Unit filename="C:/Users/lidan/Desktop/VR/geometry/Rectangle.cpp">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/geometry/Rectangle.h">
+		<Unit filename="C:/Users/lidan/Desktop/VR/geometry/Rectangle.h">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/geometry/Size.cpp">
+		<Unit filename="C:/Users/lidan/Desktop/VR/geometry/Size.cpp">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/geometry/Size.h">
+		<Unit filename="C:/Users/lidan/Desktop/VR/geometry/Size.h">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/geometry/Vertex.cpp">
+		<Unit filename="C:/Users/lidan/Desktop/VR/geometry/Vertex.cpp">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/geometry/Vertex.h">
+		<Unit filename="C:/Users/lidan/Desktop/VR/geometry/Vertex.h">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/main.cpp">
+		<Unit filename="C:/Users/lidan/Desktop/VR/main.cpp">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/opengl/BufferObject.cpp">
+		<Unit filename="C:/Users/lidan/Desktop/VR/opengl/BufferObject.cpp">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/opengl/BufferObject.h">
+		<Unit filename="C:/Users/lidan/Desktop/VR/opengl/BufferObject.h">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/opengl/FrameBuffer.cpp">
+		<Unit filename="C:/Users/lidan/Desktop/VR/opengl/FrameBuffer.cpp">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/opengl/FrameBuffer.h">
+		<Unit filename="C:/Users/lidan/Desktop/VR/opengl/FrameBuffer.h">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/opengl/RenderWindow.cpp">
+		<Unit filename="C:/Users/lidan/Desktop/VR/opengl/RenderWindow.cpp">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/opengl/RenderWindow.h">
+		<Unit filename="C:/Users/lidan/Desktop/VR/opengl/RenderWindow.h">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/opengl/Sample2D.cpp">
+		<Unit filename="C:/Users/lidan/Desktop/VR/opengl/Sample2D.cpp">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/opengl/Sample2D.h">
+		<Unit filename="C:/Users/lidan/Desktop/VR/opengl/Sample2D.h">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/opengl/Shader.cpp">
+		<Unit filename="C:/Users/lidan/Desktop/VR/opengl/Shader.cpp">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/opengl/Shader.h">
+		<Unit filename="C:/Users/lidan/Desktop/VR/opengl/Shader.h">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/opengl/ShaderProgram.cpp">
+		<Unit filename="C:/Users/lidan/Desktop/VR/opengl/ShaderProgram.cpp">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/opengl/ShaderProgram.h">
+		<Unit filename="C:/Users/lidan/Desktop/VR/opengl/ShaderProgram.h">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/opengl/VertexArrayObject.cpp">
+		<Unit filename="C:/Users/lidan/Desktop/VR/opengl/VertexArrayObject.cpp">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/opengl/VertexArrayObject.h">
+		<Unit filename="C:/Users/lidan/Desktop/VR/opengl/VertexArrayObject.h">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/opengl/Window.cpp">
+		<Unit filename="C:/Users/lidan/Desktop/VR/opengl/Window.cpp">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/opengl/Window.h">
+		<Unit filename="C:/Users/lidan/Desktop/VR/opengl/Window.h">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/render/Camera.cpp">
+		<Unit filename="C:/Users/lidan/Desktop/VR/render/Cam.cpp">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/render/Camera.h">
+		<Unit filename="C:/Users/lidan/Desktop/VR/render/Cam.h">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/render/EulerAngles.cpp">
+		<Unit filename="C:/Users/lidan/Desktop/VR/render/Camera.cpp">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/render/EulerAngles.h">
+		<Unit filename="C:/Users/lidan/Desktop/VR/render/Camera.h">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/render/MatrixCalculation.cpp">
+		<Unit filename="C:/Users/lidan/Desktop/VR/render/EulerAngles.cpp">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/render/MatrixCalculation.h">
+		<Unit filename="C:/Users/lidan/Desktop/VR/render/EulerAngles.h">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/render/Quaternion.cpp">
+		<Unit filename="C:/Users/lidan/Desktop/VR/render/MatrixCalculation.cpp">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/render/Quaternion.h">
+		<Unit filename="C:/Users/lidan/Desktop/VR/render/MatrixCalculation.h">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/render/Timer.cpp">
+		<Unit filename="C:/Users/lidan/Desktop/VR/render/Quaternion.cpp">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/render/Timer.h">
+		<Unit filename="C:/Users/lidan/Desktop/VR/render/Quaternion.h">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/shadertoy/ShaderToy.h">
+		<Unit filename="C:/Users/lidan/Desktop/VR/render/Timer.cpp">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/util/EigenLidan.h">
+		<Unit filename="C:/Users/lidan/Desktop/VR/render/Timer.h">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/util/FileReader.h">
+		<Unit filename="C:/Users/lidan/Desktop/VR/shadertoy/ShaderToy.h">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/util/Lmath.h">
+		<Unit filename="C:/Users/lidan/Desktop/VR/util/EigenLidan.h">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/util/Log.h">
+		<Unit filename="C:/Users/lidan/Desktop/VR/util/FileReader.h">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/util/Matrix.h">
+		<Unit filename="C:/Users/lidan/Desktop/VR/util/Lmath.h">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/util/util.cpp">
+		<Unit filename="C:/Users/lidan/Desktop/VR/util/Log.h">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/util/util.h">
+		<Unit filename="C:/Users/lidan/Desktop/VR/util/Matrix.h">
 			<Option target="VR"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/CMakeLists.txt">
+		<Unit filename="C:/Users/lidan/Desktop/VR/util/util.cpp">
+			<Option target="VR"/>
+		</Unit>
+		<Unit filename="C:/Users/lidan/Desktop/VR/util/util.h">
+			<Option target="VR"/>
+		</Unit>
+		<Unit filename="C:/Users/lidan/Desktop/VR/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/cmake/LidanBase.cmake">
+		<Unit filename="C:/Users/lidan/Desktop/VR/cmake/LidanBase.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/cmake/LidanBuild.cmake">
+		<Unit filename="C:/Users/lidan/Desktop/VR/cmake/LidanBuild.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
-		<Unit filename="C:/Users/lidan/Desktop/result/VR/external/imgui/CMakeLists.txt">
+		<Unit filename="C:/Users/lidan/Desktop/VR/external/imgui/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\external\imgui\"/>
 		</Unit>
 	</Project>

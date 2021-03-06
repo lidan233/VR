@@ -11,6 +11,7 @@ _rect(nullptr),
 _drawrect(nullptr)
 {
     createWindow() ;
+    ca = new Camera(Vec3(650,0,650)) ;
 }
 
 Window::~Window() 
@@ -255,7 +256,13 @@ void Window::keydownEvent(SDL_KeyboardEvent *event)
 
 void Window::keyupEvent(SDL_KeyboardEvent *event)
 {
-
+    switch (event->keysym.sym) {
+        case SDLK_ESCAPE: return  ; break ;
+        case SDLK_w: ca->ProcessKeyboard(FORWARD,0.1) ;break ;
+        case SDLK_a: ca->ProcessKeyboard(LEFT,0.1); break ;
+        case SDLK_s: ca->ProcessKeyboard(BACKWARD,0.1); break ;
+        case SDLK_d: ca->ProcessKeyboard(RIGHT,0.1);break ;
+    }
 }
 
 void Window::mouseButtonUpEvent(SDL_MouseButtonEvent *event)

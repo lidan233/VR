@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/lidan/Desktop/result/VR/external/glad/src/glad.cpp" "C:/Users/lidan/Desktop/result/VR/cmake-build-debug/external/imgui/CMakeFiles/imgui.dir/__/glad/src/glad.cpp.obj"
-  "C:/Users/lidan/Desktop/result/VR/external/imgui/examples/imgui_impl_glfw.cpp" "C:/Users/lidan/Desktop/result/VR/cmake-build-debug/external/imgui/CMakeFiles/imgui.dir/examples/imgui_impl_glfw.cpp.obj"
-  "C:/Users/lidan/Desktop/result/VR/external/imgui/examples/imgui_impl_opengl3.cpp" "C:/Users/lidan/Desktop/result/VR/cmake-build-debug/external/imgui/CMakeFiles/imgui.dir/examples/imgui_impl_opengl3.cpp.obj"
-  "C:/Users/lidan/Desktop/result/VR/external/imgui/imgui.cpp" "C:/Users/lidan/Desktop/result/VR/cmake-build-debug/external/imgui/CMakeFiles/imgui.dir/imgui.cpp.obj"
-  "C:/Users/lidan/Desktop/result/VR/external/imgui/imgui_demo.cpp" "C:/Users/lidan/Desktop/result/VR/cmake-build-debug/external/imgui/CMakeFiles/imgui.dir/imgui_demo.cpp.obj"
-  "C:/Users/lidan/Desktop/result/VR/external/imgui/imgui_draw.cpp" "C:/Users/lidan/Desktop/result/VR/cmake-build-debug/external/imgui/CMakeFiles/imgui.dir/imgui_draw.cpp.obj"
-  "C:/Users/lidan/Desktop/result/VR/external/imgui/imgui_widgets.cpp" "C:/Users/lidan/Desktop/result/VR/cmake-build-debug/external/imgui/CMakeFiles/imgui.dir/imgui_widgets.cpp.obj"
+  "C:/Users/lidan/Desktop/VR/external/glad/src/glad.cpp" "C:/Users/lidan/Desktop/VR/cmake-build-debug/external/imgui/CMakeFiles/imgui.dir/__/glad/src/glad.cpp.obj"
+  "C:/Users/lidan/Desktop/VR/external/imgui/examples/imgui_impl_glfw.cpp" "C:/Users/lidan/Desktop/VR/cmake-build-debug/external/imgui/CMakeFiles/imgui.dir/examples/imgui_impl_glfw.cpp.obj"
+  "C:/Users/lidan/Desktop/VR/external/imgui/examples/imgui_impl_opengl3.cpp" "C:/Users/lidan/Desktop/VR/cmake-build-debug/external/imgui/CMakeFiles/imgui.dir/examples/imgui_impl_opengl3.cpp.obj"
+  "C:/Users/lidan/Desktop/VR/external/imgui/imgui.cpp" "C:/Users/lidan/Desktop/VR/cmake-build-debug/external/imgui/CMakeFiles/imgui.dir/imgui.cpp.obj"
+  "C:/Users/lidan/Desktop/VR/external/imgui/imgui_demo.cpp" "C:/Users/lidan/Desktop/VR/cmake-build-debug/external/imgui/CMakeFiles/imgui.dir/imgui_demo.cpp.obj"
+  "C:/Users/lidan/Desktop/VR/external/imgui/imgui_draw.cpp" "C:/Users/lidan/Desktop/VR/cmake-build-debug/external/imgui/CMakeFiles/imgui.dir/imgui_draw.cpp.obj"
+  "C:/Users/lidan/Desktop/VR/external/imgui/imgui_widgets.cpp" "C:/Users/lidan/Desktop/VR/cmake-build-debug/external/imgui/CMakeFiles/imgui.dir/imgui_widgets.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 

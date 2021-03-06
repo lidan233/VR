@@ -35,7 +35,6 @@ public:
 
     void addTexture(std::vector<const char *> &texFileNames);
     void addUserFragmentMainCode(const char *fragmentMain);
-    bool screenshot();
 
 protected:
     void initilizeGL() override;

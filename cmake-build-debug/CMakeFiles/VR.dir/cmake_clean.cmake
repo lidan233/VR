@@ -11,6 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/VR.dir/opengl/ShaderProgram.cpp.obj"
   "CMakeFiles/VR.dir/opengl/VertexArrayObject.cpp.obj"
   "CMakeFiles/VR.dir/opengl/Window.cpp.obj"
+  "CMakeFiles/VR.dir/render/Cam.cpp.obj"
   "CMakeFiles/VR.dir/render/Camera.cpp.obj"
   "CMakeFiles/VR.dir/render/EulerAngles.cpp.obj"
   "CMakeFiles/VR.dir/render/MatrixCalculation.cpp.obj"

@@ -35,20 +35,12 @@ public:
     inline static float acos(float radian) { return acosf(radian); }
     inline static float asin(float radian) { return asinf(radian); }
     inline static float atan(float radian) { return atanf(radian); }
-    // atan(r1/r2)
     inline static float atan2(float r1, float r2) { return atan2f(r1, r2); }
     inline static float cos(float radian) { return cosf(radian); }
     inline static float sin(float radian) { return sinf(radian); }
     inline static float tan(float radian) { return tanf(radian); }
     inline static float cot(float radian) { return 1.0f / tanf(radian); }
 
-//    inline static int max(int a, int b) {  return a > b ? a : b; }
-//    inline static float max(float a, float b) { return a > b ? a : b; }
-//    inline static double max(double a, double b) { return a > b ? a : b; }
-//
-//    inline static int min(int a, int b) { return a < b ? a : b; }
-//    inline static float min(float a, float b) { return a < b ? a : b; }
-//    inline static double min(double a, double b) { return a < b ? a : b; }
 
     inline static float log(float n) { return log(n); }
     inline static float log10(float n) { return log10(n); }
