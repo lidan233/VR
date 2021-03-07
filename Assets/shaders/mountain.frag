@@ -22,7 +22,6 @@
 #define NUM_PARTICLES 70.
 
 
-float lava_hash21(in vec2 n){ return fract(sin(dot(n, vec2(12.9898, 4.1414))) * 43758.5453); }
 vec2 lava_rot2D(vec2 p, float angle) {
     angle = radians(angle);
     float s = sin(angle);
@@ -31,15 +30,17 @@ vec2 lava_rot2D(vec2 p, float angle) {
     return p * mat2(c,s,-s,c);
 }
 
-float rand_rot2D(vec2 c){
-    return fract(sin(dot(c.xy ,vec2(12.9898,78.233))) * 43758.5453);
-}
 
 float lava_hash12(vec2 p) {
     p  = fract(p / MOD2);
     p += dot(p.xy, p.yx+19.19);
     return fract(p.x * p.y);
 }
+float hash( float n )
+{
+    return fract(sin(n)*43758.5453123);
+}
+
 
 const vec2 add = vec2(1.0, 0.0);
 
@@ -52,10 +53,6 @@ float lava_noise( in vec2 x ) {
     return res;
 }
 
-float hash( float n )
-{
-    return fract(sin(n)*43758.5453123);
-}
 mat2 makem2(in float theta){float c = cos(theta);float s = sin(theta);return mat2(c,-s,s,c);}
 float noiseLava( in vec2 x )
 {
@@ -69,7 +66,7 @@ float noiseLava( in vec2 x )
     float res = mix(mix( hash(n+  0.0), hash(n+  1.0),f.x),
     mix( hash(n+ 57.0), hash(n+ 58.0),f.x),f.y);
 
-    return res;
+    return res*255;
 }
 
 
@@ -177,14 +174,14 @@ vec3 fexplosion(vec2 uv, vec2 p, float seed, float t) {
         float pt = 1.-pow(t-1., 2.);
         vec2 pos = mix(p, endP, pt);
         float size = mix(.01, .005, S(0., .1, pt));
-        size *= S(1., .1, pt);
-        float sparkle = (sin((pt+n.z)*100.)*.5+.5);
-        sparkle = pow(sparkle, pow(en.x, 3.)*50.)*mix(0.01, .01, en.y*n.y);
-        size += sparkle*B(en.x, en.y, en.z, t);
-        col += baseCol*flight(uv, pos, size);
-    }
+size *= S(1., .1, pt);
+float sparkle = (sin((pt+n.z)*100.)*.5+.5);
+sparkle = pow(sparkle, pow(en.x, 3.)*50.)*mix(0.01, .01, en.y*n.y);
+size += sparkle*B(en.x, en.y, en.z, t);
+col += baseCol*flight(uv, pos, size);
+}
 
-    return col;
+return col;
 }
 
 vec3 Rainbow(vec3 c) {
@@ -327,23 +324,23 @@ float noise3( in vec3 x )
     vec3 h = hash33(p1+vec3(1.0,1.0,1.0));
 
     return 	mix(
-                mix(
-                    mix(dot(ff - vec3(0, 0, 0),a),
-                    dot(ff - vec3(1, 0, 0),b),
-                    w.x),
-                    mix(dot(ff - vec3(0, 1, 0),c),
-                    dot(ff - vec3(1, 1, 0),d),
-                    w.x),
-                w.z),
-                mix(
-                    mix(dot(ff - vec3(0, 1, 0), e),
-                    dot(ff - vec3(1, 1, 0), f),
-                    w.x),
-                    mix(dot(ff - vec3(0, 1, 1), g),
-                    dot(ff - vec3(1, 1, 1), h),
-                    w.x),
-                w.z),
-            w.y);
+    mix(
+    mix(dot(ff - vec3(0, 0, 0),a),
+    dot(ff - vec3(1, 0, 0),b),
+    w.x),
+    mix(dot(ff - vec3(0, 1, 0),c),
+    dot(ff - vec3(1, 1, 0),d),
+    w.x),
+    w.z),
+    mix(
+    mix(dot(ff - vec3(0, 1, 0), e),
+    dot(ff - vec3(1, 1, 0), f),
+    w.x),
+    mix(dot(ff - vec3(0, 1, 1), g),
+    dot(ff - vec3(1, 1, 1), h),
+    w.x),
+    w.z),
+    w.y);
 
 }
 
@@ -364,8 +361,8 @@ float noise( in vec2 x )
 
 
 mat3 m = mat3( 0.00,  0.80,  0.60,
-              -0.80,  0.36, -0.48,
-              -0.60, -0.48,  0.64 );
+-0.80,  0.36, -0.48,
+-0.60, -0.48,  0.64 );
 
 mat2 m2 = mat2(1.6,-1.2,1.2,1.6);
 
@@ -572,7 +569,8 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
     vec3 campos = CamPath(time) ;
     vec3 campos_next = CamPath(time+ 3.0 ) ;
 
-    campos.y = terrain( campos.xz ) + 15.0 ;
+    campos.y = terrain( campos.xz ) + 15.0  ;
+    if(campos.y<=70) campos.y = 75 ;
     campos_next.y = campos.y * 0.5 ;
 
     float roll = 0.1 * cos(0.1*time) ;
@@ -609,8 +607,8 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
         // firework
         col = 0.2*  firework(fragCoord) +(1.-.2)*col  ;
 
-//        col = 0.3* fcol+(1.-.3)*col;
-//        col = fcol ;
+        //        col = 0.3* fcol+(1.-.3)*col;
+        //        col = fcol ;
     }else if(isIntersectWithTerrain==1){
         vec3 pos = campos + t*rd ;
         vec3 nor = calcNormal(pos, t) ;
@@ -636,23 +634,23 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
         #endif
 
         // snow
-//        #if 1
-//        float h = smoothstep(55.0,80.0,pos.y + 25.0*fbm(0.01*pos.xz) );
-//        float e = smoothstep(1.0-0.5*h,1.0-0.1*h,nor.y);
-//        float o = 0.3 + 0.7*smoothstep(0.0,0.1,nor.x+h*h);
-//        float s = h*e*o;
-//        s = smoothstep( 0.1, 0.9, s );
-//        col = mix( col, 0.4*vec3(0.6,0.65,0.7), s );
-//        #endif
+        //        #if 1
+        //        float h = smoothstep(55.0,80.0,pos.y + 25.0*fbm(0.01*pos.xz) );
+        //        float e = smoothstep(1.0-0.5*h,1.0-0.1*h,nor.y);
+        //        float o = 0.3 + 0.7*smoothstep(0.0,0.1,nor.x+h*h);
+        //        float s = h*e*o;
+        //        s = smoothstep( 0.1, 0.9, s );
+        //        col = mix( col, 0.4*vec3(0.6,0.65,0.7), s );
+        //        #endif
 
 
-//        vec3  col = vec3(0.36,0.43,0.54) - rd.y*0.5;
-//        float sun = clamp( dot(rd,lig), 0.0, 1.0 );
-//        col += vec3(1.0,0.8,0.4)*0.24*pow( sun, 6.0 );
-//        vec3 bcol = col;
-//        //smoke
-//        vec4 res = raymarchClouds( campos, rd, bcol, fragCoord );
-//        col = mix( col, res.xyz, res.w ) ;
+        //        vec3  col = vec3(0.36,0.43,0.54) - rd.y*0.5;
+        //        float sun = clamp( dot(rd,lig), 0.0, 1.0 );
+        //        col += vec3(1.0,0.8,0.4)*0.24*pow( sun, 6.0 );
+        //        vec3 bcol = col;
+        //        //smoke
+        //        vec4 res = raymarchClouds( campos, rd, bcol, fragCoord );
+        //        col = mix( col, res.xyz, res.w ) ;
 
         // sum the shadowing and direct light
         vec3 brdf  = 2.0*vec3(0.17,0.19,0.20)*clamp(nor.y,0.0,1.0); //flat surfaces are enhanced
@@ -666,15 +664,15 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
         col = mix( col, fco, fo );
     }else if(isIntersectWithTerrain==2){
         vec3 pos = campos + t*rd ;
-        vec3 lavCol = blackbody(flowFBM(pos.xz*0.005)) ;
+        vec3 lavCol = blackbody(flowFBM(pos.xz*0.05)) ;
         col = lavCol ;
     }
 
     col = sqrt(col); // brightens the image (colors are < 1.0, so sqrt would be a larger number)
 
     // darkens the edges of the image
-//    vec2 uv = xy*0.5+0.5;
-//    col *= 0.7 + 0.3*pow(16.0*uv.x*uv.y*(1.0-uv.x)*(1.0-uv.y),0.1);
+    //    vec2 uv = xy*0.5+0.5;
+    //    col *= 0.7 + 0.3*pow(16.0*uv.x*uv.y*(1.0-uv.x)*(1.0-uv.y),0.1);
 
     vec2 pos= (fragCoord.xy/iResolution.y - vec2(.8,.5))*2.;
     float gaz = 1.5*fbm(vec2(5.*(pos.x-PI),2.*pos.y-6.*time));
@@ -682,8 +680,8 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 
 
     if(isCyan)
-        fragColor=vec4(col,1.0);
-//    else
+    fragColor=vec4(col,1.0);
+    //    else
 
-//        fragColor=vec4(sqrt(col.r),0.0,0.0,1.0);
+    //        fragColor=vec4(sqrt(col.r),0.0,0.0,1.0);
 }
