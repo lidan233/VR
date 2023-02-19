@@ -1,68 +1,67 @@
-# 技术文档说明（大规模火山场景的渲染）
+# Technical documentation description (rendering of large-scale volcano scenes)
 
-# 李源
+# Li Yuan
 
-# 最终的实现结果(非立体视觉版本）
+# The final implementation result (non-stereoscopic version)
 
-<img src="images/技术文档说明0.png" width=500px />
+<img src="images/technical documentation description 0.png" width=500px />
 
-有5种不同的效果
+There are 5 different effects
 
-1\. <span style="color:#FF0000">地形</span> （基于perlinnoise实现）
+1\. <span style="color:#FF0000">Terrain</span> (based on perlinnoise implementation)
 
-2\. <span style="color:#FF0000">烟花</span> （基于最简单的粒子系统实现）
+2\. <span style="color:#FF0000">Fireworks</span> (based on the simplest particle system implementation)
 
-3\. <span style="color:#FF0000">烟雾</span> （基于noise\+解析梯度实现）
+3\. <span style="color:#FF0000">Smoke</span> (based on noise\+analytic gradient implementation)
 
-4\. <span style="color:#FF0000">岩浆</span> （基于physx实现失败，最终使用基于noise\+解析梯度实现）
+4\. <span style="color:#FF0000">magma</span> (based on physx implementation failed, and finally implemented based on noise\+analytic gradient)
 
-5\. <span style="color:#FF0000">云朵</span> \(基于解析梯度和noise实现）
+5\. <span style="color:#FF0000">clouds</span> \(based on analytical gradient and noise implementation)
 
-# 实现的难点
+# The difficulty of implementation
 
-1\.数学库的优雅实现（经历多次重构，util/EigenLidan\,Matrix\.h…\)
+1\. Elegant implementation of the math library (after multiple refactorings, util/EigenLidan\,Matrix\.h...\)
 
-2\.基于opengl管线的优雅实现（opengl/\*）
+2\. Elegant implementation based on opengl pipeline (opengl/\*)
 
-3\.基于glsl的光线追踪实现\(光线与noise所构建地形，云朵等的match）
+3\. Realization of ray tracing based on glsl (matching of terrain, clouds, etc.)
 
-4\.支持可交互（但是仅仅只能点击放烟花）
+4\. Support interactive (but only click to set off fireworks)
 
-5\.简单的烟花粒子系统（没有使用物理引擎，仅仅使用shader模拟了重力，速度关系）
+5\. Simple fireworks particle system (no physics engine, just use shader to simulate the relationship between gravity and speed)
 
-对老师要求的匹配: 1\. <span style="color:#FF0000">5</span>  <span style="color:#FF0000">种地物</span>  <span style="color:#FF0000">\(</span>  <span style="color:#FF0000">匹配：见上页），</span>  <span style="color:#FF0000">2\.</span>  <span style="color:#FF0000">物理引擎（没有使用，但是自行模拟了最简单的烟花粒子系统），</span>  <span style="color:#FF0000">3\.</span>  <span style="color:#FF0000">可交互（放烟花）。</span>
+Matching to the teacher's requirements: 1\. <span style="color:#FF0000">5</span> <span style="color:#FF0000">plants</span> <span style="color: #FF0000">\(</span> <span style="color:#FF0000">Match: see previous page),</span> <span style="color:#FF0000">2\.</span> <span style="color:#FF0000">Physics engine (not used, but simulated the simplest fireworks particle system),</span> <span style="color:#FF0000">3\.</span > <span style="color:#FF0000">Interactive (fireworks). </span>
 
-# 最终VR效果（因为opengl的立体视觉非常简单）（使用红蓝眼睛观看）
+# The final VR effect (because opengl's stereo vision is very simple) (use red and blue eyes to watch)
 
-<img src="images/技术文档说明1.png" width=500px />
+<img src="images/Technical Documentation Description 1.png" width=500px />
 
-# 原始效果
+# original effect
 
-# 立体视觉
+# stereo vision
 
-# 总结
+# Summarize
 
-1\.综上所述，基本完成老师的要求
+1\. In summary, basically fulfill the teacher's requirements
 
-2\.优点：我最满意的是数学库和opengl管线的优雅实现。 以及第一次接触了，使用noise和noise的解析梯度去构造地形等物体，并使用路径追踪去渲染这些物体。 提供了立体视觉的实现。
+2\. Advantages: I am most satisfied with the elegant implementation of the math library and opengl pipeline. And the first contact, use noise and noise's analytical gradient to construct terrain and other objects, and use path tracing to render these objects. An implementation of stereo vision is provided.
 
-3\.缺点：没有使用物理引擎，只是简单实现了一个粒子系统。交互性仅仅只能放烟花。
+3\. Disadvantages: No physics engine is used, but a particle system is simply implemented. Interactivity is all about setting off fireworks.
 
 # reference
 
-1\.[http://iquilezles\.org/www/articles/morenoise/morenoise\.htm\(noise](http://iquilezles.org/www/articles/morenoise/morenoise.htm(noise)函数及noise解析梯度计算，解析梯度可以帮助快速计算法向量）
+1\.[http://iquilezles\.org/www/articles/morenoise/morenoise\.htm\(noise](http://iquilezles.org/www/articles/morenoise/morenoise.htm(noise) function and Noise analytical gradient calculation, analytical gradient can help to quickly calculate the normal vector)
 
-[2\.](http://iquilezles.org/www/articles/rmshadows/rmshadows.htm)[http://iquilezles\.org/www/articles/rmshadows/rmshadows\.htm](http://iquilezles.org/www/articles/rmshadows/rmshadows.htm)（有限光线追踪中软阴影的实现）
+[2\.](http://iquilezles.org/www/articles/rmshadows/rmshadows.htm)[http://iquilezles\.org/www/articles/rmshadows/rmshadows\.htm](http:// iquilezles.org/www/articles/rmshadows/rmshadows.htm) (Implementation of soft shadows in finite ray tracing)
 
-3\.[http://iquilezles\.org/www/articles/fog/fog\.htm](http://iquilezles.org/www/articles/fog/fog.htm)\(雾的计算，以及烟的计算）
+3\.[http://iquilezles\.org/www/articles/fog/fog\.htm](http://iquilezles.org/www/articles/fog/fog.htm)\(fog calculation, and smoke calculation)
 
-4\.软件noise lab，（提供valued noise，perlinnoise等2d噪声的实现demo）
+4\. Software noise lab, (provide valued noise, perlinnoise and other 2d noise implementation demos)
 
-5\.岩浆noise实现（[https://www\.shadertoy\.com/view/lslXRS](https://www.shadertoy.com/view/lslXRS)）
+5\. Magma noise implementation ([https://www\.shadertoy\.com/view/lslXRS](https://www.shadertoy.com/view/lslXRS))
 
-以上博文和软件，在我的实验中有很多帮助。
+The above blog posts and software have helped me a lot in my experiments.
 
-# 心得体会
+# experience
 
-Noise加解析梯度可以渲染你想要的任何东西，只要raymatch函数你写的出来。
-
+Noise plus analytical gradient can render anything you want, as long as you write the raymatch function.
