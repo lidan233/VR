@@ -34,7 +34,7 @@ Matching to the teacher's requirements: 1\. <span style="color:#FF0000">5</span>
 
 # The final VR effect (because opengl's stereo vision is very simple) (use red and blue eyes to watch)
 
-<img src="images/Technical Documentation Description 1.png" width=500px />
+<img src="images/技术文档说明1.png" width=500px />
 
 # original effect
 
