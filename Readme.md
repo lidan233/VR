@@ -4,7 +4,7 @@
 
 # The final implementation result (non-stereoscopic version)
 
-<img src="images/technical documentation description 0.png" width=500px />
+<img src="images/技术文档说明0.png" width=500px />
 
 There are 5 different effects
 
